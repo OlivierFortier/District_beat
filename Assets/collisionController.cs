@@ -5,7 +5,7 @@ using UnityEngine;
 public class collisionController : MonoBehaviour
 {
     public healthBarController healthBar;
-    void OnTriggerEnter(Collider collision)
+    void OnCollisionEnter(Collision collision)
     {
         print("bonjour");
 
