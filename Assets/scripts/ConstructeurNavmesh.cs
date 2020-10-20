@@ -30,7 +30,9 @@ public class ConstructeurNavmesh : MonoBehaviour
         }
         else
         {
-            if (solNav) { solNav.BuildNavMesh(); }
+            if (solNav) { 
+                solNav.RemoveData();
+                solNav.BuildNavMesh(); }
         }
     }
 

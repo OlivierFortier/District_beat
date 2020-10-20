@@ -14,7 +14,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 108
+  m_StaticEditorFlags: 104
   m_IsActive: 1
 --- !u!4 &2145533537556405370
 Transform:
@@ -45,7 +45,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 108
+  m_StaticEditorFlags: 104
   m_IsActive: 1
 --- !u!4 &2145533537990701310
 Transform:
@@ -89,7 +89,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 108
+  m_StaticEditorFlags: 104
   m_IsActive: 1
 --- !u!4 &2145533538279931201
 Transform:
@@ -132,7 +132,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 108
+  m_StaticEditorFlags: 104
   m_IsActive: 1
 --- !u!4 &2145533538296180964
 Transform:
@@ -163,7 +163,7 @@ GameObject:
   m_TagString: sol
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 108
+  m_StaticEditorFlags: 104
   m_IsActive: 1
 --- !u!4 &2145533538333776032
 Transform:
@@ -223,7 +223,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 108
+  m_StaticEditorFlags: 104
   m_IsActive: 1
 --- !u!4 &2145533538499394587
 Transform:
@@ -316,7 +316,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 108
+  m_StaticEditorFlags: 104
   m_IsActive: 1
 --- !u!4 &2145533538578452974
 Transform:
@@ -364,7 +364,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 108
+  m_StaticEditorFlags: 104
   m_IsActive: 1
 --- !u!4 &2145533538755657781
 Transform:
@@ -460,7 +460,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 108
+  m_StaticEditorFlags: 104
   m_IsActive: 1
 --- !u!4 &2145533539280509826
 Transform:
@@ -552,7 +552,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: -5442936267250999957, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 108
+  m_StaticEditorFlags: 104
   m_IsActive: 1
 --- !u!4 &2145533539331042745
 Transform:
@@ -585,7 +585,7 @@ GameObject:
   m_TagString: sol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 108
+  m_StaticEditorFlags: 104
   m_IsActive: 1
 --- !u!4 &5309531877391468597
 Transform:
@@ -729,7 +729,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5724477704788342385, guid: 732048b20b51ea54d98bd032376133ba, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 108
+      value: 104
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 732048b20b51ea54d98bd032376133ba, type: 3}
