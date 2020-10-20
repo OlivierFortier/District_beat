@@ -8,18 +8,29 @@ public class ConstructeurNavmesh : MonoBehaviour
 
     public GameObject[] surfacesSol;
 
+    public bool testAllo;
+
+    public NavMeshSurface solNav;
+
     // Start is called before the first frame update
     void Start()
     {
-        surfacesSol = GameObject.FindGameObjectsWithTag("sol");
-
-        foreach (GameObject surface in surfacesSol)
+        if (!testAllo)
         {
-            if (surface.GetComponent<NavMeshSurface>())
+            surfacesSol = GameObject.FindGameObjectsWithTag("sol");
+
+            foreach (GameObject surface in surfacesSol)
             {
-                NavMeshSurface navmeshSurface = surface.GetComponent<NavMeshSurface>();
-                navmeshSurface.BuildNavMesh();
+                if (surface.GetComponent<NavMeshSurface>())
+                {
+                    NavMeshSurface navmeshSurface = surface.GetComponent<NavMeshSurface>();
+                    navmeshSurface.BuildNavMesh();
+                }
             }
+        }
+        else
+        {
+            if (solNav) { solNav.BuildNavMesh(); }
         }
     }
 
