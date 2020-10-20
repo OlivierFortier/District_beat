@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - ennemi
+  - joueur
+  - sol
   layers:
   - Default
   - TransparentFX
@@ -15,9 +17,9 @@ TagManager:
   - 
   - 
   - Sol
-  - 
-  - 
-  - 
+  - joueurs
+  - items-interactif
+  - ennemis
   - 
   - 
   - 
