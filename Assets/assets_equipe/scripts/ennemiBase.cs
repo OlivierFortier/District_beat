@@ -14,23 +14,36 @@ public class ennemiBase : MonoBehaviour
     private GameObject[] lesJoueurs;
 
     // Start is called before the first frame update
-    void Start()
+    IEnumerator Start()
     {
         tagJoueur = "joueur";
 
         lesJoueurs = GameObject.FindGameObjectsWithTag(tagJoueur);
+
+        yield return StartCoroutine("ActiverAi");
+
     }
+
+    IEnumerator ActiverAi() {
+        yield return new WaitForSecondsRealtime(1f);
+        agent.enabled = true;
+    }
+
+
 
     // Update is called once per frame
     void Update()
     {
-        foreach (GameObject joueur in lesJoueurs)
+        if (agent)
         {
-            float distance = Vector3.Distance(transform.position, joueur.transform.position);
-
-            if (distance <= 50)
+            foreach (GameObject joueur in lesJoueurs)
             {
-                agent.SetDestination(joueur.transform.position);
+                float distance = Vector3.Distance(transform.position, joueur.transform.position);
+
+                if (distance <= 50)
+                {
+                    agent.SetDestination(joueur.transform.position);
+                }
             }
         }
 
