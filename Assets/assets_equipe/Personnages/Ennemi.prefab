@@ -244,6 +244,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   agent: {fileID: 5277260488356384697}
   tagJoueur: joueur
+  coucheSol:
+    serializedVersion: 2
+    m_Bits: 256
+  coucheJoueur:
+    serializedVersion: 2
+    m_Bits: 512
+  pointPatrouille: {x: 0, y: 0, z: 0}
+  zonePatrouille: 5
+  zoneVision: 20
+  zoneAttaqueMelee: 5
+  joueurVisible: 0
+  joueurAttaquableMelee: 0
 --- !u!1 &864968824561396666
 GameObject:
   m_ObjectHideFlags: 0
