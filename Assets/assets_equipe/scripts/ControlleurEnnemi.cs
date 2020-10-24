@@ -21,16 +21,22 @@ public class ControlleurEnnemi : MonoBehaviour
 
 
     //le point d'origine de la zone que le AI va patrouiller
-    public Vector3 pointPatrouille;
+    private Vector3 pointPatrouille;
     //si le point de patrouille est actif
-    bool pointPatrouilleActif;
+    private bool pointPatrouilleActif;
     //la grandeur de la zone de patrouille
     public float zonePatrouille;
 
-    //les grandeurs des zones de visions et d'attaque melee de l'ennemi
-    public float zoneVision, zoneAttaqueMelee;
-    //si le joueur est en distance visible ou en distance attaquable mélée
-    public bool joueurVisible, joueurAttaquableMelee;
+    //les grandeurs des zones de visions et d'attaque melee ou a distance de l'ennemi
+    public float zoneVision, zoneAttaqueMelee, zoneAttaqueDistance;
+    //si le joueur est en distance visible ou en distance attaquable mélée ou en distance d'attaque de loin
+    private bool joueurVisible, joueurAttaquableMelee, joueurAttaquableDistance;
+
+    //référence au script d'attaque mélée
+    public MonoBehaviour refMelee;
+
+    //référence au script d'attaque distance
+    public MonoBehaviour refDistance; 
 
 
 
@@ -71,13 +77,17 @@ public class ControlleurEnnemi : MonoBehaviour
                 joueurVisible = Physics.CheckSphere(transform.position, zoneVision, coucheJoueur);
                 //vérifier si le joueur est attaquable par l'ennemi en mélée, donc présent dans sa zone de mélée
                 joueurAttaquableMelee = Physics.CheckSphere(transform.position, zoneAttaqueMelee, coucheJoueur);
+                //vérifier si le joueur est attaquable par l'ennemi a distance, donc présent dans sa zone de distance
+                joueurAttaquableDistance = Physics.CheckSphere(transform.position, zoneAttaqueDistance, coucheJoueur);
 
                 //si le joueur n'est pas visible et pas attaquable, patrouiller
                 if (!joueurVisible && !joueurAttaquableMelee) Patrouiller();
                 //si le joueur est visible mais pas assez proche pour attaquer en mélée, suivre le joueur
                 if (joueurVisible && !joueurAttaquableMelee) SuivreJoueur(joueur.transform.position);
+                //si le joueur est visible et assez près pour attaquer a distance, attaquer le joueur
+                if (joueurVisible && refDistance!=null && joueurAttaquableDistance) AttaquerJoueurDistance(joueur.transform.position);
                 //si le joueur est visible et assez près pour attaquer en mélée, attaquer le joueur
-                if (joueurVisible && joueurAttaquableMelee) AttaquerJoueur(joueur.transform.position);
+                if (joueurVisible && refMelee!=null && joueurAttaquableMelee) AttaquerJoueurMelee(joueur.transform.position);
 
             }
         }
@@ -109,7 +119,7 @@ public class ControlleurEnnemi : MonoBehaviour
         float zAleatoire = Random.Range(-zonePatrouille, zonePatrouille);
         float xAleatoire = Random.Range(-zonePatrouille, zonePatrouille);
 
-        //définir un nouveau point de patrouille selon les poisionts x et z obtenues
+        //définir un nouveau point de patrouille dans la zone de patrouille selon les poisionts x et z obtenues
         pointPatrouille = new Vector3(transform.position.x + xAleatoire, transform.position.y, transform.position.z + zAleatoire);
 
         //si le point de patrouille est valide, activer le "flag" qui avertis qu'il est disponible a utiliser
@@ -124,9 +134,21 @@ public class ControlleurEnnemi : MonoBehaviour
     }
 
 
-    //a modifier pour relier avec le systeme de combat
-    void AttaquerJoueur(Vector3 positionJoueur)
+    //a modifier pour relier avec le systeme de combat melee
+    void AttaquerJoueurMelee(Vector3 positionJoueur)
     {
+        agent.SetDestination(transform.position);
+
+        transform.LookAt(positionJoueur);
+
+        //intégrer le script d'attaque ici 
+
+    }
+
+    //a modifier pour relier avec le systeme de combat a distance
+    void AttaquerJoueurDistance(Vector3 positionJoueur)
+    {
+        print("distance");
         agent.SetDestination(transform.position);
 
         transform.LookAt(positionJoueur);
@@ -139,6 +161,8 @@ public class ControlleurEnnemi : MonoBehaviour
      private void OnDrawGizmosSelected() {
          Gizmos.color = Color.red;
          Gizmos.DrawWireSphere(transform.position, zoneAttaqueMelee);
+         Gizmos.color = Color.yellow;
+         Gizmos.DrawWireSphere(transform.position, zoneAttaqueDistance);
          Gizmos.color = Color.blue;
          Gizmos.DrawWireSphere(transform.position, zoneVision);
     }

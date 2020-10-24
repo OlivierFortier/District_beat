@@ -250,12 +250,12 @@ MonoBehaviour:
   coucheJoueur:
     serializedVersion: 2
     m_Bits: 512
-  pointPatrouille: {x: 0, y: 0, z: 0}
-  zonePatrouille: 5
-  zoneVision: 20
+  zonePatrouille: 15
+  zoneVision: 30
   zoneAttaqueMelee: 5
-  joueurVisible: 0
-  joueurAttaquableMelee: 0
+  zoneAttaqueDistance: 15
+  refMelee: {fileID: 0}
+  refDistance: {fileID: 0}
 --- !u!1 &864968824561396666
 GameObject:
   m_ObjectHideFlags: 0
