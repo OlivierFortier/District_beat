@@ -10,7 +10,7 @@ public class toucherEnnemi : MonoBehaviour
     {
        if (toucherEnnemi.gameObject.tag == "ennemi")
         {
-            toucherEnnemi.gameObject.Enemyhealth--; 
+            //toucherEnnemi.gameObject.Enemyhealth--; 
         }   
     }
 }
