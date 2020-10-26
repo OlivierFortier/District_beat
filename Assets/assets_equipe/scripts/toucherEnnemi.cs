@@ -11,13 +11,14 @@ public class toucherEnnemi : MonoBehaviour
     private bool estUnJoueur;
 
 
-    private void Start() {
+    private void Start()
+    {
         estUnJoueur = GetComponentInParent<GameObject>().tag == "joueur";
     }
 
     private void OnCollisionEnter(Collision toucherEnnemi)
     {
-        if(estUnJoueur)
+        if (estUnJoueur)
         {
             if (toucherEnnemi.gameObject.tag == "ennemi")
             {
@@ -29,7 +30,8 @@ public class toucherEnnemi : MonoBehaviour
                 print("ouch ayoye");
             }
         }
-        else {
+        else
+        {
             if (toucherEnnemi.gameObject.tag == "joueur")
             {
                 //modifie la variable directement

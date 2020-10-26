@@ -6,7 +6,6 @@ using UnityEngine.UI;
 public class healthBarController : MonoBehaviour
 {
     public GameObject refHealthBar;
-
     private GameObject instanceHealthBar;
     public float health;
     public float startHealth;
@@ -17,20 +16,24 @@ public class healthBarController : MonoBehaviour
         instanceHealthBar = Instantiate(refHealthBar);
 
         //on parente au canvas l'élément UI
-        instanceHealthBar.transform.SetParent(GameObject.Find("healthBar_Canvas").transform);
+        instanceHealthBar.transform.SetParent(GameObject.Find("healthBar_Canvas").transform);//????
 
         //on le positionne à la meme place que le fond
         instanceHealthBar.GetComponent<RectTransform>().anchoredPosition =
             GameObject.Find("healthBar_BG").GetComponent<RectTransform>().anchoredPosition
         ;
-
     }
 
     public void OnTakeDamage(int damage)
     {
+        health = health - damage;//??? Damage
+        instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
+    }
 
 
-        health = health - damage;
+    public void OnTakeMedicine(int damage)//looking for a function in order to increase the health bar*****************
+    {
+        health = health + damage;//??? Damage
         instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
     }
 
