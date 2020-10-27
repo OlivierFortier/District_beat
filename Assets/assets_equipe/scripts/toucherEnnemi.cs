@@ -12,7 +12,7 @@ public class toucherEnnemi : MonoBehaviour
 
 
     private void Start() {
-        estUnJoueur = GetComponentInParent<GameObject>().tag == "joueur";
+        estUnJoueur = transform.parent.tag == "joueur";
     }
 
     private void OnCollisionEnter(Collision toucherEnnemi)
@@ -26,7 +26,7 @@ public class toucherEnnemi : MonoBehaviour
 
                 //tu apelle la fonction 
                 //toucherEnnemi.gameObject.GetComponent<statsVie>().perdreVie(dommagesArme);
-                print("ouch ayoye");
+                print("ouch ayoye ennemi blessé");
             }
         }
         else {
@@ -37,7 +37,7 @@ public class toucherEnnemi : MonoBehaviour
 
                 //tu apelle la fonction 
                 //toucherEnnemi.gameObject.GetComponent<statsVie>().perdreVie(dommagesArme);
-                print("ouch ayoye");
+                print("ouch ayoye joueur blessé");
             }
         }
 

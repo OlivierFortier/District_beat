@@ -33,10 +33,10 @@ public class ControlleurEnnemi : MonoBehaviour
     private bool joueurVisible, joueurAttaquableMelee, joueurAttaquableDistance;
 
     //référence au script d'attaque mélée
-    public MonoBehaviour refMelee;
+    public CombatMelee refMelee;
 
     //référence au script d'attaque distance
-    public MonoBehaviour refDistance; 
+    public MonoBehaviour refDistance;
 
 
 
@@ -84,10 +84,19 @@ public class ControlleurEnnemi : MonoBehaviour
                 if (!joueurVisible && !joueurAttaquableMelee) Patrouiller();
                 //si le joueur est visible mais pas assez proche pour attaquer en mélée, suivre le joueur
                 if (joueurVisible && !joueurAttaquableMelee) SuivreJoueur(joueur.transform.position);
-                //si le joueur est visible et assez près pour attaquer a distance, attaquer le joueur
-                if (joueurVisible && refDistance!=null && joueurAttaquableDistance) AttaquerJoueurDistance(joueur.transform.position);
-                //si le joueur est visible et assez près pour attaquer en mélée, attaquer le joueur
-                if (joueurVisible && refMelee!=null && joueurAttaquableMelee) AttaquerJoueurMelee(joueur.transform.position);
+
+                if (refDistance != null)
+                {//si le joueur est visible et assez près pour attaquer a distance, attaquer le joueur
+                    print("distance de loin");
+                    if (joueurVisible && !joueurAttaquableMelee && joueurAttaquableDistance) AttaquerJoueurDistance(joueur.transform.position);
+                }
+
+                if (refMelee != null)
+                {  
+                    print("distance de proche");
+                     //si le joueur est visible et assez près pour attaquer en mélée, attaquer le joueur
+                    if (joueurVisible && joueurAttaquableMelee) AttaquerJoueurMelee(joueur.transform.position);
+                }
 
             }
         }
@@ -139,31 +148,28 @@ public class ControlleurEnnemi : MonoBehaviour
     {
         agent.SetDestination(transform.position);
 
-        transform.LookAt(positionJoueur);
-
         //intégrer le script d'attaque ici 
-
+        refMelee.attaque();
     }
 
     //a modifier pour relier avec le systeme de combat a distance
     void AttaquerJoueurDistance(Vector3 positionJoueur)
     {
-        print("distance");
         agent.SetDestination(transform.position);
 
-        transform.LookAt(positionJoueur);
-
         //intégrer le script d'attaque ici 
+        refMelee.attaque();
 
     }
 
     //permet de visualiser dans unity les zones qu'on a défini pour la vision et l'attaque
-     private void OnDrawGizmosSelected() {
-         Gizmos.color = Color.red;
-         Gizmos.DrawWireSphere(transform.position, zoneAttaqueMelee);
-         Gizmos.color = Color.yellow;
-         Gizmos.DrawWireSphere(transform.position, zoneAttaqueDistance);
-         Gizmos.color = Color.blue;
-         Gizmos.DrawWireSphere(transform.position, zoneVision);
+    private void OnDrawGizmosSelected()
+    {
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, zoneAttaqueMelee);
+        Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, zoneAttaqueDistance);
+        Gizmos.color = Color.blue;
+        Gizmos.DrawWireSphere(transform.position, zoneVision);
     }
 }

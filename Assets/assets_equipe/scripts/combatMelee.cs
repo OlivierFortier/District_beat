@@ -4,7 +4,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
-public class combatMelee : MonoBehaviour
+public class CombatMelee : MonoBehaviour
 {
     public float tempsEntreAttaque;
     public float debutAttaque;
@@ -25,28 +25,28 @@ public class combatMelee : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (tempsEntreAttaque <= 0)
-        {
-
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                attaque();
-                tempsEntreAttaque = debutAttaque;
-            }
-        }
-        else
+        if (tempsEntreAttaque > 0)
         {
             tempsEntreAttaque -= Time.deltaTime;
-            // animator.SetBool("attaque", false);
-            attaqueCollider.enabled = false;
+            
         }
 
     }
 
-    void attaque()
+    public void attaque()
     {
-        animator.SetTrigger("attaque");
-        attaqueCollider.enabled = true;
-        Debug.Log("pow");
+        if (tempsEntreAttaque <= 0)
+        {
+            animator.SetTrigger("attaque");
+            attaqueCollider.enabled = true;
+            tempsEntreAttaque = debutAttaque;
+
+            Invoke("desactiverColliderArme", 1.5f);
+        }
+
+    }
+
+    void desactiverColliderArme() {
+        attaqueCollider.enabled = false;
     }
 }
