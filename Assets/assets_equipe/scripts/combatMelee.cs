@@ -19,7 +19,7 @@ public class CombatMelee : MonoBehaviour
     {
         attaqueArme = Instantiate(refAttaqueArme, mainQuiPrendArme.transform);
         attaqueArme.transform.localPosition = new Vector3(0.03f, 0.14f, -0.07f);
-        attaqueCollider = attaqueArme.GetComponentInChildren<BoxCollider>();
+        attaqueCollider = attaqueArme.GetComponent<BoxCollider>();
     }
 
     // Update is called once per frame
@@ -41,7 +41,7 @@ public class CombatMelee : MonoBehaviour
             attaqueCollider.enabled = true;
             tempsEntreAttaque = debutAttaque;
 
-            Invoke("desactiverColliderArme", 1.5f);
+            Invoke("desactiverColliderArme", 2f);
         }
 
     }

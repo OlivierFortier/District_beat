@@ -87,13 +87,12 @@ public class ControlleurEnnemi : MonoBehaviour
 
                 if (refDistance != null)
                 {//si le joueur est visible et assez près pour attaquer a distance, attaquer le joueur
-                    print("distance de loin");
+                    
                     if (joueurVisible && !joueurAttaquableMelee && joueurAttaquableDistance) AttaquerJoueurDistance(joueur.transform.position);
                 }
 
                 if (refMelee != null)
                 {  
-                    print("distance de proche");
                      //si le joueur est visible et assez près pour attaquer en mélée, attaquer le joueur
                     if (joueurVisible && joueurAttaquableMelee) AttaquerJoueurMelee(joueur.transform.position);
                 }

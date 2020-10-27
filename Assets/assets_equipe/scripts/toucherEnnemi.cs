@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class toucherEnnemi : MonoBehaviour
 {
-    public BoxCollider colliderArme;
+    //public BoxCollider colliderArme;
 
     public float dommagesArme;
 
@@ -30,6 +30,7 @@ public class toucherEnnemi : MonoBehaviour
             }
         }
         else {
+
             if (toucherEnnemi.gameObject.tag == "joueur")
             {
                 //modifie la variable directement
