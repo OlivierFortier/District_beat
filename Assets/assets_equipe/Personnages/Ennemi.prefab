@@ -156,6 +156,7 @@ GameObject:
   - component: {fileID: 2467599618069248535}
   - component: {fileID: 1330502447115832959}
   - component: {fileID: -4316061124871219271}
+  - component: {fileID: -4260924625498445636}
   m_Layer: 8
   m_Name: Ennemi
   m_TagString: ennemi
@@ -274,6 +275,21 @@ MonoBehaviour:
   animator: {fileID: 8022992634216368546}
   refAttaqueArme: {fileID: 8820125936034501892, guid: f91bc7a12ca1cc741bbe97d21c71747f, type: 3}
   mainQuiPrendArme: {fileID: 2238592246363207013}
+--- !u!114 &-4260924625498445636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782974319183076168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e435c150a47946b46826e02e115a8e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refHealthBar: {fileID: 0}
+  health: 20
+  startHealth: 20
 --- !u!1 &864968824561396666
 GameObject:
   m_ObjectHideFlags: 0

@@ -27,6 +27,7 @@ public class toucherEnnemi : MonoBehaviour
                 //tu apelle la fonction 
                 //toucherEnnemi.gameObject.GetComponent<statsVie>().perdreVie(dommagesArme);
                 print("ouch ayoye ennemi blessé");
+                toucherEnnemi.gameObject.GetComponent<healthBarController>().OnTakeDamage(dommagesArme);
             }
         }
         else {
@@ -39,6 +40,7 @@ public class toucherEnnemi : MonoBehaviour
                 //tu apelle la fonction 
                 //toucherEnnemi.gameObject.GetComponent<statsVie>().perdreVie(dommagesArme);
                 print("ouch ayoye joueur blessé");
+                toucherEnnemi.gameObject.GetComponent<healthBarController>().OnTakeDamage(dommagesArme);
             }
         }
 
