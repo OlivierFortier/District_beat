@@ -50,7 +50,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3055115735384318423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5715723, y: 0, z: 20.56}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2129171936885310736}
@@ -99,6 +99,7 @@ MonoBehaviour:
   vitesseDeBase: 10
   gravite: -20
   tempsTournerSmooth: 1
+  refMelee: {fileID: -7748874295776243528}
   typeTouches: 0
 --- !u!114 &3328577470237388329
 MonoBehaviour:
@@ -170,7 +171,7 @@ MonoBehaviour:
   tempsEntreAttaque: 0
   debutAttaque: 1
   animator: {fileID: 5759884187082044221}
-  refAttaqueArme: {fileID: 8820125936034501892, guid: 46976590de89cdc498f8f7119b346b48, type: 3}
+  refAttaqueArme: {fileID: 8820125936034501892, guid: 0f4165a7aafbd5a468c4e806a0c24e0d, type: 3}
   mainQuiPrendArme: {fileID: 4587284162558087162}
 --- !u!1 &4524091258392181681
 GameObject:

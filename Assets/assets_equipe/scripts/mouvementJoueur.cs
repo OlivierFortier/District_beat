@@ -51,6 +51,8 @@ public class mouvementJoueur : MonoBehaviour
     //référence à l'animator pour controller les animations du personnage
     private Animator animateur = null;
 
+    public CombatMelee refMelee;
+
 
     //détermine les types de touches/contrôles (2 pour l'instant)
     public enum enumTypeTouches
@@ -110,6 +112,12 @@ public class mouvementJoueur : MonoBehaviour
         if (timerDureeEsquive > 0)
         {
             timerDureeEsquive -= Time.deltaTime;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            refMelee.attaque();
+
         }
 
         Bouger();

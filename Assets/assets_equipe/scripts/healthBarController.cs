@@ -13,25 +13,28 @@ public class healthBarController : MonoBehaviour
 
     private void Start()
     {
-        //on instancie le prefab
-        instanceHealthBar = Instantiate(refHealthBar);
+        if (refHealthBar)
+        {//on instancie le prefab
+            instanceHealthBar = Instantiate(refHealthBar);
 
-        //on parente au canvas l'élément UI
-        instanceHealthBar.transform.SetParent(GameObject.Find("healthBar_Canvas").transform);
+            //on parente au canvas l'élément UI
+            instanceHealthBar.transform.SetParent(GameObject.Find("healthBar_Canvas").transform);
 
-        //on le positionne à la meme place que le fond
-        instanceHealthBar.GetComponent<RectTransform>().anchoredPosition =
-            GameObject.Find("healthBar_BG").GetComponent<RectTransform>().anchoredPosition
-        ;
+            //on le positionne à la meme place que le fond
+            instanceHealthBar.GetComponent<RectTransform>().anchoredPosition =
+                GameObject.Find("healthBar_BG").GetComponent<RectTransform>().anchoredPosition
+            ;
+        }
 
     }
 
-    public void OnTakeDamage(int damage)
+    public void OnTakeDamage(float damage)
     {
 
-
         health = health - damage;
-        instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
+
+        if (refHealthBar)
+        { instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth; }
     }
 
 }
