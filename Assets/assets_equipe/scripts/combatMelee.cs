@@ -38,12 +38,16 @@ public class CombatMelee : MonoBehaviour
         if (tempsEntreAttaque <= 0)
         {
             animator.SetTrigger("attaque");
-            attaqueCollider.enabled = true;
+            Invoke("activerColliderArme", 1f);
             tempsEntreAttaque = debutAttaque;
 
-            Invoke("desactiverColliderArme", 2f);
+            Invoke("desactiverColliderArme", 0.5f);
         }
 
+    }
+
+    void activerColliderArme() {
+        attaqueCollider.enabled = true;
     }
 
     void desactiverColliderArme() {

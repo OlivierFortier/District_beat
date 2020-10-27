@@ -2,10 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class healthBarController : MonoBehaviour
 {
     public GameObject refHealthBar;
+
+    public Animator animator;
 
     private GameObject instanceHealthBar;
     public float health;
@@ -18,7 +21,7 @@ public class healthBarController : MonoBehaviour
             instanceHealthBar = Instantiate(refHealthBar);
 
             //on parente au canvas l'élément UI
-            instanceHealthBar.transform.SetParent(GameObject.Find("healthBar_Canvas").transform);
+            instanceHealthBar.transform.SetParent(GameObject.Find("Canvas").transform);
 
             //on le positionne à la meme place que le fond
             instanceHealthBar.GetComponent<RectTransform>().anchoredPosition =
@@ -34,7 +37,45 @@ public class healthBarController : MonoBehaviour
         health = health - damage;
 
         if (refHealthBar)
-        { instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth; }
+        {
+            instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
+        }
+
+        //si le personnage est mort
+        if (health <= 0)
+        {
+            mortPersonnage();
+        }
+
+    }
+
+    public void mortPersonnage()
+    {
+
+        if (animator)
+        {
+            animator.SetTrigger("mort");
+        }
+
+        if (tag == "ennemi")
+        {
+            Invoke("detruirePersonnage", 2f);
+        }
+        else if (tag == "joueur")
+        {
+            Invoke("relancerPartie", 4f);
+        }
+
+    }
+
+    void detruirePersonnage()
+    {
+        Destroy(this.gameObject);
+    }
+
+    void relancerPartie()
+    {
+        SceneManager.LoadScene(1);
     }
 
 }

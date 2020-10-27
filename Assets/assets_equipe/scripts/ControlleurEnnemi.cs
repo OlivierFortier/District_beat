@@ -93,6 +93,7 @@ public class ControlleurEnnemi : MonoBehaviour
 
                 if (refMelee != null)
                 {  
+                    print(joueurAttaquableMelee);
                      //si le joueur est visible et assez près pour attaquer en mélée, attaquer le joueur
                     if (joueurVisible && joueurAttaquableMelee) AttaquerJoueurMelee(joueur.transform.position);
                 }
