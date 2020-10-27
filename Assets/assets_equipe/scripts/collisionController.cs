@@ -10,7 +10,7 @@ public class collisionController : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        if (ollision.gameObject.tag == "ennemi")
+        if (collision.gameObject.tag == "ennemi")
         {
             timesHit++;
         }
@@ -24,13 +24,14 @@ public class collisionController : MonoBehaviour
             {
                 healthBar.OnTakeDamage(10);
             }
-            //ex: si l'ennemi tire sur le joueur, le joueur meurt    
-        }
+        } //ex: si l'ennemi tire sur le joueur, le joueur meurt    
         else if (collision.gameObject.tag == "bullet")
         {
             if (healthBar)
             {
-                healthBar.OnTakeDamage(10);//CHANGE THIS ONE ... to die or something like that...
+                healthBar.OnDie(100);
+                //Die();
+
             }
         }
 
@@ -40,7 +41,7 @@ public class collisionController : MonoBehaviour
         {
             if (healthBar)
             {
-                healthBar.OnTakeMedicine(10);//looking for a function in order to increase the health bar
+                healthBar.OnTakeMedicine(10);
             }
         }
     }

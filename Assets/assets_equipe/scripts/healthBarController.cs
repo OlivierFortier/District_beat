@@ -26,15 +26,20 @@ public class healthBarController : MonoBehaviour
 
     public void OnTakeDamage(int damage)
     {
-        health = health - damage;//??? Damage
+        health = health - damage;
         instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
     }
 
 
-    public void OnTakeMedicine(int damage)//looking for a function in order to increase the health bar*****************
+    public void OnTakeMedicine(int medicament)
     {
-        health = health + damage;//??? Damage
+        health = health + medicament;
         instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
     }
 
+    public void OnDie(int die)
+    {
+        health = health - die;
+        instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
+    }
 }
