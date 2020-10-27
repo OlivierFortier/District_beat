@@ -11,7 +11,6 @@ public class collisionController : MonoBehaviour
 
         if (collision.gameObject.tag == "ennemi")
         {
-           
 
             if (healthBar)
             {

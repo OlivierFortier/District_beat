@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfacesSol: []
-  testAllo: 1
+  construireUnSeulNavMesh: 1
   solNav: {fileID: 467273228}
 --- !u!114 &467273228
 MonoBehaviour:
@@ -661,7 +661,7 @@ GameObject:
   - component: {fileID: 6594889434752215715}
   - component: {fileID: 6594889434752215712}
   m_Layer: 5
-  m_Name: healthBar_Canvas
+  m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
