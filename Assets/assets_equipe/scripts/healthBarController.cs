@@ -7,9 +7,7 @@ using UnityEngine.SceneManagement;
 public class healthBarController : MonoBehaviour
 {
     public GameObject refHealthBar;
-
     public Animator animator;
-
     private GameObject instanceHealthBar;
     public float health;
     public float startHealth;
@@ -25,26 +23,31 @@ public class healthBarController : MonoBehaviour
 
             //on le positionne à la meme place que le fond
             instanceHealthBar.GetComponent<RectTransform>().anchoredPosition =
-                GameObject.Find("healthBar_BG").GetComponent<RectTransform>().anchoredPosition
-            ;
+                GameObject.Find("healthBar_BG").GetComponent<RectTransform>().anchoredPosition;
+   
         }
 
     }
 
     public void OnTakeDamage(float damage)
     {
-
         health = health - damage;
-
-        if (refHealthBar)
-        {
-            instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
-        }
-
+        instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
+        
         //si le personnage est mort
         if (health <= 0)
         {
             mortPersonnage();
+        }
+    }
+
+    public void OnTakeMedicine(int medicament)
+    {
+        health = health + medicament;
+
+        if (refHealthBar)
+        {
+            instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
         }
 
     }

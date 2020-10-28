@@ -11,13 +11,14 @@ public class toucherEnnemi : MonoBehaviour
     private bool estUnJoueur;
 
 
+
     private void Start() {
         estUnJoueur = transform.parent.tag == "joueur";
     }
 
     private void OnCollisionEnter(Collision toucherEnnemi)
     {
-        if(estUnJoueur)
+        if (estUnJoueur)
         {
             if (toucherEnnemi.gameObject.tag == "ennemi")
             {
