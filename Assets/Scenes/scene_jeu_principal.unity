@@ -242,10 +242,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 467273227, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
-      propertyPath: construireUnSeulNavMesh
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 4408163460465134795, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: m_Name
       value: conteneur_scene

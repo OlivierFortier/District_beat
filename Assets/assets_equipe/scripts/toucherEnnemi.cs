@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class toucherEnnemi : MonoBehaviour
 {
-    public BoxCollider colliderArme;
+    //public BoxCollider colliderArme;
 
     public float dommagesArme;
 
     private bool estUnJoueur;
 
 
-    private void Start()
-    {
-        estUnJoueur = GetComponentInParent<GameObject>().tag == "joueur";
+
+    private void Start() {
+        estUnJoueur = transform.parent.tag == "joueur";
     }
 
     private void OnCollisionEnter(Collision toucherEnnemi)
@@ -27,11 +27,12 @@ public class toucherEnnemi : MonoBehaviour
 
                 //tu apelle la fonction 
                 //toucherEnnemi.gameObject.GetComponent<statsVie>().perdreVie(dommagesArme);
-                print("ouch ayoye");
+                print("ouch ayoye ennemi blessé");
+                toucherEnnemi.gameObject.GetComponent<healthBarController>().OnTakeDamage(dommagesArme);
             }
         }
-        else
-        {
+        else {
+
             if (toucherEnnemi.gameObject.tag == "joueur")
             {
                 //modifie la variable directement
@@ -39,7 +40,8 @@ public class toucherEnnemi : MonoBehaviour
 
                 //tu apelle la fonction 
                 //toucherEnnemi.gameObject.GetComponent<statsVie>().perdreVie(dommagesArme);
-                print("ouch ayoye");
+                print("ouch ayoye joueur blessé");
+                toucherEnnemi.gameObject.GetComponent<healthBarController>().OnTakeDamage(dommagesArme);
             }
         }
 

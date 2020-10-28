@@ -12,13 +12,18 @@ public class collisionController : MonoBehaviour
     {
         if (collision.gameObject.tag == "ennemi")
         {
+     
             timesHit++;
+            
+            
+            
         }
 
         //ex: Si le joueur est frapé TROIS fois par les ennemis, le joueur sera étourdi et il perds 10% de sa health bar
         if (collision.gameObject.tag == "ennemi" && timesHit <= 3)
         {
             timesHit = 0;
+
 
             if (healthBar)
             {

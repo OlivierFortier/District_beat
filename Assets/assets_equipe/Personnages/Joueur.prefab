@@ -31,7 +31,6 @@ GameObject:
   - component: {fileID: 1358466473624404222}
   - component: {fileID: 7786058271810915232}
   - component: {fileID: 3328577470237388329}
-  - component: {fileID: 7209822324256390756}
   - component: {fileID: 8872907344975232884}
   - component: {fileID: 5065288763668534917}
   - component: {fileID: -7748874295776243528}
@@ -50,7 +49,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3055115735384318423}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.5715723, y: 0, z: 20.56}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2129171936885310736}
@@ -99,6 +98,7 @@ MonoBehaviour:
   vitesseDeBase: 10
   gravite: -20
   tempsTournerSmooth: 1
+  refMelee: {fileID: -7748874295776243528}
   typeTouches: 0
 --- !u!114 &3328577470237388329
 MonoBehaviour:
@@ -113,19 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   vitesseJoueur: 50
---- !u!114 &7209822324256390756
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3055115735384318423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1829afeb3aee3214b897619010c05bb0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  healthBar: {fileID: 8872907344975232884}
 --- !u!114 &8872907344975232884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refHealthBar: {fileID: 1285309475961774753, guid: 6be4cd000f41bd34bbea4acf9112ee58, type: 3}
+  animator: {fileID: 0}
   health: 100
   startHealth: 100
 --- !u!136 &5065288763668534917
@@ -170,7 +158,7 @@ MonoBehaviour:
   tempsEntreAttaque: 0
   debutAttaque: 1
   animator: {fileID: 5759884187082044221}
-  refAttaqueArme: {fileID: 8820125936034501892, guid: 46976590de89cdc498f8f7119b346b48, type: 3}
+  refAttaqueArme: {fileID: 8820125936034501892, guid: 0f4165a7aafbd5a468c4e806a0c24e0d, type: 3}
   mainQuiPrendArme: {fileID: 4587284162558087162}
 --- !u!1 &4524091258392181681
 GameObject:

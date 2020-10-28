@@ -155,6 +155,8 @@ GameObject:
   - component: {fileID: 6220430026409163767}
   - component: {fileID: 2467599618069248535}
   - component: {fileID: 1330502447115832959}
+  - component: {fileID: -4316061124871219271}
+  - component: {fileID: -4260924625498445636}
   m_Layer: 8
   m_Name: Ennemi
   m_TagString: ennemi
@@ -170,7 +172,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 782974319183076168}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.367008, y: 0.0000019073486, z: 52.71473}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4410163082729848719}
@@ -192,7 +194,7 @@ NavMeshAgent:
   m_Acceleration: 8
   avoidancePriority: 50
   m_AngularSpeed: 120
-  m_StoppingDistance: 0
+  m_StoppingDistance: 2
   m_AutoTraverseOffMeshLink: 1
   m_AutoBraking: 1
   m_AutoRepath: 1
@@ -214,7 +216,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 126
   m_CollisionDetection: 0
 --- !u!136 &2467599618069248535
 CapsuleCollider:
@@ -254,8 +256,40 @@ MonoBehaviour:
   zoneVision: 30
   zoneAttaqueMelee: 5
   zoneAttaqueDistance: 15
-  refMelee: {fileID: 0}
+  refMelee: {fileID: -4316061124871219271}
   refDistance: {fileID: 0}
+--- !u!114 &-4316061124871219271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782974319183076168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 133855d556e92c642ab88265936ba8ab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tempsEntreAttaque: 0
+  debutAttaque: 5
+  animator: {fileID: 8022992634216368546}
+  refAttaqueArme: {fileID: 8820125936034501892, guid: f91bc7a12ca1cc741bbe97d21c71747f, type: 3}
+  mainQuiPrendArme: {fileID: 2238592246363207013}
+--- !u!114 &-4260924625498445636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782974319183076168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e435c150a47946b46826e02e115a8e09, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  refHealthBar: {fileID: 0}
+  health: 20
+  startHealth: 20
 --- !u!1 &864968824561396666
 GameObject:
   m_ObjectHideFlags: 0
