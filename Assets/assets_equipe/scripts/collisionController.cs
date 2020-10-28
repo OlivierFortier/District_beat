@@ -34,7 +34,7 @@ public class collisionController : MonoBehaviour
         {
             if (healthBar)
             {
-                healthBar.OnDie(100);
+                //healthBar.OnDie(100);
                 //Die();
 
             }
