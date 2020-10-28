@@ -24,7 +24,7 @@ public class healthBarController : MonoBehaviour
             //on le positionne à la meme place que le fond
             instanceHealthBar.GetComponent<RectTransform>().anchoredPosition =
                 GameObject.Find("healthBar_BG").GetComponent<RectTransform>().anchoredPosition;
-   
+
         }
 
     }
@@ -32,8 +32,12 @@ public class healthBarController : MonoBehaviour
     public void OnTakeDamage(float damage)
     {
         health = health - damage;
-        instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
-        
+
+        if (instanceHealthBar)
+        {
+            instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
+        }
+
         //si le personnage est mort
         if (health <= 0)
         {
@@ -45,7 +49,7 @@ public class healthBarController : MonoBehaviour
     {
         health = health + medicament;
 
-        if (refHealthBar)
+        if (instanceHealthBar)
         {
             instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
         }

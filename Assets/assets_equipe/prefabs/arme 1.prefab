@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 7153758007672669292}
   - component: {fileID: 4942671637829280629}
   - component: {fileID: 2593445963763189531}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: objet
   m_TagString: arme
   m_Icon: {fileID: 0}
@@ -93,7 +93,7 @@ GameObject:
   - component: {fileID: 6958810625088330419}
   - component: {fileID: 353017898841578262}
   - component: {fileID: 6810626404730506375}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: arme 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,7 +127,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a6a384da3d00a48964418a2b4694a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colliderArme: {fileID: 353017898841578262}
   dommagesArme: 10
 --- !u!65 &353017898841578262
 BoxCollider:
