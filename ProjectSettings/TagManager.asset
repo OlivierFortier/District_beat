@@ -7,6 +7,8 @@ TagManager:
   - ennemi
   - joueur
   - sol
+  - arme
+  - medicament
   layers:
   - Default
   - TransparentFX
