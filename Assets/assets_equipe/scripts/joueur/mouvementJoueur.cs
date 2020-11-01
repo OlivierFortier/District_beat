@@ -5,7 +5,7 @@ using UnityEngine;
 public class mouvementJoueur : MonoBehaviour
 {
     //vitesse de deplacement du joueur
-    private float laVitesse;
+    // private float laVitesse;
     //public statistiqueJoueur referenceStats;  
 
     //référence au controlleur de personnage jouables
@@ -73,7 +73,7 @@ public class mouvementJoueur : MonoBehaviour
     {
 
 
-        laVitesse = GetComponent<statistiqueJoueur>().vitesseJoueur;
+        // laVitesse = GetComponent<statistiqueJoueur>().vitesseJoueur;
         //laVitesse = referenceStats.vitesseJoueur;
 
 
