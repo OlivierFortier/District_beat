@@ -13,6 +13,7 @@ public class toucherEnnemi : MonoBehaviour
 
 
     private void Start() {
+        GetComponent<Collider>().enabled = false;
         estUnJoueur = transform.parent.tag == "joueur";
     }
 
