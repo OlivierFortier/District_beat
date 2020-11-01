@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Heureka.meta
 guid: baea58b45e062be41ac6113667f74b67
+=======
+guid: b9cabb85bca88f5469f62fc30b3f32af
+>>>>>>> a254e1a373a8d90c97872806fd06a16a24930f73:Assets/AllSkyFree.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}
