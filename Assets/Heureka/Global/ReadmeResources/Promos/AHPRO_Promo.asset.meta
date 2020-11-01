@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Heureka/Global/ReadmeResources/Promos/AHPRO_Promo.asset.meta
 guid: f88d9af7cb3174e489a3bde98792e30f
+=======
+guid: 5f7f5f4aad31e494da58427a71ff180b
+>>>>>>> a254e1a373a8d90c97872806fd06a16a24930f73:Assets/Heureka/Global/ReadmeResources/Promos/AFPRO_Promo.asset.meta
 NativeFormatImporter:
   externalObjects: {}
   mainObjectFileID: 0
