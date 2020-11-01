@@ -30,7 +30,6 @@ GameObject:
   - component: {fileID: 3820130673462506084}
   - component: {fileID: 1358466473624404222}
   - component: {fileID: 7786058271810915232}
-  - component: {fileID: 3328577470237388329}
   - component: {fileID: 8872907344975232884}
   - component: {fileID: 5065288763668534917}
   - component: {fileID: -7748874295776243528}
@@ -100,19 +99,6 @@ MonoBehaviour:
   tempsTournerSmooth: 1
   refMelee: {fileID: -7748874295776243528}
   typeTouches: 0
---- !u!114 &3328577470237388329
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3055115735384318423}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c328276a5cd0fbb459ea9bc661152e83, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  vitesseJoueur: 50
 --- !u!114 &8872907344975232884
 MonoBehaviour:
   m_ObjectHideFlags: 0
