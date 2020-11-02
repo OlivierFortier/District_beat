@@ -11,6 +11,7 @@ public class mainMenu : MonoBehaviour
     }
      public void Quitter()
     {     
+        // yeet
        Debug.Log("QUIT!");
        Application.Quit();
        
