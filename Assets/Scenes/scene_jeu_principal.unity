@@ -420,15 +420,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434485546596, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: m_Color.r
-      value: 0.19586878
+      value: 0.3066399
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434485546596, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: m_Color.g
-      value: 0.107912086
+      value: 0.1718138
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434485546596, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: m_Color.b
-      value: 0.23584908
+      value: 0.3679245
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434485546599, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: m_LocalRotation.x
