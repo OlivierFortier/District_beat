@@ -15,45 +15,46 @@ public class ItemLoot : MonoBehaviour
             switch (typeItem)
             {
                 case TypeItem.PackVie:
-                    PrendrePackVie();
+                    PrendrePackVie(entitee.gameObject);
                     break;
 
                 case TypeItem.Speed:
-                    PrendreSpeed();
+                    PrendreSpeed(entitee.gameObject);
                     break;
 
                 case TypeItem.Morphine:
-                    PrendreMorphine();
+                    PrendreMorphine(entitee.gameObject);
                     break;
 
                 case TypeItem.Neon:
-                    PrendreNeon();
+                    PrendreNeon(entitee.gameObject);
                     break;
 
                 default:
-                    PrendrePackVie();
+                    PrendrePackVie(entitee.gameObject);
                     break;
             }
 
         }
     }
 
-    private void PrendrePackVie()
+    private void PrendrePackVie(GameObject joueur)
+    {
+        var scriptVie = joueur.GetComponent<healthBarController>();
+        scriptVie.OnTakeMedicine(25);
+    }
+
+    private void PrendreSpeed(GameObject joueur)
     {
 
     }
 
-    private void PrendreSpeed()
+    private void PrendreMorphine(GameObject joueur)
     {
 
     }
 
-    private void PrendreMorphine()
-    {
-
-    }
-
-    private void PrendreNeon()
+    private void PrendreNeon(GameObject joueur)
     {
 
     }

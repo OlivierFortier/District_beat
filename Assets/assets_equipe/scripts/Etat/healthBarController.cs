@@ -47,7 +47,10 @@ public class healthBarController : MonoBehaviour
 
     public void OnTakeMedicine(int medicament)
     {
+        
         health = health + medicament;
+
+        if(health > startHealth) health = startHealth;
 
         if (instanceHealthBar)
         {
