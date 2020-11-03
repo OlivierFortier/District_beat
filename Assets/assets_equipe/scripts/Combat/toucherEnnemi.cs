@@ -24,14 +24,14 @@ public class toucherEnnemi : MonoBehaviour
         {
             if (toucherEnnemi.gameObject.tag == "ennemi")
             {
-                toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesArme);
+                toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
             }
         }
         else
         {
             if (toucherEnnemi.gameObject.tag == "joueur")
             {
-                toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesArme);
+                toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
             }
         }
     }

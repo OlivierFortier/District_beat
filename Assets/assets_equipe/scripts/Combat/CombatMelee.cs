@@ -10,7 +10,8 @@ public class CombatMelee : MonoBehaviour
     public float debutAttaque;
     public Animator animator;
     public GameObject refAttaqueArme;
-    private GameObject attaqueArme;
+
+    [HideInInspector] public GameObject attaqueArme;
     public GameObject mainQuiPrendArme;
 
     private BoxCollider attaqueCollider;
