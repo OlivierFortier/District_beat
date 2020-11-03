@@ -65,7 +65,8 @@ public class ItemLoot : MonoBehaviour
 
     private void PrendreNeon(GameObject joueur)
     {
-
+        var scriptArme = joueur.GetComponent<CombatMelee>().attaqueArme.GetComponent<toucherEnnemi>();
+        scriptArme.MultiplierDommages(valeurDuBoost, tempsDuBoost);
     }
 
 
