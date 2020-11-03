@@ -35,7 +35,7 @@ public class mouvementJoueur : MonoBehaviour
     public float vitesseDeBase = 10f;
 
     //référence à la vitesse actuellement expériencée par le personnage
-    private float vitesseActuelle;
+    public float vitesseActuelle;
 
     //variable pour controler la gravité du personnage. par défaut égale à la terre.
     public float gravite = -9.81f;
@@ -128,23 +128,14 @@ public class mouvementJoueur : MonoBehaviour
     /// </summary>
     private void Bouger()
     {
-        //si l'esquive est terminée, remettre la vitesse à normal
-        if (timerDureeEsquive <= 0)
-        {
-            vitesseActuelle = vitesseDeBase;
-        }
-
         //si on appuie sur la touche d'esquive
         if (Input.GetAxis(axeTouches[2]) >= 0.1f)
         {
-            //on effectue l'esquive en modifiant la vitesse du joueur pendant un court instant
-
             //si le cooldown de l'esquive est prêt
             if (timerEsquive <= 0)
             {
-                vitesseActuelle = Esquiver();
+                Esquiver(25f, 0.5f);
             }
-
         }
         //on prends la vitesse de base pour faire bouger le joueur
         float vitesse = vitesseActuelle;
@@ -157,9 +148,6 @@ public class mouvementJoueur : MonoBehaviour
         {
             velocite.y = -2f;
         }
-
-        //on pourrait utiliser le nouveau système de input , mais il faut s'y adapter car on ne peut pas mélanger celui-ci
-        //et le nouveau
 
         //on assigne les touches et on les détectes
         float horizontal = Input.GetAxis(axeTouches[0]);
@@ -174,7 +162,6 @@ public class mouvementJoueur : MonoBehaviour
         //si on détecte une touche
         if (direction.magnitude >= 0.1f)
         {
-
             //calculer l'angle pour tourner dans la bonne direction
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
 
@@ -188,7 +175,6 @@ public class mouvementJoueur : MonoBehaviour
 
 
         }
-
         //calculer la vélocité
         velocite.y += gravite * Time.deltaTime;
         //faire bouger 
@@ -200,25 +186,31 @@ public class mouvementJoueur : MonoBehaviour
     /// 
     /// Retourne la vitesse 
     /// </summary>
-    private float Esquiver()
+    private void Esquiver(float vitesseEsquive, float tempsEsquive)
     {
-
-        //augmenter la vitesse du joueur
-        float vitesseEsquive = 25f;
-
         //déclencher l'animation de dodge
         //TODO
 
-        //commencer le cooldown
+        //augmenter la vitesse du joueur
+        vitesseActuelle = vitesseEsquive;
+
+        //commencer le cooldown entre la prochaine esquive
         timerEsquive = delaiEsquive;
 
-        //commencer la durée de l'esquive
-        timerDureeEsquive = dureeEsquive;
-
-        //on retourne la vitesse d'esquive pour etre utilisée dans la méthode bouger
-        return vitesseEsquive;
+        Invoke("RemettreVitesseDeBase", tempsEsquive);
 
     }
-    //allo
+
+
+    public void AugmenterVitesseDeBase(float vitesse, float temps)
+    {
+        vitesseActuelle = vitesse;
+        Invoke("RemettreVitesseDeBase", temps);
+    }
+
+    public void RemettreVitesseDeBase()
+    {
+        vitesseActuelle = vitesseDeBase;
+    }
 
 }

@@ -46,7 +46,8 @@ public class ItemLoot : MonoBehaviour
 
     private void PrendreSpeed(GameObject joueur)
     {
-
+        var scriptVitesse = joueur.GetComponent<mouvementJoueur>();
+        scriptVitesse.AugmenterVitesseDeBase(15f, 5f);
     }
 
     private void PrendreMorphine(GameObject joueur)
