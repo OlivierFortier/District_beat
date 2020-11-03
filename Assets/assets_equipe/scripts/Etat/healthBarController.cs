@@ -6,60 +6,72 @@ using UnityEngine.SceneManagement;
 
 public class healthBarController : MonoBehaviour
 {
-    public GameObject refHealthBar;
+    public GameObject refBarreDeVie;
     public Animator animator;
-    private GameObject instanceHealthBar;
-    public float health;
-    public float startHealth;
+    private GameObject instanceBarreDeVie;
+    public float vie;
+    public float vieDebut;
+
+    public float resistanceBase = 1f;
+
+    public float resistanceActuelle;
 
     private void Start()
     {
-        if (refHealthBar)
+        resistanceActuelle = resistanceBase;
+
+        if (refBarreDeVie)
         {//on instancie le prefab
-            instanceHealthBar = Instantiate(refHealthBar);
+            instanceBarreDeVie = Instantiate(refBarreDeVie);
 
             //on parente au canvas l'élément UI
-            instanceHealthBar.transform.SetParent(GameObject.Find("Canvas").transform);
+            instanceBarreDeVie.transform.SetParent(GameObject.Find("Canvas").transform);
 
             //on le positionne à la meme place que le fond
-            instanceHealthBar.GetComponent<RectTransform>().anchoredPosition =
+            instanceBarreDeVie.GetComponent<RectTransform>().anchoredPosition =
                 GameObject.Find("healthBar_BG").GetComponent<RectTransform>().anchoredPosition;
-
         }
-
     }
 
-    public void OnTakeDamage(float damage)
+    public void PrendreDommages(float damage)
     {
-        health = health - damage;
+        vie = vie - (damage / resistanceActuelle);
 
-        if (instanceHealthBar)
+        if (instanceBarreDeVie)
         {
-            instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
+            instanceBarreDeVie.GetComponent<Image>().fillAmount = vie / vieDebut;
         }
 
         //si le personnage est mort
-        if (health <= 0)
+        if (vie <= 0)
         {
-            mortPersonnage();
+            MortPersonnage();
         }
     }
 
-    public void OnTakeMedicine(int medicament)
+    public void AugmenterResistance(float nouvelleResistance, float tempsBoost) {
+
+        resistanceBase += nouvelleResistance;
+        Invoke("RemettreResistanceNormale", tempsBoost);
+    }
+
+    public void RemettreResistanceNormale() {
+        resistanceActuelle = resistanceBase;
+    }
+
+    public void PrendreMedecine(int medicament)
     {
-        
-        health = health + medicament;
+        vie = vie + medicament;
 
-        if(health > startHealth) health = startHealth;
+        if(vie > vieDebut) vie = vieDebut;
 
-        if (instanceHealthBar)
+        if (instanceBarreDeVie)
         {
-            instanceHealthBar.GetComponent<Image>().fillAmount = health / startHealth;
+            instanceBarreDeVie.GetComponent<Image>().fillAmount = vie / vieDebut;
         }
-
     }
 
-    public void mortPersonnage()
+    public void MortPersonnage()
     {
 
         if (animator)
@@ -78,12 +90,12 @@ public class healthBarController : MonoBehaviour
 
     }
 
-    void detruirePersonnage()
+    void DetruirePersonnage()
     {
         Destroy(this.gameObject);
     }
 
-    void relancerPartie()
+    void RelancerPartie()
     {
         SceneManager.LoadScene(1);
     }
