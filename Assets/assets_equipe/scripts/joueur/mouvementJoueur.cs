@@ -204,7 +204,7 @@ public class mouvementJoueur : MonoBehaviour
 
     public void AugmenterVitesseDeBase(float vitesse, float temps)
     {
-        vitesseActuelle = vitesse;
+        vitesseActuelle += vitesse;
         Invoke("RemettreVitesseDeBase", temps);
     }
 

@@ -8,32 +8,39 @@ public class ItemLoot : MonoBehaviour
     public enum TypeItem { PackVie, Speed, Morphine, Neon }
     public TypeItem typeItem;
 
-    private void OnCollisionEnter(Collision entitee)
+    public float tempsDuBoost = 5f;
+
+    public int valeurDuBoost = 15f;
+
+    private void OnCollisionEnter(Collision collision)
     {
-        if (entitee.gameObject.CompareTag("joueur"))
+        if (collision.gameObject.CompareTag("joueur"))
         {
             switch (typeItem)
             {
                 case TypeItem.PackVie:
-                    PrendrePackVie(entitee.gameObject);
+                    PrendrePackVie(collision.gameObject);
                     break;
 
                 case TypeItem.Speed:
-                    PrendreSpeed(entitee.gameObject);
+                    PrendreSpeed(collision.gameObject);
                     break;
 
                 case TypeItem.Morphine:
-                    PrendreMorphine(entitee.gameObject);
+                    PrendreMorphine(collision.gameObject);
                     break;
 
                 case TypeItem.Neon:
-                    PrendreNeon(entitee.gameObject);
+                    PrendreNeon(collision.gameObject);
                     break;
 
                 default:
-                    PrendrePackVie(entitee.gameObject);
+                    PrendrePackVie(collision.gameObject);
                     break;
             }
+
+            //détruire l'objet après avoir interragi avec
+            Destroy(gameObject);
 
         }
     }
@@ -41,18 +48,19 @@ public class ItemLoot : MonoBehaviour
     private void PrendrePackVie(GameObject joueur)
     {
         var scriptVie = joueur.GetComponent<healthBarController>();
-        scriptVie.OnTakeMedicine(25);
+        scriptVie.PrendreMedecine(valeurDuBoost);
     }
 
     private void PrendreSpeed(GameObject joueur)
     {
         var scriptVitesse = joueur.GetComponent<mouvementJoueur>();
-        scriptVitesse.AugmenterVitesseDeBase(15f, 5f);
+        scriptVitesse.AugmenterVitesseDeBase(valeurDuBoost, tempsDuBoost);
     }
 
     private void PrendreMorphine(GameObject joueur)
     {
-
+        var scriptVie = joueur.GetComponent<healthBarController>();
+        scriptVie.AugmenterResistance(valeurDuBoost, tempsDuBoost);
     }
 
     private void PrendreNeon(GameObject joueur)
