@@ -8,9 +8,12 @@ public class toucherEnnemi : MonoBehaviour
 
     public float dommagesArme;
 
+    private float dommagesTotal;
+
     private bool estUnJoueur;
 
-    private void Start() {
+    private void Start()
+    {
         GetComponent<Collider>().enabled = false;
         estUnJoueur = transform.parent.tag == "joueur";
     }
@@ -24,14 +27,23 @@ public class toucherEnnemi : MonoBehaviour
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesArme);
             }
         }
-        else {
-
+        else
+        {
             if (toucherEnnemi.gameObject.tag == "joueur")
             {
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesArme);
             }
         }
-
     }
+
+    public void MultiplierDommages(float multiplicateur, float tempsDuBoost) {
+        dommagesTotal *= multiplicateur;
+        Invoke("ArreterMultiplicateurDommages", tempsDuBoost);
+    }
+
+    private void ArreterMultiplicateurDommages() {
+        dommagesTotal = dommagesArme;
+    }
+
 }
 
