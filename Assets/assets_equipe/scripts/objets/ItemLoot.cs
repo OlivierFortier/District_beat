@@ -10,7 +10,7 @@ public class ItemLoot : MonoBehaviour
 
     public float tempsDuBoost = 5f;
 
-    public int valeurDuBoost = 15f;
+    public int valeurDuBoost = 15;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -53,7 +53,7 @@ public class ItemLoot : MonoBehaviour
 
     private void PrendreSpeed(GameObject joueur)
     {
-        var scriptVitesse = joueur.GetComponent<mouvementJoueur>();
+        var scriptVitesse = joueur.GetComponent<ControlleurJoueur>();
         scriptVitesse.AugmenterVitesseDeBase(valeurDuBoost, tempsDuBoost);
     }
 
