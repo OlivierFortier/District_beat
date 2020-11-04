@@ -54,7 +54,7 @@ public class CombatDistance : MonoBehaviour
 
             rbProjectile.AddForce(transform.forward * 30, ForceMode.VelocityChange);
 
-            //activer le collider du projectile
+            //activer le collider du projectile ??? a continuer, ne fonctionne pas pour l'instant
            var coll = projectile.GetComponent<Collider>();
            coll.enabled = true;
             
