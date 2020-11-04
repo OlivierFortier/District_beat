@@ -6,6 +6,7 @@ using UnityEngine.Assertions.Must;
 
 public class CombatMelee : MonoBehaviour
 {
+    public bool estUnJoueur;
     public float tempsEntreAttaque;
     public float debutAttaque;
     public Animator animator;
@@ -19,6 +20,7 @@ public class CombatMelee : MonoBehaviour
     private void Start()
     {
         attaqueArme = Instantiate(refAttaqueArme, mainQuiPrendArme.transform);
+        attaqueArme.GetComponent<toucherEnnemi>().AssocierJoueurAuProjectile(estUnJoueur);
         attaqueArme.transform.localPosition = new Vector3(0.03f, 0.14f, -0.07f);
         attaqueCollider = attaqueArme.GetComponent<BoxCollider>();
     }

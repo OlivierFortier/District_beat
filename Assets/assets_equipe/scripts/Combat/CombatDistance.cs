@@ -6,6 +6,8 @@ using UnityEngine.Assertions.Must;
 
 public class CombatDistance : MonoBehaviour
 {
+
+    public bool estUnJoueur;
     public float tempsEntreAttaque;
     public float debutAttaque;
     public Animator animator;
@@ -13,6 +15,8 @@ public class CombatDistance : MonoBehaviour
 
     [HideInInspector] public GameObject attaqueArme;
     public GameObject mainQuiPrendArme;
+
+    public Vector3 projectilePostionDepart;
 
     private void Start()
     {
@@ -34,12 +38,26 @@ public class CombatDistance : MonoBehaviour
     {
         if (tempsEntreAttaque <= 0)
         {
-            animator.SetTrigger("attaque");
+            // animator.SetTrigger("attaque");
             tempsEntreAttaque = debutAttaque;
 
             //instancier le projectile (attaqueArme)
+            var projectile = Instantiate(attaqueArme, attaqueArme.transform.position, Quaternion.identity);
+
+            projectile.GetComponent<toucherEnnemi>().AssocierJoueurAuProjectile(estUnJoueur);
+            projectile.GetComponent<toucherEnnemi>().SetProjectile(true);
+
+            //donner une vitesse au projectile
+            var rbProjectile = projectile.GetComponent<Rigidbody>();
+
+            rbProjectile.constraints = RigidbodyConstraints.None;
+
+            rbProjectile.AddForce(transform.forward * 30, ForceMode.VelocityChange);
 
             //activer le collider du projectile
+           var coll = projectile.GetComponent<Collider>();
+           coll.enabled = true;
+            
 
             //détruire le projectile lorsqu'il touche un mur ou un ennemi
 

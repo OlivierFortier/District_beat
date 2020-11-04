@@ -12,10 +12,11 @@ public class toucherEnnemi : MonoBehaviour
 
     private bool estUnJoueur;
 
+    private bool estunProjectile;
+
     private void Start()
     {
         GetComponent<Collider>().enabled = false;
-        estUnJoueur = transform.parent.tag == "joueur";
     }
 
     private void OnCollisionEnter(Collision toucherEnnemi)
@@ -34,6 +35,9 @@ public class toucherEnnemi : MonoBehaviour
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
             }
         }
+
+        Destroy(gameObject);
+
     }
 
     public void MultiplierDommages(float multiplicateur, float tempsDuBoost) {
@@ -43,6 +47,14 @@ public class toucherEnnemi : MonoBehaviour
 
     private void ArreterMultiplicateurDommages() {
         dommagesTotal = dommagesArme;
+    }
+
+    public void AssocierJoueurAuProjectile(bool estUnJoueur) {
+        this.estUnJoueur = estUnJoueur;
+    }
+
+    public void SetProjectile(bool estunProjectile) {
+        this.estunProjectile = estunProjectile;
     }
 
 }

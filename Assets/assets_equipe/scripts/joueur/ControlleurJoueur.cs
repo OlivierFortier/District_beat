@@ -52,6 +52,7 @@ public class ControlleurJoueur : MonoBehaviour
     private Animator animateur = null;
 
     public CombatMelee refMelee;
+    public CombatDistance refDistance;
 
 
     //détermine les types de touches/contrôles (2 pour l'instant)
@@ -116,7 +117,8 @@ public class ControlleurJoueur : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            refMelee.attaque();
+            // refMelee.attaque();
+                refDistance.attaque();
 
         }
 
