@@ -8,13 +8,15 @@ public class toucherEnnemi : MonoBehaviour
 
     public float dommagesArme;
 
+    private float dommagesTotal;
+
     private bool estUnJoueur;
 
+    private bool estunProjectile;
 
-
-    private void Start() {
+    private void Start()
+    {
         GetComponent<Collider>().enabled = false;
-        estUnJoueur = transform.parent.tag == "joueur";
     }
 
     private void OnCollisionEnter(Collision toucherEnnemi)
@@ -23,29 +25,37 @@ public class toucherEnnemi : MonoBehaviour
         {
             if (toucherEnnemi.gameObject.tag == "ennemi")
             {
-                //modifie la variable directement
-                //toucherEnnemi.gameObject.GetComponent<statsVie>().ennemiVie -= dommagesArme;
-
-                //tu apelle la fonction 
-                //toucherEnnemi.gameObject.GetComponent<statsVie>().perdreVie(dommagesArme);
-                print("ouch ayoye ennemi blessé");
-                toucherEnnemi.gameObject.GetComponent<healthBarController>().OnTakeDamage(dommagesArme);
+                toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
             }
         }
-        else {
-
+        else
+        {
             if (toucherEnnemi.gameObject.tag == "joueur")
             {
-                //modifie la variable directement
-                //toucherEnnemi.gameObject.GetComponent<statsVie>().ennemiVie -= dommagesArme;
-
-                //tu apelle la fonction 
-                //toucherEnnemi.gameObject.GetComponent<statsVie>().perdreVie(dommagesArme);
-                print("ouch ayoye joueur blessé");
-                toucherEnnemi.gameObject.GetComponent<healthBarController>().OnTakeDamage(dommagesArme);
+                toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
             }
         }
 
+        Destroy(gameObject);
+
     }
+
+    public void MultiplierDommages(float multiplicateur, float tempsDuBoost) {
+        dommagesTotal *= multiplicateur;
+        Invoke("ArreterMultiplicateurDommages", tempsDuBoost);
+    }
+
+    private void ArreterMultiplicateurDommages() {
+        dommagesTotal = dommagesArme;
+    }
+
+    public void AssocierJoueurAuProjectile(bool estUnJoueur) {
+        this.estUnJoueur = estUnJoueur;
+    }
+
+    public void SetProjectile(bool estunProjectile) {
+        this.estunProjectile = estunProjectile;
+    }
+
 }
 
