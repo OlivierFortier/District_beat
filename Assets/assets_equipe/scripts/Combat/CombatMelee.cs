@@ -23,6 +23,7 @@ public class CombatMelee : MonoBehaviour
         attaqueArme.GetComponent<toucherEnnemi>().AssocierJoueurAuProjectile(estUnJoueur);
         attaqueArme.transform.localPosition = new Vector3(0.03f, 0.14f, -0.07f);
         attaqueCollider = attaqueArme.GetComponent<BoxCollider>();
+        attaqueCollider.enabled = false;
     }
 
     // Update is called once per frame
@@ -44,13 +45,14 @@ public class CombatMelee : MonoBehaviour
             Invoke("activerColliderArme", 1f);
             tempsEntreAttaque = debutAttaque;
 
-            Invoke("desactiverColliderArme", 0.5f);
+            
         }
 
     }
 
     void activerColliderArme() {
         attaqueCollider.enabled = true;
+        Invoke("desactiverColliderArme", 1f);
     }
 
     void desactiverColliderArme() {

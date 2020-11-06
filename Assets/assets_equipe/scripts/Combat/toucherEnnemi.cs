@@ -20,35 +20,30 @@ public class toucherEnnemi : MonoBehaviour
 
     private void Start()
     {
-
+        
         dommagesTotal = dommagesArme;
 
         GetComponent<Collider>().enabled = false;
-         
 
-        if (estUnJoueur)
-        {//Physics.IgnoreCollision(myParent.GetComponent<Collider>(), GetComponent<Collider>());
-            // Physics.IgnoreLayerCollision(9, 12, true);
 
-        }
-       
-       if (estunProjectile) ActiverCollider();
+
+        if (estunProjectile) Invoke("ActiverCollider", 0.15f);
     }
 
     private void OnCollisionEnter(Collision toucherEnnemi)
     {
         if (estUnJoueur)
         {
-            
+
             if (toucherEnnemi.gameObject.tag == "ennemi")
             {
-               
+
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
             }
         }
         else
         {
-            
+
             if (toucherEnnemi.gameObject.tag == "joueur")
             {
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);

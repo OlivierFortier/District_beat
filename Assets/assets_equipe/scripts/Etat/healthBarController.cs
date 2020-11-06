@@ -38,8 +38,7 @@ public class healthBarController : MonoBehaviour
 
     public void PrendreDommages(float damage)
     {
-        print("allo");
-        print(damage);
+
         vie = vie - (damage / resistanceActuelle);
 
         if (instanceBarreDeVie)
