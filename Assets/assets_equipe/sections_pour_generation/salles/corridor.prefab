@@ -238,6 +238,7 @@ MonoBehaviour:
   - corridor
   CreatesTags:
   - salle
+  - fin
   Exits: {fileID: 1907414613374226095}
   Bounds: {fileID: 1907414612812599549}
   DeadEndChance: 1

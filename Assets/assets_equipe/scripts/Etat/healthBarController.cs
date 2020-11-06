@@ -9,6 +9,7 @@ public class healthBarController : MonoBehaviour
     public GameObject refBarreDeVie;
     public Animator animator;
     private GameObject instanceBarreDeVie;
+    public GameObject fondBarreVie;
     public float vie;
     public float vieDebut;
 
@@ -20,6 +21,8 @@ public class healthBarController : MonoBehaviour
     {
         resistanceActuelle = resistanceBase;
 
+        vie = vieDebut;
+
         if (refBarreDeVie)
         {//on instancie le prefab
             instanceBarreDeVie = Instantiate(refBarreDeVie);
@@ -29,12 +32,13 @@ public class healthBarController : MonoBehaviour
 
             //on le positionne à la meme place que le fond
             instanceBarreDeVie.GetComponent<RectTransform>().anchoredPosition =
-                GameObject.Find("healthBar_BG").GetComponent<RectTransform>().anchoredPosition;
+                fondBarreVie.GetComponent<RectTransform>().anchoredPosition;
         }
     }
 
     public void PrendreDommages(float damage)
     {
+
         vie = vie - (damage / resistanceActuelle);
 
         if (instanceBarreDeVie)
@@ -49,13 +53,15 @@ public class healthBarController : MonoBehaviour
         }
     }
 
-    public void AugmenterResistance(float nouvelleResistance, float tempsBoost) {
+    public void AugmenterResistance(float nouvelleResistance, float tempsBoost)
+    {
 
         resistanceBase += nouvelleResistance;
         Invoke("RemettreResistanceNormale", tempsBoost);
     }
 
-    public void RemettreResistanceNormale() {
+    public void RemettreResistanceNormale()
+    {
         resistanceActuelle = resistanceBase;
     }
 
@@ -63,7 +69,7 @@ public class healthBarController : MonoBehaviour
     {
         vie = vie + medicament;
 
-        if(vie > vieDebut) vie = vieDebut;
+        if (vie > vieDebut) vie = vieDebut;
 
         if (instanceBarreDeVie)
         {
@@ -81,11 +87,11 @@ public class healthBarController : MonoBehaviour
 
         if (tag == "ennemi")
         {
-            Invoke("detruirePersonnage", 2f);
+            Invoke("DetruirePersonnage", 2f);
         }
         else if (tag == "joueur")
         {
-            Invoke("relancerPartie", 4f);
+            Invoke("RelancerPartie", 4f);
         }
 
     }
@@ -97,7 +103,7 @@ public class healthBarController : MonoBehaviour
 
     void RelancerPartie()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("fin_jeu");
     }
 
 }

@@ -7,7 +7,7 @@ using UnityEngine.Assertions.Must;
 public class CombatDistance : MonoBehaviour
 {
 
-    public bool estUnJoueur;
+    public bool estUnJoueur = false;
     public float tempsEntreAttaque;
     public float debutAttaque;
     public Animator animator;
@@ -21,6 +21,8 @@ public class CombatDistance : MonoBehaviour
     private void Start()
     {
         attaqueArme = Instantiate(refAttaqueArme, mainQuiPrendArme.transform);
+        // attaqueArme.GetComponent<toucherEnnemi>().SetProjectile(true);
+        attaqueArme.GetComponent<toucherEnnemi>().AssocierJoueurAuProjectile(estUnJoueur);
         attaqueArme.transform.localPosition = new Vector3(0.03f, 0.14f, -0.07f);
     }
 
