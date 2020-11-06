@@ -292,7 +292,7 @@ MonoBehaviour:
   refBarreDeVie: {fileID: 0}
   animator: {fileID: 0}
   fondBarreVie: {fileID: 0}
-  vie: 25
+  vie: 0
   vieDebut: 25
   resistanceBase: 1
   resistanceActuelle: 0

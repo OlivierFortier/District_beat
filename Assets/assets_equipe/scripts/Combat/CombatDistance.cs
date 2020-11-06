@@ -7,7 +7,7 @@ using UnityEngine.Assertions.Must;
 public class CombatDistance : MonoBehaviour
 {
 
-    public bool estUnJoueur;
+    public bool estUnJoueur = false;
     public float tempsEntreAttaque;
     public float debutAttaque;
     public Animator animator;

@@ -10,7 +10,7 @@ public class toucherEnnemi : MonoBehaviour
 
     private float dommagesTotal;
 
-    private bool estUnJoueur;
+    private bool estUnJoueur = false;
 
     private bool estunProjectile = false;
 
@@ -20,32 +20,35 @@ public class toucherEnnemi : MonoBehaviour
 
     private void Start()
     {
+
+        dommagesTotal = dommagesArme;
+
         GetComponent<Collider>().enabled = false;
-         if (estunProjectile) ActiverCollider();
+         
 
         if (estUnJoueur)
         {//Physics.IgnoreCollision(myParent.GetComponent<Collider>(), GetComponent<Collider>());
             Physics.IgnoreLayerCollision(9, 12, true);
 
         }
-        else
-        {
-            Physics.IgnoreLayerCollision(11, 12, true);
-        }
        
+       if (estunProjectile) ActiverCollider();
     }
 
     private void OnCollisionEnter(Collision toucherEnnemi)
     {
         if (estUnJoueur)
         {
+            
             if (toucherEnnemi.gameObject.tag == "ennemi")
             {
+               
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
             }
         }
         else
         {
+            
             if (toucherEnnemi.gameObject.tag == "joueur")
             {
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
@@ -67,14 +70,14 @@ public class toucherEnnemi : MonoBehaviour
         dommagesTotal = dommagesArme;
     }
 
-    public void AssocierJoueurAuProjectile(bool estUnJoueur)
+    public void AssocierJoueurAuProjectile(bool vraiFaux)
     {
-        this.estUnJoueur = estUnJoueur;
+        estUnJoueur = vraiFaux;
     }
 
-    public void SetProjectile(bool estunProjectile)
+    public void SetProjectile(bool vraiFaux)
     {
-        this.estunProjectile = estunProjectile;
+        estunProjectile = vraiFaux;
     }
 
     public void ActiverCollider() { GetComponent<Collider>().enabled = true; }

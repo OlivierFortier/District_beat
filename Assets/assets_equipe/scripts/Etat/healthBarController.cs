@@ -21,6 +21,8 @@ public class healthBarController : MonoBehaviour
     {
         resistanceActuelle = resistanceBase;
 
+        vie = vieDebut;
+
         if (refBarreDeVie)
         {//on instancie le prefab
             instanceBarreDeVie = Instantiate(refBarreDeVie);
@@ -36,6 +38,8 @@ public class healthBarController : MonoBehaviour
 
     public void PrendreDommages(float damage)
     {
+        print("allo");
+        print(damage);
         vie = vie - (damage / resistanceActuelle);
 
         if (instanceBarreDeVie)
@@ -84,7 +88,7 @@ public class healthBarController : MonoBehaviour
 
         if (tag == "ennemi")
         {
-            Invoke("detruirePersonnage", 2f);
+            Invoke("DetruirePersonnage", 2f);
         }
         else if (tag == "joueur")
         {
