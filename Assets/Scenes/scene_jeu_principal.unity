@@ -913,6 +913,30 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: Sections.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: Sections.Array.data[4]
+      value: 
+      objectReference: {fileID: 5729161760670399905, guid: 3c40b9992717c764898efff003fecddb, type: 3}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[1].Tag
+      value: fin
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[1].MinAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[1].MaxAmount
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6594889434752215717, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: m_RootOrder
       value: 2

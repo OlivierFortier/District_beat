@@ -103,7 +103,7 @@ public class healthBarController : MonoBehaviour
 
     void RelancerPartie()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene("fin_jeu");
     }
 
 }
