@@ -28,7 +28,7 @@ public class toucherEnnemi : MonoBehaviour
 
         if (estUnJoueur)
         {//Physics.IgnoreCollision(myParent.GetComponent<Collider>(), GetComponent<Collider>());
-            Physics.IgnoreLayerCollision(9, 12, true);
+            // Physics.IgnoreLayerCollision(9, 12, true);
 
         }
        

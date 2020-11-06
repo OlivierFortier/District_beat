@@ -92,7 +92,7 @@ public class healthBarController : MonoBehaviour
         }
         else if (tag == "joueur")
         {
-            Invoke("relancerPartie", 4f);
+            Invoke("RelancerPartie", 4f);
         }
 
     }
