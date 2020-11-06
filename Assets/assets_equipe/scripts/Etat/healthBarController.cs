@@ -9,6 +9,7 @@ public class healthBarController : MonoBehaviour
     public GameObject refBarreDeVie;
     public Animator animator;
     private GameObject instanceBarreDeVie;
+    public GameObject fondBarreVie;
     public float vie;
     public float vieDebut;
 
@@ -29,7 +30,7 @@ public class healthBarController : MonoBehaviour
 
             //on le positionne à la meme place que le fond
             instanceBarreDeVie.GetComponent<RectTransform>().anchoredPosition =
-                GameObject.Find("healthBar_BG").GetComponent<RectTransform>().anchoredPosition;
+                fondBarreVie.GetComponent<RectTransform>().anchoredPosition;
         }
     }
 

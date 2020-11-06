@@ -114,8 +114,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e435c150a47946b46826e02e115a8e09, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  refBarreDeVie: {fileID: 3120963436269683979, guid: 4b4e8b1b8a56c7b4d827f2912b2444e5, type: 3}
+  refBarreDeVie: {fileID: 357213430911057535, guid: a2faca9ae819abb4d95122b11670415e, type: 3}
   animator: {fileID: 0}
+  fondBarreVie: {fileID: 3120963436269683979, guid: 4b4e8b1b8a56c7b4d827f2912b2444e5, type: 3}
   vie: 100
   vieDebut: 100
   resistanceBase: 1
@@ -146,7 +147,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 133855d556e92c642ab88265936ba8ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  estUnJoueur: 0
+  estUnJoueur: 1
   tempsEntreAttaque: 0
   debutAttaque: 1
   animator: {fileID: 5759884187082044221}
@@ -165,7 +166,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 23caf99dc6ca6ac45b351aadd32fdbd1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  estUnJoueur: 0
+  estUnJoueur: 1
   tempsEntreAttaque: 0
   debutAttaque: 1
   animator: {fileID: 0}

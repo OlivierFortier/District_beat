@@ -12,11 +12,27 @@ public class toucherEnnemi : MonoBehaviour
 
     private bool estUnJoueur;
 
-    private bool estunProjectile;
+    private bool estunProjectile = false;
+
+    public int lay1;
+
+    public int lay2;
 
     private void Start()
     {
         GetComponent<Collider>().enabled = false;
+         if (estunProjectile) ActiverCollider();
+
+        if (estUnJoueur)
+        {//Physics.IgnoreCollision(myParent.GetComponent<Collider>(), GetComponent<Collider>());
+            Physics.IgnoreLayerCollision(9, 12, true);
+
+        }
+        else
+        {
+            Physics.IgnoreLayerCollision(11, 12, true);
+        }
+       
     }
 
     private void OnCollisionEnter(Collision toucherEnnemi)
@@ -36,26 +52,32 @@ public class toucherEnnemi : MonoBehaviour
             }
         }
 
-        Destroy(gameObject);
+        if (estunProjectile) Destroy(gameObject);
 
     }
 
-    public void MultiplierDommages(float multiplicateur, float tempsDuBoost) {
+    public void MultiplierDommages(float multiplicateur, float tempsDuBoost)
+    {
         dommagesTotal *= multiplicateur;
         Invoke("ArreterMultiplicateurDommages", tempsDuBoost);
     }
 
-    private void ArreterMultiplicateurDommages() {
+    private void ArreterMultiplicateurDommages()
+    {
         dommagesTotal = dommagesArme;
     }
 
-    public void AssocierJoueurAuProjectile(bool estUnJoueur) {
+    public void AssocierJoueurAuProjectile(bool estUnJoueur)
+    {
         this.estUnJoueur = estUnJoueur;
     }
 
-    public void SetProjectile(bool estunProjectile) {
+    public void SetProjectile(bool estunProjectile)
+    {
         this.estunProjectile = estunProjectile;
     }
+
+    public void ActiverCollider() { GetComponent<Collider>().enabled = true; }
 
 }
 
