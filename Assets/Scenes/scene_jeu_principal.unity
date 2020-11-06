@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 509947040}
-  m_IndirectSpecularColor: {r: 0.015395615, g: 0.009356134, b: 0.014377055, a: 1}
+  m_IndirectSpecularColor: {r: 0.015380738, g: 0.009355774, b: 0.014399035, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -209,7 +209,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &365104020
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,6 +320,10 @@ PrefabInstance:
     - target: {fileID: 3616172547790130713, guid: fe01130e741315d4f9019f7b4ac81cda, type: 3}
       propertyPath: m_Name
       value: healthBar2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616172547790130713, guid: fe01130e741315d4f9019f7b4ac81cda, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5397929698903611761, guid: fe01130e741315d4f9019f7b4ac81cda, type: 3}
       propertyPath: m_LocalPosition.x
@@ -689,7 +693,7 @@ RectTransform:
   m_Children:
   - {fileID: 1098062008}
   m_Father: {fileID: 6594889434931805418}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
@@ -864,6 +868,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: healthBar3
       objectReference: {fileID: 0}
+    - target: {fileID: 3616172547790130713, guid: fe01130e741315d4f9019f7b4ac81cda, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5397929698903611761, guid: fe01130e741315d4f9019f7b4ac81cda, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -996,6 +1004,10 @@ PrefabInstance:
     - target: {fileID: 3616172547790130713, guid: fe01130e741315d4f9019f7b4ac81cda, type: 3}
       propertyPath: m_Name
       value: healthBar4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616172547790130713, guid: fe01130e741315d4f9019f7b4ac81cda, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5397929698903611761, guid: fe01130e741315d4f9019f7b4ac81cda, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1195,6 +1207,10 @@ PrefabInstance:
     - target: {fileID: 3616172547790130713, guid: fe01130e741315d4f9019f7b4ac81cda, type: 3}
       propertyPath: m_Name
       value: healthBar1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3616172547790130713, guid: fe01130e741315d4f9019f7b4ac81cda, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5397929698903611761, guid: fe01130e741315d4f9019f7b4ac81cda, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1440,6 +1456,10 @@ PrefabInstance:
     - target: {fileID: 6594889434752215717, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: m_RootOrder
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7589517524623992693, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6594889434485546597, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}

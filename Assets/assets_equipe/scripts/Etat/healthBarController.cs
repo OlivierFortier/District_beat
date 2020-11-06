@@ -49,13 +49,15 @@ public class healthBarController : MonoBehaviour
         }
     }
 
-    public void AugmenterResistance(float nouvelleResistance, float tempsBoost) {
+    public void AugmenterResistance(float nouvelleResistance, float tempsBoost)
+    {
 
         resistanceBase += nouvelleResistance;
         Invoke("RemettreResistanceNormale", tempsBoost);
     }
 
-    public void RemettreResistanceNormale() {
+    public void RemettreResistanceNormale()
+    {
         resistanceActuelle = resistanceBase;
     }
 
@@ -63,7 +65,7 @@ public class healthBarController : MonoBehaviour
     {
         vie = vie + medicament;
 
-        if(vie > vieDebut) vie = vieDebut;
+        if (vie > vieDebut) vie = vieDebut;
 
         if (instanceBarreDeVie)
         {
