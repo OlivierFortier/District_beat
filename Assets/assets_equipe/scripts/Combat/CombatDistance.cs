@@ -40,7 +40,7 @@ public class CombatDistance : MonoBehaviour
     {
         if (tempsEntreAttaque <= 0)
         {
-            // animator.SetTrigger("attaque");
+            animator.SetTrigger("lance");
             tempsEntreAttaque = debutAttaque;
 
             //instancier le projectile (attaqueArme)
