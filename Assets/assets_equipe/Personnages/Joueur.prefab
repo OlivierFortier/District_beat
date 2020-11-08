@@ -169,7 +169,7 @@ MonoBehaviour:
   estUnJoueur: 1
   tempsEntreAttaque: 0
   debutAttaque: 1
-  animator: {fileID: 0}
+  animator: {fileID: 5759884187082044221}
   refAttaqueArme: {fileID: 8820125936034501892, guid: ca08e1cc4b3e400438c5517b47376c93, type: 3}
   attaqueArme: {fileID: 0}
   mainQuiPrendArme: {fileID: 4587284162558087162}
