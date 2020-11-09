@@ -418,8 +418,7 @@ MonoBehaviour:
   - tout
   - tier-6
   CreatesTags:
-  - salle
-  - sallePreFin
+  - fin
   Exits: {fileID: 7083568155134401038}
   Bounds: {fileID: 6519770840157388209}
   DeadEndChance: 1
