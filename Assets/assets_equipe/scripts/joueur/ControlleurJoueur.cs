@@ -117,8 +117,10 @@ public class ControlleurJoueur : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            // refMelee.attaque();
-                refDistance.attaque();
+
+            if (refMelee.enabled) refMelee.attaque();
+            
+            if (refDistance.enabled) refDistance.attaque();
 
         }
 
