@@ -548,6 +548,7 @@ MonoBehaviour:
   - salle-t3
   CreatesTags:
   - corridor-t3
+  - corridor-alt-t3
   Exits: {fileID: 5729161760489568831}
   Bounds: {fileID: 5729161759787929990}
   DeadEndChance: 0

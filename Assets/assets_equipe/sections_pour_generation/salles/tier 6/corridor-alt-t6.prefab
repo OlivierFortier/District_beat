@@ -416,7 +416,7 @@ MonoBehaviour:
   Tags:
   - corridor-alt-t6
   CreatesTags:
-  - fin
+  - quartier-fin
   Exits: {fileID: 7083568155134401038}
   Bounds: {fileID: 6519770840157388209}
   DeadEndChance: 0

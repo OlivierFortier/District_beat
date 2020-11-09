@@ -219,6 +219,7 @@ MonoBehaviour:
   - salle-t5
   CreatesTags:
   - corridor-t5
+  - corridor-alt-t5
   Exits: {fileID: 2145533538578452975}
   Bounds: {fileID: 2145533537990701311}
   DeadEndChance: 0
