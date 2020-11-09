@@ -422,7 +422,7 @@ MonoBehaviour:
   - tier-6
   Exits: {fileID: 7083568155134401038}
   Bounds: {fileID: 6519770840157388209}
-  DeadEndChance: 1
+  DeadEndChance: 0
 --- !u!1001 &1867210021549412751
 PrefabInstance:
   m_ObjectHideFlags: 0

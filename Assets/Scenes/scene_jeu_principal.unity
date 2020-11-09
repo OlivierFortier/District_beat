@@ -915,11 +915,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: Sections.Array.size
-      value: 28
+      value: 26
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.size
-      value: 10
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: Sections.Array.data[4]
@@ -1104,7 +1104,7 @@ PrefabInstance:
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: Sections.Array.data[25]
       value: 
-      objectReference: {fileID: 1907414613787263441, guid: 560d8c0ee69740d4da4eb9b53d6adb68, type: 3}
+      objectReference: {fileID: 5729161760670399905, guid: 3c40b9992717c764898efff003fecddb, type: 3}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: Sections.Array.data[26]
       value: 
@@ -1127,27 +1127,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[7].Tag
-      value: sallePreFin
+      value: corridor-t6
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[7].MinAmount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[7].MaxAmount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[8].Tag
-      value: corridorFin
+      value: fin
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[8].MinAmount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[8].MaxAmount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[9].Tag

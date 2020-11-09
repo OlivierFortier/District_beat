@@ -553,7 +553,7 @@ MonoBehaviour:
   - tier-6
   Exits: {fileID: 5729161760489568831}
   Bounds: {fileID: 5729161759787929990}
-  DeadEndChance: 5
+  DeadEndChance: 0
 --- !u!1 &5729161760964069654
 GameObject:
   m_ObjectHideFlags: 0

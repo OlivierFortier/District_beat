@@ -224,7 +224,7 @@ MonoBehaviour:
   - tier-3
   Exits: {fileID: 2145533538578452975}
   Bounds: {fileID: 2145533537990701311}
-  DeadEndChance: 5
+  DeadEndChance: 0
 --- !u!1 &2145533538499394580
 GameObject:
   m_ObjectHideFlags: 0
