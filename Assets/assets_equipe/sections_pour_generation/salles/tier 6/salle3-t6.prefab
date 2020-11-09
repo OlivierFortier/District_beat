@@ -216,12 +216,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tags:
-  - salle
-  - tout
-  - tier-6
+  - salle-t6
   CreatesTags:
-  - corridor
-  - tier-6
+  - corridor-t6
   Exits: {fileID: 2145533538578452975}
   Bounds: {fileID: 2145533537990701311}
   DeadEndChance: 0

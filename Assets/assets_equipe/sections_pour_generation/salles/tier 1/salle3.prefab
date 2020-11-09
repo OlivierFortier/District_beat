@@ -216,12 +216,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tags:
-  - salle
-  - tout
-  - tier-1
+  - salle-t1
   CreatesTags:
-  - corridor
-  - tier-1
+  - corridor-t1
+  - corridor-alt-t1
   Exits: {fileID: 2145533538578452975}
   Bounds: {fileID: 2145533537990701311}
   DeadEndChance: 0

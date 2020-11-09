@@ -236,12 +236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tags:
-  - corridor
-  - tout
-  - tier-4
+  - corridor-t4
   CreatesTags:
-  - salle
-  - tier-4
+  - salle-t4
   Exits: {fileID: 1907414613374226095}
   Bounds: {fileID: 1907414612812599549}
   DeadEndChance: 0

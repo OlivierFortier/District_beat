@@ -414,10 +414,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Tags:
-  - corridor
-  - tout
-  - tier-6
-  - corridor-t6
+  - corridor-alt-t6
   CreatesTags:
   - fin
   Exits: {fileID: 7083568155134401038}

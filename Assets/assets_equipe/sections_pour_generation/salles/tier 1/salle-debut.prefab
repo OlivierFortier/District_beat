@@ -810,8 +810,7 @@ MonoBehaviour:
   Tags:
   - debut
   CreatesTags:
-  - corridor
-  - tier-1
+  - corridor-t1
   Exits: {fileID: 7586812051692033481}
   Bounds: {fileID: 7586812051051702281}
   DeadEndChance: 0
