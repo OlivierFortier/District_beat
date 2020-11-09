@@ -38,8 +38,8 @@ ModelImporter:
       name: lancer
       takeName: mixamo.com
       internalID: 0
-      firstFrame: 59
-      lastFrame: 179
+      firstFrame: 91
+      lastFrame: 167
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
@@ -117,7 +117,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1
+    globalScale: 100
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

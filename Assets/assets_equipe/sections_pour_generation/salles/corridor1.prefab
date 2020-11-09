@@ -181,7 +181,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &7592602889436491616
@@ -416,10 +416,11 @@ MonoBehaviour:
   Tags:
   - corridor
   CreatesTags:
+  - salle
   - corridor
   Exits: {fileID: 7083568155134401038}
   Bounds: {fileID: 6519770840157388209}
-  DeadEndChance: 50
+  DeadEndChance: 0
 --- !u!1001 &1867210021549412751
 PrefabInstance:
   m_ObjectHideFlags: 0
