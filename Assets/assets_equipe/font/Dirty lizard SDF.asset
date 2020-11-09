@@ -68,9 +68,9 @@ Material:
     - _OutlineWidth: 0
     - _PerspectiveFilter: 0.875
     - _Reflectivity: 10
-    - _ScaleRatioA: 1
-    - _ScaleRatioB: 1
-    - _ScaleRatioC: 1
+    - _ScaleRatioA: 0.8333333
+    - _ScaleRatioB: 0.6770833
+    - _ScaleRatioC: 0.6770833
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -115,9 +115,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71c1514a6bd24e1e882cebbe1904ce04, type: 3}
   m_Name: Dirty lizard SDF
   m_EditorClassIdentifier: 
-  hashCode: 0
+  hashCode: -1250520213
   material: {fileID: -1241414456973384292}
-  materialHashCode: 0
+  materialHashCode: -1099294741
   m_Version: 1.1.0
   m_SourceFontFileGUID: 03f0012a7d5d1f54bb173bcbb4d22e35
   m_SourceFontFile_EditorRef: {fileID: 12800000, guid: 03f0012a7d5d1f54bb173bcbb4d22e35, type: 3}
