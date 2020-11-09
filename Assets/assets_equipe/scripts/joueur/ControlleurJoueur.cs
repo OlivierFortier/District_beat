@@ -192,7 +192,7 @@ public class ControlleurJoueur : MonoBehaviour
     {
         //déclencher l'animation de dodge
         //TODO
-
+        animateur.SetTrigger("roulade");
         //augmenter la vitesse du joueur
         vitesseActuelle = vitesseEsquive;
 
