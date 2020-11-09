@@ -919,7 +919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.size
-      value: 8
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: DeadEnds.Array.size
@@ -931,7 +931,7 @@ PrefabInstance:
       objectReference: {fileID: 2145533538333776033, guid: 330b215b5ea3318438073212d7c73335, type: 3}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[1].Tag
-      value: corridor-alt-t1
+      value: quartier-fin
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[1].MinAmount
@@ -975,11 +975,11 @@ PrefabInstance:
       objectReference: {fileID: 1907414613787263441, guid: 047d02dc76aa1ca4e9f45ea46527795e, type: 3}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: MaxAllowedOrder
-      value: 20
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: MaxLevelSize
-      value: 50
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: Sections.Array.data[7]
@@ -1027,7 +1027,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[0].Tag
-      value: debut
+      value: corridor-alt-t6
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[0].MinAmount
@@ -1143,7 +1143,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[8].Tag
-      value: fin
+      value: salle-t6
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[8].MinAmount
@@ -1155,7 +1155,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[9].Tag
-      value: fin
+      value: salle-t1
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[9].MinAmount
@@ -1163,6 +1163,58 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
       propertyPath: SpecialRules.Array.data[9].MaxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: DeadEnds.Array.data[0]
+      value: 
+      objectReference: {fileID: 9094586954509250278, guid: 7240fdae0316a4a40b4bd7b59f343c75, type: 3}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[10].Tag
+      value: salle-t2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[10].MinAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[10].MaxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[11].Tag
+      value: salle-t3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[11].MinAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[11].MaxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[12].Tag
+      value: salle-t4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[12].MinAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[12].MaxAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[13].Tag
+      value: salle-t5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[13].MinAmount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6594889434618930119, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
+      propertyPath: SpecialRules.Array.data[13].MaxAmount
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6594889434752215717, guid: 705380120ce1dd241b2228c1134c1d9c, type: 3}
