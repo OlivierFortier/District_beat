@@ -194,7 +194,7 @@ GameObject:
   - component: {fileID: 1907414613787263442}
   - component: {fileID: 1907414613787263441}
   m_Layer: 8
-  m_Name: corridor
+  m_Name: corridor-t2
   m_TagString: sol
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -237,8 +237,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tags:
   - corridor
+  - tout
+  - tier-2
   CreatesTags:
   - salle
+  - tier-2
   Exits: {fileID: 1907414613374226095}
   Bounds: {fileID: 1907414612812599549}
   DeadEndChance: 1

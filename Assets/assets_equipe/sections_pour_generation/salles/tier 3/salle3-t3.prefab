@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 2145533538333776032}
   - component: {fileID: 2145533538333776033}
   m_Layer: 8
-  m_Name: salle3
+  m_Name: salle3-t3
   m_TagString: sol
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -217,11 +217,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tags:
   - salle
+  - tout
+  - tier-3
   CreatesTags:
   - corridor
+  - tier-3
   Exits: {fileID: 2145533538578452975}
   Bounds: {fileID: 2145533537990701311}
-  DeadEndChance: 20
+  DeadEndChance: 5
 --- !u!1 &2145533538499394580
 GameObject:
   m_ObjectHideFlags: 0

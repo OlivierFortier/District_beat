@@ -488,7 +488,7 @@ GameObject:
   - component: {fileID: 5729161760670399904}
   - component: {fileID: 5729161760670399905}
   m_Layer: 8
-  m_Name: salle
+  m_Name: salle-t5
   m_TagString: sol
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -546,11 +546,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tags:
   - salle
+  - tout
+  - tier-5
   CreatesTags:
   - corridor
+  - tier-5
   Exits: {fileID: 5729161760489568831}
   Bounds: {fileID: 5729161759787929990}
-  DeadEndChance: 20
+  DeadEndChance: 5
 --- !u!1 &5729161760964069654
 GameObject:
   m_ObjectHideFlags: 0

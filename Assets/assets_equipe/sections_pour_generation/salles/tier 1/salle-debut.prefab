@@ -809,8 +809,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Tags:
   - debut
+  - tout
+  - tier-1
   CreatesTags:
   - corridor
+  - tier-1
   Exits: {fileID: 7586812051692033481}
   Bounds: {fileID: 7586812051051702281}
   DeadEndChance: 0
