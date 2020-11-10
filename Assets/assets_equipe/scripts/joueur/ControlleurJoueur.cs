@@ -2,11 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Olivier Fortier
+// script de controle de base du joueur. Mouvement, boutons pour effectuer des actions, esquive, etc
 public class ControlleurJoueur : MonoBehaviour
 {
-    //vitesse de deplacement du joueur
-    // private float laVitesse;
-    //public statistiqueJoueur referenceStats;  
 
     //référence au controlleur de personnage jouables
     public CharacterController controller;
@@ -51,7 +50,9 @@ public class ControlleurJoueur : MonoBehaviour
     //référence à l'animator pour controller les animations du personnage
     private Animator animateur = null;
 
+    // référence au systeme de combat melee
     public CombatMelee refMelee;
+    // référence au systeme de combat distance
     public CombatDistance refDistance;
 
 
@@ -72,12 +73,7 @@ public class ControlleurJoueur : MonoBehaviour
     //aller chercher le composant animator du personnage au départ.
     void Start()
     {
-
-
-        // laVitesse = GetComponent<statistiqueJoueur>().vitesseJoueur;
-        //laVitesse = referenceStats.vitesseJoueur;
-
-
+        // activer l'animator si on en possède un
         if (GetComponentInChildren<Animator>() != null) animateur = GetComponentInChildren<Animator>();
 
 
@@ -97,6 +93,7 @@ public class ControlleurJoueur : MonoBehaviour
                 break;
         }
 
+        // configuration de la vitesse de base
         vitesseActuelle = vitesseDeBase;
 
     }
@@ -109,21 +106,23 @@ public class ControlleurJoueur : MonoBehaviour
             timerEsquive -= Time.deltaTime;
         }
 
-        //faire écouler le temps
+        //faire écouler le temps pour la durée d'une esquive
         if (timerDureeEsquive > 0)
         {
             timerDureeEsquive -= Time.deltaTime;
         }
 
+        // bouton pour attaquer
         if (Input.GetKeyDown(KeyCode.Space))
         {
-
-            if (refMelee.enabled) refMelee.attaque();
+            // selon si le systeme de distance ou de mélée est activée, attaque de cette facon
+            if (refMelee.enabled) refMelee.Attaque();
             
-            if (refDistance.enabled) refDistance.attaque();
+            if (refDistance.enabled) refDistance.Attaque();
 
         }
 
+        // gestion de mouvement du personage
         Bouger();
     }
 
@@ -192,8 +191,8 @@ public class ControlleurJoueur : MonoBehaviour
     /// </summary>
     private void Esquiver(float vitesseEsquive, float tempsEsquive)
     {
-        //déclencher l'animation de dodge
-        //TODO
+
+        // déclenche l'animation d'esquive
         animateur.SetTrigger("roulade");
         //augmenter la vitesse du joueur
         vitesseActuelle = vitesseEsquive;

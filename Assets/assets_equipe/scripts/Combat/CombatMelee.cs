@@ -4,21 +4,29 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Assertions.Must;
 
+// Bernard Dwyer
+// script qui permet a une entité d'attaquer au corps a corps
 public class CombatMelee : MonoBehaviour
 {
+    // booléen pour savoir si c'est un joueur qui tient l'arme
     public bool estUnJoueur;
     public float tempsEntreAttaque;
     public float debutAttaque;
     public Animator animator;
+    // référence au prefab de l'arme avec laquelle l'entité est équipée
     public GameObject refAttaqueArme;
 
+// l'instance de l'arme invoquée par le prefab
     [HideInInspector] public GameObject attaqueArme;
+    // référence au gameobject de la main qui tiens l'arme
     public GameObject mainQuiPrendArme;
 
+    // référence au collider de l'arme
     private BoxCollider attaqueCollider;
 
     private void Start()
     {
+        // instanciation et configuration de l'arme (position dans la main, désactiver le collider ,etc)
         attaqueArme = Instantiate(refAttaqueArme, mainQuiPrendArme.transform);
         attaqueArme.GetComponent<toucherEnnemi>().AssocierJoueurAuProjectile(estUnJoueur);
         attaqueArme.transform.localPosition = new Vector3(0.03f, 0.14f, -0.07f);
@@ -26,9 +34,10 @@ public class CombatMelee : MonoBehaviour
         attaqueCollider.enabled = false;
     }
 
-    // Update is called once per frame
+
     void Update()
     {
+        // gestion du délai entre les attaques
         if (tempsEntreAttaque > 0)
         {
             tempsEntreAttaque -= Time.deltaTime;
@@ -37,12 +46,14 @@ public class CombatMelee : MonoBehaviour
 
     }
 
-    public void attaque()
+    public void Attaque()
     {
+        // si on peut attaquer
         if (tempsEntreAttaque <= 0)
         {
+            // attaquer
             animator.SetTrigger("attaque");
-            Invoke("activerColliderArme", 1f);
+            Invoke("ActiverColliderArme", 1f);
             tempsEntreAttaque = debutAttaque;
 
             
@@ -50,12 +61,13 @@ public class CombatMelee : MonoBehaviour
 
     }
 
-    void activerColliderArme() {
+// actique le collider de l'arme pendant l'animation d'attaque
+    void ActiverColliderArme() {
         attaqueCollider.enabled = true;
-        Invoke("desactiverColliderArme", 1f);
+        Invoke("DesactiverColliderArme", 1f);
     }
 
-    void desactiverColliderArme() {
+    void DesactiverColliderArme() {
         attaqueCollider.enabled = false;
     }
 }

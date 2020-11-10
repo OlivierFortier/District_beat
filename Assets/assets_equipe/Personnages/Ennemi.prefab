@@ -1739,6 +1739,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Barre_vie
       objectReference: {fileID: 0}
+    - target: {fileID: 5520309944067449435, guid: fdb8a27925531c3439fdd281af717351, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9078793266385362797, guid: fdb8a27925531c3439fdd281af717351, type: 3}
       propertyPath: m_FillOrigin
       value: 0

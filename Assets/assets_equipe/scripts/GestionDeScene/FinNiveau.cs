@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// Olivier Fortier
+// gestion de la section de fin. Si le joueur entre dans cette section , la partie se termine
 public class FinNiveau : MonoBehaviour
 {
     

@@ -4,11 +4,16 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
+// Alejandra Damaris Miranda Reyes & Olivier Fortier
+// script qui gère le fonctionnement des barres de vie des entitées
 public class healthBarController : MonoBehaviour
 {
+    // référence au prefab UI de barre de vie
     public GameObject refBarreDeVie;
     public Animator animator;
+    // référence à l'instance invoquée du prefab de barre de vie
     private GameObject instanceBarreDeVie;
+    // référence au UI de fond de barre de vie
     public GameObject fondBarreVie;
     public float vie;
     public float vieDebut;
@@ -23,6 +28,7 @@ public class healthBarController : MonoBehaviour
 
         vie = vieDebut;
 
+// si l'entitée possède un UI de barre de vie statique
         if (refBarreDeVie)
         {//on instancie le prefab
             instanceBarreDeVie = Instantiate(refBarreDeVie);
@@ -36,11 +42,14 @@ public class healthBarController : MonoBehaviour
         }
     }
 
+// méthode qui permet à l'entitée de prendre des dommages et d'etre blessé
     public void PrendreDommages(float damage)
     {
 
+        // la vie est calculée selon les résistances
         vie = vie - (damage / resistanceActuelle);
 
+// si il y a un UI, mettre à jour le UI
         if (instanceBarreDeVie)
         {
             instanceBarreDeVie.GetComponent<Image>().fillAmount = vie / vieDebut;
@@ -52,6 +61,7 @@ public class healthBarController : MonoBehaviour
             MortPersonnage();
         }
     }
+
 
     public void AugmenterResistance(float nouvelleResistance, float tempsBoost)
     {
@@ -65,6 +75,7 @@ public class healthBarController : MonoBehaviour
         resistanceActuelle = resistanceBase;
     }
 
+// méthode qui permet de reprendre de la vie
     public void PrendreMedecine(int medicament)
     {
         vie = vie + medicament;
@@ -77,6 +88,7 @@ public class healthBarController : MonoBehaviour
         }
     }
 
+// gestio nde la mort de l'entitée
     public void MortPersonnage()
     {
 
@@ -85,10 +97,12 @@ public class healthBarController : MonoBehaviour
             animator.SetTrigger("mort");
         }
 
+        // si c'est un ennemi, le détruire
         if (tag == "ennemi")
         {
             Invoke("DetruirePersonnage", 2f);
         }
+        // si c'est un joueur, terminer la partie
         else if (tag == "joueur")
         {
             Invoke("RelancerPartie", 4f);
