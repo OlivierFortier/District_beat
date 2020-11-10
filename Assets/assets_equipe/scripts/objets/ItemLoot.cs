@@ -2,20 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Olivier Fortier
+// script de gestion des items ramassables dans le jeu (médecine, speed, neon, morphine)
 public class ItemLoot : MonoBehaviour
 {
 
+    // type des items de loot
     public enum TypeItem { PackVie, Speed, Morphine, Neon }
     public TypeItem typeItem;
 
+    // temps de durée du boost de l'item
     public float tempsDuBoost = 5f;
 
+    // valeur qui augmente une certaine statistique
     public int valeurDuBoost = 15;
 
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("joueur"))
         {
+            // gestion différente selon le type sélectionné de l'item dans l'inspecteur unity
             switch (typeItem)
             {
                 case TypeItem.PackVie:

@@ -149,7 +149,7 @@ public class ControlleurEnnemi : MonoBehaviour
         agent.SetDestination(transform.position);
 
         //intégrer le script d'attaque ici 
-        refMelee.attaque();
+        refMelee.Attaque();
     }
 
     //a modifier pour relier avec le systeme de combat a distance
@@ -158,7 +158,7 @@ public class ControlleurEnnemi : MonoBehaviour
         agent.SetDestination(transform.position);
 
         //intégrer le script d'attaque ici 
-        refMelee.attaque();
+        refMelee.Attaque();
 
     }
 

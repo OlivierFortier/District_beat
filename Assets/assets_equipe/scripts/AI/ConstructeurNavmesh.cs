@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+// Olivier Fortier
+// script qui permet de générer dynamiquement le navmesh avec les niveaux procédural
 public class ConstructeurNavmesh : MonoBehaviour
 {
 

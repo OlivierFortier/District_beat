@@ -2,27 +2,33 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Olivier Fortier
+// gestion de vie flottante UI des ennemis
 public class VieFlottante : MonoBehaviour
 {
 
 
-    public Transform lookAt;
+// ou le UI doit etre placé
+    public Transform cible;
 
-    public Vector3 offset;
+// offset de déplacement si nécéssaire
+    public Vector3 deplacement;
 
     private Camera cam;
 
-    // Start is called before the first frame update
+   
     void Start()
     {
         cam = Camera.main;
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        Vector3 pos = cam.WorldToScreenPoint(lookAt.position + offset);
+        // trouver la position de la cible (ennemi)
+        Vector3 pos = cam.WorldToScreenPoint(cible.position + deplacement);
 
+    // mettre à jour la position du UI à la positio nde la cible
         if(transform.position != pos)
             transform.position = pos;
     }

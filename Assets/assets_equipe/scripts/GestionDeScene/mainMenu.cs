@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
+// Bernard Dwyer
+// script de gestion des boutons du menu principal
 public class mainMenu : MonoBehaviour
 {
     public void Jouer()
