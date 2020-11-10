@@ -17,7 +17,7 @@ GameObject:
   m_TagString: sol
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 104
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &4488394342223791309
 Transform:
@@ -106,12 +106,12 @@ GameObject:
   m_Component:
   - component: {fileID: 2304373126132385716}
   - component: {fileID: 9116500827362162062}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &2304373126132385716
 Transform:
@@ -198,12 +198,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3072966751020926026}
   - component: {fileID: 1873508915170262963}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Exits
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &3072966751020926026
 Transform:
@@ -243,12 +243,12 @@ GameObject:
   - component: {fileID: 4353164603078136705}
   - component: {fileID: 7814747933725515054}
   - component: {fileID: 1627476750454683379}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &8992822327515921324
 Transform:
@@ -338,12 +338,12 @@ GameObject:
   m_Component:
   - component: {fileID: 1368246729457350884}
   - component: {fileID: 835483757397871987}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1368246729457350884
 Transform:
@@ -430,12 +430,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5729161759787929985}
   - component: {fileID: 5729161759787929990}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Bounds
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 104
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5729161759787929985
 Transform:
@@ -474,12 +474,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5729161759831082406}
   - component: {fileID: 5729161759831082401}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Box 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 104
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5729161759831082406
 Transform:
@@ -518,12 +518,12 @@ GameObject:
   m_Component:
   - component: {fileID: 5729161760670399904}
   - component: {fileID: 5729161760670399905}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: QuartierFin
   m_TagString: sol
   m_Icon: {fileID: 8418204508859773708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 104
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5729161760670399904
 Transform:
@@ -590,12 +590,12 @@ GameObject:
   - component: {fileID: 2946415362425301406}
   - component: {fileID: 5065570025412818940}
   - component: {fileID: 5468706865385975504}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7619031431263706553
 Transform:
@@ -686,12 +686,12 @@ GameObject:
   - component: {fileID: 7608488960404630682}
   - component: {fileID: 7493504928854352195}
   - component: {fileID: 6449641714327776415}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Collider_Fin_Niveau
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7608488960404630682
 Transform:
@@ -742,12 +742,12 @@ GameObject:
   m_Component:
   - component: {fileID: 7383338588617629484}
   - component: {fileID: 92990759356860462}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7383338588617629484
 Transform:
@@ -834,6 +834,10 @@ PrefabInstance:
     - target: {fileID: 176465215707318053, guid: 2557362e4e8bcfe4486030fd8a78182a, type: 3}
       propertyPath: m_Name
       value: House_01 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 176465215707318053, guid: 2557362e4e8bcfe4486030fd8a78182a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1420943568377158471, guid: 2557362e4e8bcfe4486030fd8a78182a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1015,6 +1019,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: containers 2
       objectReference: {fileID: 0}
+    - target: {fileID: 5942398096143548103, guid: 15e47636dce37fa4892c5368acf59b9c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15e47636dce37fa4892c5368acf59b9c, type: 3}
 --- !u!4 &846747807273494150 stripped
@@ -1032,6 +1040,10 @@ PrefabInstance:
     - target: {fileID: 2010102323321453278, guid: 80a0304f8a4d6b744b51aea2f654ac21, type: 3}
       propertyPath: m_Name
       value: bin_02
+      objectReference: {fileID: 0}
+    - target: {fileID: 2010102323321453278, guid: 80a0304f8a4d6b744b51aea2f654ac21, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3296081534931814605, guid: 80a0304f8a4d6b744b51aea2f654ac21, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1168,6 +1180,10 @@ PrefabInstance:
     - target: {fileID: 176465215707318053, guid: 2557362e4e8bcfe4486030fd8a78182a, type: 3}
       propertyPath: m_Name
       value: House_01 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 176465215707318053, guid: 2557362e4e8bcfe4486030fd8a78182a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1420943568377158471, guid: 2557362e4e8bcfe4486030fd8a78182a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1351,7 +1367,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5724477704788342385, guid: 732048b20b51ea54d98bd032376133ba, type: 3}
       propertyPath: m_Layer
-      value: 8
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5724477704788342385, guid: 732048b20b51ea54d98bd032376133ba, type: 3}
       propertyPath: m_IsActive
@@ -1359,7 +1375,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5724477704788342385, guid: 732048b20b51ea54d98bd032376133ba, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 104
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 732048b20b51ea54d98bd032376133ba, type: 3}
@@ -1378,6 +1394,10 @@ PrefabInstance:
     - target: {fileID: 176465215707318053, guid: 2557362e4e8bcfe4486030fd8a78182a, type: 3}
       propertyPath: m_Name
       value: House_01 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 176465215707318053, guid: 2557362e4e8bcfe4486030fd8a78182a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1420943568377158471, guid: 2557362e4e8bcfe4486030fd8a78182a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1497,6 +1517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: containers 2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5942398096143548103, guid: 15e47636dce37fa4892c5368acf59b9c, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 15e47636dce37fa4892c5368acf59b9c, type: 3}
 --- !u!4 &6631372545943868423 stripped
@@ -1514,6 +1538,10 @@ PrefabInstance:
     - target: {fileID: 176465215707318053, guid: 2557362e4e8bcfe4486030fd8a78182a, type: 3}
       propertyPath: m_Name
       value: House_01 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 176465215707318053, guid: 2557362e4e8bcfe4486030fd8a78182a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1420943568377158471, guid: 2557362e4e8bcfe4486030fd8a78182a, type: 3}
       propertyPath: m_LocalPosition.x

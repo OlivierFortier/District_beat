@@ -27,7 +27,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &7650131921452591041
 Transform:
@@ -54,6 +54,10 @@ PrefabInstance:
     - target: {fileID: 1030316947490377187, guid: 3452e800e85575341a6e56bc843fa4c6, type: 3}
       propertyPath: m_Name
       value: road_barrier_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 1030316947490377187, guid: 3452e800e85575341a6e56bc843fa4c6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 4041754264461934576, guid: 3452e800e85575341a6e56bc843fa4c6, type: 3}
       propertyPath: m_LocalPosition.x

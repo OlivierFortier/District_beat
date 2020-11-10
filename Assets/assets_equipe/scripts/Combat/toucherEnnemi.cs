@@ -14,10 +14,6 @@ public class toucherEnnemi : MonoBehaviour
 
     private bool estunProjectile = false;
 
-    public int lay1;
-
-    public int lay2;
-
     private void Start()
     {
         

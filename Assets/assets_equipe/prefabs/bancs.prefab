@@ -40,7 +40,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &5587515604375871132
 Transform:
@@ -139,6 +139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bench_02 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 9060606649543865368, guid: 58718a685a6b731499e38cda96d7d2e8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58718a685a6b731499e38cda96d7d2e8, type: 3}
 --- !u!1 &8232702222114643359 stripped
@@ -218,6 +222,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: bench_02
       objectReference: {fileID: 0}
+    - target: {fileID: 9060606649543865368, guid: 58718a685a6b731499e38cda96d7d2e8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58718a685a6b731499e38cda96d7d2e8, type: 3}
 --- !u!1 &1561991272074168559 stripped
@@ -296,6 +304,10 @@ PrefabInstance:
     - target: {fileID: 9060606649543865368, guid: 58718a685a6b731499e38cda96d7d2e8, type: 3}
       propertyPath: m_Name
       value: bench_02 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 9060606649543865368, guid: 58718a685a6b731499e38cda96d7d2e8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58718a685a6b731499e38cda96d7d2e8, type: 3}
