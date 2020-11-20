@@ -100,6 +100,8 @@ public class healthBarController : MonoBehaviour
         // si c'est un ennemi, le détruire
         if (tag == "ennemi")
         {
+            // dropper du loot
+            Invoke("RelacherButin", 0.5f);
             Invoke("DetruirePersonnage", 2f);
         }
         // si c'est un joueur, terminer la partie
@@ -118,6 +120,10 @@ public class healthBarController : MonoBehaviour
     void RelancerPartie()
     {
         SceneManager.LoadScene("fin_jeu");
+    }
+
+    void RelacherButin() {
+        
     }
 
 }
