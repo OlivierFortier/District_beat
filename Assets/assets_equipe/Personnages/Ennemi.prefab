@@ -1547,8 +1547,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4b53451a94d4f384783efd401df0f262, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lookAt: {fileID: 2127580558341097919}
-  offset: {x: 0, y: 0, z: 0}
+  cible: {fileID: 2127580558341097919}
+  deplacement: {x: 0, y: 0, z: 0}
 --- !u!1 &8040179089385270511
 GameObject:
   m_ObjectHideFlags: 0
