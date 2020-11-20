@@ -1,8 +1,5 @@
 using System;
-using System.Collections.Generic;
-using UnityEditor;
 using UnityEngine;
-using UnityObject = UnityEngine.Object;
 
 
  [Serializable]
@@ -10,4 +7,4 @@ using UnityObject = UnityEngine.Object;
      [SerializeField] public TypeCle objet;
     [SerializeField] public TypeValeur valeur;
  }
- }
+ 

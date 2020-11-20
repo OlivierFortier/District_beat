@@ -5,7 +5,7 @@ using UnityEngine;
 public class TableButin : MonoBehaviour
 {
     
-    public DictionnairePerso<GameObject, float> tableButin = new DictionnairePerso<GameObject, float>();
+    public List<DictionnairePerso<GameObject, float>> tableButin = new List<DictionnairePerso<GameObject, float>>();
 
 
     void Start()
