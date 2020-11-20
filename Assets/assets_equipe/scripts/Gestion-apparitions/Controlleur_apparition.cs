@@ -4,19 +4,43 @@ using UnityEngine;
 
 public class Controlleur_apparition : MonoBehaviour
 {
-    private List<GameObject> pointsApparition;
+    // liste des points d'apparitions possibles. Ce sont les enfants de ce gameobject (capsules jaunes)
+    List<GameObject> listePointsApparition = new List<GameObject>();
+
+    // Liste des objets prefab qu'on veut instancier aléatoirement
+    public List<GameObject> listeObjetsAInstancier = new List<GameObject>();
     
     void Start()
     {
-        foreach (var point in transform)
+        // remplir la liste des points
+        foreach (Transform point in transform)
         {
-            print(point);
+            listePointsApparition.Add(point.gameObject);
+            // enlever le renderer des points d'apparitions
+            point.gameObject.GetComponent<Renderer>().enabled = false;
         }
+
     }
 
-    // Update is called once per frame
+   
     void Update()
     {
+        // tant qu'il reste des prefabs à instancier, on exécute la fonction pour les instancier
+        while (listeObjetsAInstancier.Count > 0)
+        {
+            InstancierObjet();
+        }
         
+    }
+
+// Méthode pour instancier un prefab sur un point parmis la liste des points
+    void InstancierObjet() {
+        //obtention d'une position parmis les points placés
+        GameObject positionParmisLesPoints = listePointsApparition.ObtenirEtEnlever<GameObject>(Random.Range(0, listePointsApparition.Count));
+        //obtention d'un objet aléatoire parmis la liste donnée dans unity
+        GameObject prefabAleatoire = listeObjetsAInstancier.ObtenirEtEnlever<GameObject>(Random.Range(0, listePointsApparition.Count));
+
+        //instancier l'objet a la position du point obtenu
+        Instantiate(prefabAleatoire, positionParmisLesPoints.transform.position, Quaternion.identity);
     }
 }
