@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class Controlleur_apparition : MonoBehaviour
 {
@@ -17,7 +18,7 @@ public class Controlleur_apparition : MonoBehaviour
         {
             listePointsApparition.Add(point.gameObject);
             // enlever le renderer des points d'apparitions
-            point.gameObject.GetComponent<Renderer>().enabled = false;
+            point.gameObject.GetComponentInChildren<Renderer>().enabled = false;
         }
 
     }
@@ -38,7 +39,7 @@ public class Controlleur_apparition : MonoBehaviour
         //obtention d'une position parmis les points placés
         GameObject positionParmisLesPoints = listePointsApparition.ObtenirEtEnlever<GameObject>(Random.Range(0, listePointsApparition.Count - 1));
         //obtention d'un objet aléatoire parmis la liste donnée dans unity
-        GameObject prefabAleatoire = listeObjetsAInstancier.ObtenirEtEnlever<GameObject>(Random.Range(0, listePointsApparition.Count - 1));
+        GameObject prefabAleatoire = listeObjetsAInstancier.ObtenirEtEnlever<GameObject>(Random.Range(0, listeObjetsAInstancier.Count - 1));
 
         //instancier l'objet a la position du point obtenu
         Instantiate(prefabAleatoire, positionParmisLesPoints.transform.position, Quaternion.identity);
