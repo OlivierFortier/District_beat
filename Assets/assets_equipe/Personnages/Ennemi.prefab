@@ -158,6 +158,7 @@ GameObject:
   - component: {fileID: -4316061124871219271}
   - component: {fileID: -4260924625498445636}
   - component: {fileID: 894954357870508928}
+  - component: {fileID: 3194117670891760429}
   m_Layer: 11
   m_Name: Ennemi
   m_TagString: ennemi
@@ -312,6 +313,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   barreVie: {fileID: 6257120662741215346}
+--- !u!114 &3194117670891760429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782974319183076168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1fc911fcfb4163408a7f2cefddd1eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tableButin:
+  - objet: {fileID: 1102826171423402851, guid: d979d1ed7e3fd8e45b4868aa4b96aafa, type: 3}
+    valeur: 25
+  - objet: {fileID: 8688042914799933395, guid: 36b6aa9828decfb4491c4d8314ea3ebe, type: 3}
+    valeur: 25
+  - objet: {fileID: 5627635210463949495, guid: 1d6ab0437692ddf4e8e3bb870999877b, type: 3}
+    valeur: 25
+  - objet: {fileID: 8567890938385351188, guid: 107673929d962724084c84d67fc257a3, type: 3}
+    valeur: 25
 --- !u!1 &864968824561396666
 GameObject:
   m_ObjectHideFlags: 0
