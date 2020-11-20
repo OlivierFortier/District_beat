@@ -325,6 +325,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1fc911fcfb4163408a7f2cefddd1eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tableButin:
+  - objet: {fileID: 1102826171423402851, guid: d979d1ed7e3fd8e45b4868aa4b96aafa, type: 3}
+    valeur: 25
+  - objet: {fileID: 8688042914799933395, guid: 36b6aa9828decfb4491c4d8314ea3ebe, type: 3}
+    valeur: 25
+  - objet: {fileID: 5627635210463949495, guid: 1d6ab0437692ddf4e8e3bb870999877b, type: 3}
+    valeur: 25
+  - objet: {fileID: 8567890938385351188, guid: 107673929d962724084c84d67fc257a3, type: 3}
+    valeur: 25
 --- !u!1 &864968824561396666
 GameObject:
   m_ObjectHideFlags: 0

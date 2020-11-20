@@ -122,8 +122,10 @@ public class healthBarController : MonoBehaviour
         SceneManager.LoadScene("fin_jeu");
     }
 
+    // méthode pour déclencher le butin qui tombe de l'ennemi
     void RelacherButin() {
-        
+        TableButin controleButin = GetComponent<TableButin>();
+        controleButin.TomberButin();
     }
 
 }
