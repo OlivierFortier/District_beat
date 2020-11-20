@@ -36,9 +36,9 @@ public class Controlleur_apparition : MonoBehaviour
 // Méthode pour instancier un prefab sur un point parmis la liste des points
     void InstancierObjet() {
         //obtention d'une position parmis les points placés
-        GameObject positionParmisLesPoints = listePointsApparition.ObtenirEtEnlever<GameObject>(Random.Range(0, listePointsApparition.Count));
+        GameObject positionParmisLesPoints = listePointsApparition.ObtenirEtEnlever<GameObject>(Random.Range(0, listePointsApparition.Count - 1));
         //obtention d'un objet aléatoire parmis la liste donnée dans unity
-        GameObject prefabAleatoire = listeObjetsAInstancier.ObtenirEtEnlever<GameObject>(Random.Range(0, listePointsApparition.Count));
+        GameObject prefabAleatoire = listeObjetsAInstancier.ObtenirEtEnlever<GameObject>(Random.Range(0, listePointsApparition.Count - 1));
 
         //instancier l'objet a la position du point obtenu
         Instantiate(prefabAleatoire, positionParmisLesPoints.transform.position, Quaternion.identity);
