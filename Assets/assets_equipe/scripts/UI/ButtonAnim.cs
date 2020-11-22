@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class buttonfx : MonoBehaviour
+public class ButtonAnim : MonoBehaviour
 {
    public AudioSource myFx;
-   public AUdioClip hoverFx;
-   public AUdioClip clickFx;
+   public AudioClip hoverFx;
+   public AudioClip clickFx;
 
    public void HoverSound()
    {
