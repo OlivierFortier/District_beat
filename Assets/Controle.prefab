@@ -77,10 +77,6 @@ MonoBehaviour:
         m_CallState: 2
     m_ActionId: 8c0129fe-2f3b-4ad9-89e8-0a8155d8a5fa
     m_ActionName: menu/select[/XInputControllerWindows/leftShoulder,/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightShoulder,/XInputControllerWindows/rightShoulder]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 7db6b540-7ca7-498f-909b-6393005efbf8
-    m_ActionName: menu/perso select[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right,/XInputControllerWindows/leftStick/right]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: menu

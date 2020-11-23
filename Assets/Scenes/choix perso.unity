@@ -268,7 +268,7 @@ MonoBehaviour:
       m_Interactions: 
       m_SingletonActionBindings: []
     m_Reference: {fileID: 0}
-  m_PlayerPrefab: {fileID: 1859110216}
+  m_PlayerPrefab: {fileID: 189538933572265518, guid: 35395ea09ac1dc44283bfd377b7e1fe4, type: 3}
   m_SplitScreen: 0
   m_MaintainAspectRatioInSplitScreen: 0
   m_FixedNumberOfSplitScreens: -1
@@ -1066,7 +1066,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 876312020}
-  - component: {fileID: 876312019}
   - component: {fileID: 876312018}
   m_Layer: 0
   m_Name: joueur 4
@@ -1087,7 +1086,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cef4d7336954cc4bbe95565434f16cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IndexJoueur: 0
+  IndexJoueur: 3
   Perso1: {fileID: 635396609}
   Perso2: {fileID: 430654837}
   Perso3: {fileID: 471192050}
@@ -1098,61 +1097,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  numPerso: 4
---- !u!114 &876312019
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 876312017}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: f03ec694a663b024cab46e2404579ac4, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e8ce7867-8350-43f0-8283-e680f680a020
-    m_ActionName: menu/select[/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c602511e-5d3c-438d-a1b0-83b62dbfe734
-    m_ActionName: joindre/joindre[/XInputControllerWindows/start]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 876312018}
-        m_TargetAssemblyTypeName: choisirPerso, Assembly-CSharp
-        m_MethodName: Suivant
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 94b2c5a2-8e12-4372-920d-b5d6f35a21f6
-    m_ActionName: menu/perso select[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: menu
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  numPerso: 0
 --- !u!4 &876312020
 Transform:
   m_ObjectHideFlags: 0
@@ -1169,7 +1118,7 @@ Transform:
   - {fileID: 1778522557}
   - {fileID: 635396613}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1136188334
 GameObject:
@@ -1371,7 +1320,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1354242953}
-  - component: {fileID: 1354242955}
   - component: {fileID: 1354242956}
   m_Layer: 0
   m_Name: joueur 1
@@ -1396,62 +1344,8 @@ Transform:
   - {fileID: 1269151341}
   - {fileID: 1759596174}
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1354242955
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1354242952}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: f03ec694a663b024cab46e2404579ac4, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e8ce7867-8350-43f0-8283-e680f680a020
-    m_ActionName: menu/select[/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c602511e-5d3c-438d-a1b0-83b62dbfe734
-    m_ActionName: joindre/joindre[/XInputControllerWindows/start]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1354242956}
-        m_TargetAssemblyTypeName: choisirPerso, Assembly-CSharp
-        m_MethodName: Suivant
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 94b2c5a2-8e12-4372-920d-b5d6f35a21f6
-    m_ActionName: menu/perso select[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: menu
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!114 &1354242956
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1475,7 +1369,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  numPerso: 1
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  numPerso: 0
 --- !u!1 &1355281206
 GameObject:
   m_ObjectHideFlags: 0
@@ -2052,7 +1950,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1719400861}
-  - component: {fileID: 1719400860}
   - component: {fileID: 1719400859}
   m_Layer: 0
   m_Name: joueur 2
@@ -2073,7 +1970,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cef4d7336954cc4bbe95565434f16cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IndexJoueur: 0
+  IndexJoueur: 1
   Perso1: {fileID: 450156975}
   Perso2: {fileID: 1460210806}
   Perso3: {fileID: 1389735147}
@@ -2084,61 +1981,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  numPerso: 2
---- !u!114 &1719400860
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1719400858}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: f03ec694a663b024cab46e2404579ac4, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e8ce7867-8350-43f0-8283-e680f680a020
-    m_ActionName: menu/select[/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c602511e-5d3c-438d-a1b0-83b62dbfe734
-    m_ActionName: joindre/joindre[/XInputControllerWindows/start]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1719400859}
-        m_TargetAssemblyTypeName: choisirPerso, Assembly-CSharp
-        m_MethodName: Suivant
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 94b2c5a2-8e12-4372-920d-b5d6f35a21f6
-    m_ActionName: menu/perso select[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: menu
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  numPerso: 0
 --- !u!4 &1719400861
 Transform:
   m_ObjectHideFlags: 0
@@ -2155,7 +2002,7 @@ Transform:
   - {fileID: 464624359}
   - {fileID: 450156979}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1759596173
 GameObject:
@@ -2464,104 +2311,6 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
---- !u!1 &1859110216
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1859110219}
-  - component: {fileID: 1859110218}
-  - component: {fileID: 1859110217}
-  m_Layer: 0
-  m_Name: Controle
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1859110217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859110216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f967f9e1cf997ee4185b8c2c5fd01657, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1859110218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859110216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: f03ec694a663b024cab46e2404579ac4, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1859110217}
-        m_TargetAssemblyTypeName: GestionControle, Assembly-CSharp
-        m_MethodName: Test
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: e8ce7867-8350-43f0-8283-e680f680a020
-    m_ActionName: menu/select[/XInputControllerWindows/leftShoulder,/XInputControllerWindows/rightShoulder]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: 94b2c5a2-8e12-4372-920d-b5d6f35a21f6
-    m_ActionName: menu/perso select[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c602511e-5d3c-438d-a1b0-83b62dbfe734
-    m_ActionName: joindre/joindre[/XInputControllerWindows/start,/Keyboard/anyKey]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: menu
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
---- !u!4 &1859110219
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1859110216}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16.3, y: -5.5700006, z: 14.03}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 7
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1915212196
 GameObject:
   m_ObjectHideFlags: 0
@@ -2761,7 +2510,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2007539705}
-  - component: {fileID: 2007539704}
   - component: {fileID: 2007539703}
   m_Layer: 0
   m_Name: joueur 3
@@ -2782,7 +2530,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9cef4d7336954cc4bbe95565434f16cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  IndexJoueur: 0
+  IndexJoueur: 2
   Perso1: {fileID: 412305967}
   Perso2: {fileID: 147403054}
   Perso3: {fileID: 1543310568}
@@ -2793,61 +2541,11 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  numPerso: 3
---- !u!114 &2007539704
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2007539702}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Actions: {fileID: -944628639613478452, guid: f03ec694a663b024cab46e2404579ac4, type: 3}
-  m_NotificationBehavior: 2
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents:
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: e8ce7867-8350-43f0-8283-e680f680a020
-    m_ActionName: menu/select[/XInputControllerWindows/buttonSouth]
-  - m_PersistentCalls:
-      m_Calls: []
-    m_ActionId: c602511e-5d3c-438d-a1b0-83b62dbfe734
-    m_ActionName: joindre/joindre[/XInputControllerWindows/start]
-  - m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2007539703}
-        m_TargetAssemblyTypeName: choisirPerso, Assembly-CSharp
-        m_MethodName: Suivant
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-    m_ActionId: 94b2c5a2-8e12-4372-920d-b5d6f35a21f6
-    m_ActionName: menu/perso select[/XInputControllerWindows/leftStick/up,/XInputControllerWindows/leftStick/down,/XInputControllerWindows/leftStick/left,/XInputControllerWindows/leftStick/right]
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: menu
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  numPerso: 0
 --- !u!4 &2007539705
 Transform:
   m_ObjectHideFlags: 0
@@ -2864,5 +2562,5 @@ Transform:
   - {fileID: 62839134}
   - {fileID: 412305971}
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
