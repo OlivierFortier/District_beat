@@ -61,16 +61,16 @@ public class choisirPerso : MonoBehaviour
     public void Selection(float num)
     {
         
+
+          val= Mathf.FloorToInt(num) ;
+            actif.SetActive(false);
+            numPerso= numPerso+val;
             if(numPerso==10){
                 numPerso=0;
             }
                 if(numPerso==-2){
                 numPerso=7;
             }
-          val= Mathf.FloorToInt(num) ;
-            actif.SetActive(false);
-            numPerso= numPerso+val;
-
 
              actif = Perso[numPerso];
             Perso[numPerso].SetActive(true);

@@ -25,72 +25,9 @@ public class @MenuControle : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
-                },
-                {
-                    ""name"": ""perso select"",
-                    ""type"": ""Button"",
-                    ""id"": ""7db6b540-7ca7-498f-909b-6393005efbf8"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
-                {
-                    ""name"": ""2D Vector"",
-                    ""id"": ""9502958b-ba7b-4a40-bf29-c2892f787a00"",
-                    ""path"": ""2DVector"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""perso select"",
-                    ""isComposite"": true,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""up"",
-                    ""id"": ""ae05782a-0a48-4a82-bf8f-dea839897a9a"",
-                    ""path"": ""<Gamepad>/leftStick/up"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""perso select"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""down"",
-                    ""id"": ""aa97eba8-a622-4c82-973c-42c62fa7fb9a"",
-                    ""path"": ""<Gamepad>/leftStick/down"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""perso select"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""left"",
-                    ""id"": ""e3e5dae4-0c77-4660-a03f-bbbdf485eb84"",
-                    ""path"": ""<Gamepad>/leftStick/left"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""perso select"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""right"",
-                    ""id"": ""a233144a-713e-494a-b83c-132f0d0e7467"",
-                    ""path"": ""<Gamepad>/leftStick/right"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""perso select"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
                 {
                     ""name"": ""1D Axis"",
                     ""id"": ""151b0788-17db-4cf5-8c2a-958900c57d95"",
@@ -170,7 +107,6 @@ public class @MenuControle : IInputActionCollection, IDisposable
         // menu
         m_menu = asset.FindActionMap("menu", throwIfNotFound: true);
         m_menu_select = m_menu.FindAction("select", throwIfNotFound: true);
-        m_menu_persoselect = m_menu.FindAction("perso select", throwIfNotFound: true);
         // joindre
         m_joindre = asset.FindActionMap("joindre", throwIfNotFound: true);
         m_joindre_joindre = m_joindre.FindAction("joindre", throwIfNotFound: true);
@@ -224,13 +160,11 @@ public class @MenuControle : IInputActionCollection, IDisposable
     private readonly InputActionMap m_menu;
     private IMenuActions m_MenuActionsCallbackInterface;
     private readonly InputAction m_menu_select;
-    private readonly InputAction m_menu_persoselect;
     public struct MenuActions
     {
         private @MenuControle m_Wrapper;
         public MenuActions(@MenuControle wrapper) { m_Wrapper = wrapper; }
         public InputAction @select => m_Wrapper.m_menu_select;
-        public InputAction @persoselect => m_Wrapper.m_menu_persoselect;
         public InputActionMap Get() { return m_Wrapper.m_menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -243,9 +177,6 @@ public class @MenuControle : IInputActionCollection, IDisposable
                 @select.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnSelect;
                 @select.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnSelect;
                 @select.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnSelect;
-                @persoselect.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnPersoselect;
-                @persoselect.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnPersoselect;
-                @persoselect.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnPersoselect;
             }
             m_Wrapper.m_MenuActionsCallbackInterface = instance;
             if (instance != null)
@@ -253,9 +184,6 @@ public class @MenuControle : IInputActionCollection, IDisposable
                 @select.started += instance.OnSelect;
                 @select.performed += instance.OnSelect;
                 @select.canceled += instance.OnSelect;
-                @persoselect.started += instance.OnPersoselect;
-                @persoselect.performed += instance.OnPersoselect;
-                @persoselect.canceled += instance.OnPersoselect;
             }
         }
     }
@@ -296,7 +224,6 @@ public class @MenuControle : IInputActionCollection, IDisposable
     public interface IMenuActions
     {
         void OnSelect(InputAction.CallbackContext context);
-        void OnPersoselect(InputAction.CallbackContext context);
     }
     public interface IJoindreActions
     {
