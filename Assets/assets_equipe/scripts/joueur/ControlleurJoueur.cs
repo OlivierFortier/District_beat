@@ -100,30 +100,33 @@ public class ControlleurJoueur : MonoBehaviour
 
     void Update()
     {
-        //faire écouler le temps pour l'esquive
-        if (timerEsquive > 0)
-        {
-            timerEsquive -= Time.deltaTime;
+        bool estMort = GetComponent<healthBarController>().estMort;
+        if (!estMort)
+        { //faire écouler le temps pour l'esquive
+            if (timerEsquive > 0)
+            {
+                timerEsquive -= Time.deltaTime;
+            }
+
+            //faire écouler le temps pour la durée d'une esquive
+            if (timerDureeEsquive > 0)
+            {
+                timerDureeEsquive -= Time.deltaTime;
+            }
+
+            // bouton pour attaquer
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                // selon si le systeme de distance ou de mélée est activée, attaque de cette facon
+                if (refMelee.enabled) refMelee.Attaque();
+
+                if (refDistance.enabled) refDistance.Attaque();
+
+            }
+
+            // gestion de mouvement du personage
+            Bouger();
         }
-
-        //faire écouler le temps pour la durée d'une esquive
-        if (timerDureeEsquive > 0)
-        {
-            timerDureeEsquive -= Time.deltaTime;
-        }
-
-        // bouton pour attaquer
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            // selon si le systeme de distance ou de mélée est activée, attaque de cette facon
-            if (refMelee.enabled) refMelee.Attaque();
-            
-            if (refDistance.enabled) refDistance.Attaque();
-
-        }
-
-        // gestion de mouvement du personage
-        Bouger();
     }
 
     /// <summary>
