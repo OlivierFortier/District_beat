@@ -18,9 +18,13 @@ public class healthBarController : MonoBehaviour
     public float vie;
     public float vieDebut;
 
+    // état déterministe de la vie ou non-vie du personnage
+  [HideInInspector]  public bool estMort = false;
+
     public float resistanceBase = 1f;
 
     public float resistanceActuelle;
+    
 
     private void Start()
     {
@@ -91,6 +95,8 @@ public class healthBarController : MonoBehaviour
 // gestio nde la mort de l'entitée
     public void MortPersonnage()
     {
+
+        estMort = true;
 
         if (animator)
         {

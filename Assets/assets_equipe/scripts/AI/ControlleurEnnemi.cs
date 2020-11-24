@@ -66,38 +66,41 @@ public class ControlleurEnnemi : MonoBehaviour
         //si le AI est activé
         if (agent.enabled)
         {
-
-            //pour chaque joueur
-            foreach (GameObject joueur in lesJoueurs)
+            bool estMort = GetComponent<healthBarController>().estMort;
+            if (!estMort)
             {
-                //calculer la distance entre le joueur et l'ennemi
-                float distance = Vector3.Distance(transform.position, joueur.transform.position);
+                //pour chaque joueur
+                foreach (GameObject joueur in lesJoueurs)
+                {
+                    //calculer la distance entre le joueur et l'ennemi
+                    float distance = Vector3.Distance(transform.position, joueur.transform.position);
 
-                //vérifier si le joueur est visible par l'ennemi, donc présent dans sa zone de vision
-                joueurVisible = Physics.CheckSphere(transform.position, zoneVision, coucheJoueur);
-                //vérifier si le joueur est attaquable par l'ennemi en mélée, donc présent dans sa zone de mélée
-                joueurAttaquableMelee = Physics.CheckSphere(transform.position, zoneAttaqueMelee, coucheJoueur);
-                //vérifier si le joueur est attaquable par l'ennemi a distance, donc présent dans sa zone de distance
-                joueurAttaquableDistance = Physics.CheckSphere(transform.position, zoneAttaqueDistance, coucheJoueur);
+                    //vérifier si le joueur est visible par l'ennemi, donc présent dans sa zone de vision
+                    joueurVisible = Physics.CheckSphere(transform.position, zoneVision, coucheJoueur);
+                    //vérifier si le joueur est attaquable par l'ennemi en mélée, donc présent dans sa zone de mélée
+                    joueurAttaquableMelee = Physics.CheckSphere(transform.position, zoneAttaqueMelee, coucheJoueur);
+                    //vérifier si le joueur est attaquable par l'ennemi a distance, donc présent dans sa zone de distance
+                    joueurAttaquableDistance = Physics.CheckSphere(transform.position, zoneAttaqueDistance, coucheJoueur);
 
-                //si le joueur n'est pas visible et pas attaquable, patrouiller
-                if (!joueurVisible && !joueurAttaquableMelee) Patrouiller();
-                //si le joueur est visible mais pas assez proche pour attaquer en mélée, suivre le joueur
-                if (joueurVisible && !joueurAttaquableMelee) SuivreJoueur(joueur.transform.position);
+                    //si le joueur n'est pas visible et pas attaquable, patrouiller
+                    if (!joueurVisible && !joueurAttaquableMelee) Patrouiller();
+                    //si le joueur est visible mais pas assez proche pour attaquer en mélée, suivre le joueur
+                    if (joueurVisible && !joueurAttaquableMelee) SuivreJoueur(joueur.transform.position);
 
-                if (refDistance != null)
-                {//si le joueur est visible et assez près pour attaquer a distance, attaquer le joueur
-                    
-                    if (joueurVisible && !joueurAttaquableMelee && joueurAttaquableDistance) AttaquerJoueurDistance(joueur.transform.position);
+                    if (refDistance != null)
+                    {//si le joueur est visible et assez près pour attaquer a distance, attaquer le joueur
+
+                        if (joueurVisible && !joueurAttaquableMelee && joueurAttaquableDistance) AttaquerJoueurDistance(joueur.transform.position);
+                    }
+
+                    if (refMelee != null)
+                    {
+
+                        //si le joueur est visible et assez près pour attaquer en mélée, attaquer le joueur
+                        if (joueurVisible && joueurAttaquableMelee) AttaquerJoueurMelee(joueur.transform.position);
+                    }
+
                 }
-
-                if (refMelee != null)
-                {  
-                   
-                     //si le joueur est visible et assez près pour attaquer en mélée, attaquer le joueur
-                    if (joueurVisible && joueurAttaquableMelee) AttaquerJoueurMelee(joueur.transform.position);
-                }
-
             }
         }
 

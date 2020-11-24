@@ -298,6 +298,7 @@ MonoBehaviour:
   fondBarreVie: {fileID: 6245572519642850723}
   vie: 0
   vieDebut: 25
+  estMort: 0
   resistanceBase: 1
   resistanceActuelle: 0
 --- !u!114 &894954357870508928
