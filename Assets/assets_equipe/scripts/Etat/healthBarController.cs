@@ -21,12 +21,18 @@ public class healthBarController : MonoBehaviour
     public float resistanceBase = 1f;
 
     public float resistanceActuelle;
+    
+    // activer les particules
+     public ParticleSystem sang;
+
 
     private void Start()
     {
         resistanceActuelle = resistanceBase;
 
         vie = vieDebut;
+        // activer les particules
+        
 
 // si l'entitée possède un UI de barre de vie statique
         if (refBarreDeVie)
@@ -45,9 +51,10 @@ public class healthBarController : MonoBehaviour
 // méthode qui permet à l'entitée de prendre des dommages et d'etre blessé
     public void PrendreDommages(float damage)
     {
-
+        
         // la vie est calculée selon les résistances
         vie = vie - (damage / resistanceActuelle);
+
 
 // si il y a un UI, mettre à jour le UI
         if (instanceBarreDeVie)
