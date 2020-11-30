@@ -46,6 +46,11 @@ public class toucherEnnemi : MonoBehaviour
                 // faire perdre de la vie
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
                 particuleSang.Play();
+                //faire jouer le son d'un slash d'épée lorsque le joueur frappe un ennemi
+                GetComponent<AudioSource>().Play();
+
+               
+
             }
         }
         // sinon si c'Est un ennemi qui cause les dommages
@@ -57,6 +62,8 @@ public class toucherEnnemi : MonoBehaviour
                 // faire perdre de la vie
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
                 particuleSang.Play();
+                //faire jouer un son de coup lorsque ennemi frappe au joueur
+                GetComponent<AudioSource>().Play();
             }
         }
 
