@@ -17,6 +17,9 @@ public class toucherEnnemi : MonoBehaviour
 
     // est-ce que cette arme est un projectile
     private bool estunProjectile = false;
+    
+    //systeme de particule pour le sang
+    public ParticleSystem particuleSang; 
 
     private void Start()
     {
@@ -28,6 +31,8 @@ public class toucherEnnemi : MonoBehaviour
 
         // si c'Est un projectile, activer le collider après un certain délai
         if (estunProjectile) Invoke("ActiverCollider", 0.15f);
+
+        particuleSang = GetComponent<ParticleSystem>();
     }
 
     private void OnCollisionEnter(Collision toucherEnnemi)
@@ -40,6 +45,7 @@ public class toucherEnnemi : MonoBehaviour
             {
                 // faire perdre de la vie
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
+                particuleSang.Play();
             }
         }
         // sinon si c'Est un ennemi qui cause les dommages
@@ -50,6 +56,7 @@ public class toucherEnnemi : MonoBehaviour
             {
                 // faire perdre de la vie
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
+                particuleSang.Play();
             }
         }
 
