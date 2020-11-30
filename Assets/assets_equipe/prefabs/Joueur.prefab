@@ -119,9 +119,9 @@ MonoBehaviour:
   fondBarreVie: {fileID: 3120963436269683979, guid: 4b4e8b1b8a56c7b4d827f2912b2444e5, type: 3}
   vie: 0
   vieDebut: 100
+  estMort: 0
   resistanceBase: 1
   resistanceActuelle: 0
-  sang: {fileID: 0}
 --- !u!136 &5065288763668534917
 CapsuleCollider:
   m_ObjectHideFlags: 0

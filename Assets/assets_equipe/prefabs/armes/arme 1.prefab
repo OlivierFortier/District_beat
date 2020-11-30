@@ -4999,7 +4999,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dommagesArme: 10
-  particuleSang: {fileID: 3484100408322740994}
+  particuleSang: {fileID: 0}
 --- !u!65 &353017898841578262
 BoxCollider:
   m_ObjectHideFlags: 0
