@@ -18,12 +18,13 @@ public class healthBarController : MonoBehaviour
     public float vie;
     public float vieDebut;
 
+    // état déterministe de la vie ou non-vie du personnage
+  [HideInInspector]  public bool estMort = false;
+
     public float resistanceBase = 1f;
 
     public float resistanceActuelle;
     
-    // activer les particules
-     public ParticleSystem sang;
 
 
     private void Start()
@@ -99,6 +100,8 @@ public class healthBarController : MonoBehaviour
     public void MortPersonnage()
     {
 
+        estMort = true;
+
         if (animator)
         {
             animator.SetTrigger("mort");
@@ -107,6 +110,8 @@ public class healthBarController : MonoBehaviour
         // si c'est un ennemi, le détruire
         if (tag == "ennemi")
         {
+            // dropper du loot
+            Invoke("RelacherButin", 0.5f);
             Invoke("DetruirePersonnage", 2f);
         }
         // si c'est un joueur, terminer la partie
@@ -125,6 +130,12 @@ public class healthBarController : MonoBehaviour
     void RelancerPartie()
     {
         SceneManager.LoadScene("fin_jeu");
+    }
+
+    // méthode pour déclencher le butin qui tombe de l'ennemi
+    void RelacherButin() {
+        TableButin controleButin = GetComponent<TableButin>();
+        controleButin.TomberButin();
     }
 
 }

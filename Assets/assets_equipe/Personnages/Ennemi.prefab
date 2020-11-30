@@ -128,6 +128,45 @@ GameObject:
   - component: {fileID: 5130868676087323256}
   - component: {fileID: 1117212113939548484}
   m_Layer: 11
+  m_Name: mixamorig:RightToeBase
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1353066942850207436
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 607939616519616755}
+  m_LocalRotation: {x: 0.34671116, y: 0.011588153, z: -0.004091456, w: 0.9378914}
+  m_LocalPosition: {x: 2.7755576e-17, y: 0.30865583, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 6132454217761779310}
+  m_Father: {fileID: 3661290033341054488}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &782974319183076168
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1565996985686591739}
+  - component: {fileID: 5277260488356384697}
+  - component: {fileID: 6220430026409163767}
+  - component: {fileID: 2467599618069248535}
+  - component: {fileID: 1330502447115832959}
+  - component: {fileID: -4316061124871219271}
+  - component: {fileID: -4260924625498445636}
+  - component: {fileID: 894954357870508928}
+  - component: {fileID: 3194117670891760429}
+  m_Layer: 11
   m_Name: Ennemi
   m_TagString: ennemi
   m_Icon: {fileID: 0}
@@ -266,6 +305,7 @@ MonoBehaviour:
   fondBarreVie: {fileID: 6144631026953918311}
   vie: 0
   vieDebut: 25
+  estMort: 0
   resistanceBase: 1
   resistanceActuelle: 0
   sang: {fileID: 0}
@@ -281,8 +321,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 428e260b0658ef4418908d66631da6b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  barreVie: {fileID: 6142738745513482934}
---- !u!1 &830196822565161527
+  barreVie: {fileID: 6257120662741215346}
+--- !u!114 &3194117670891760429
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782974319183076168}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1fc911fcfb4163408a7f2cefddd1eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tableButin:
+  - objet: {fileID: 1102826171423402851, guid: d979d1ed7e3fd8e45b4868aa4b96aafa, type: 3}
+    valeur: 25
+  - objet: {fileID: 8688042914799933395, guid: 36b6aa9828decfb4491c4d8314ea3ebe, type: 3}
+    valeur: 25
+  - objet: {fileID: 5627635210463949495, guid: 1d6ab0437692ddf4e8e3bb870999877b, type: 3}
+    valeur: 25
+  - objet: {fileID: 8567890938385351188, guid: 107673929d962724084c84d67fc257a3, type: 3}
+    valeur: 25
+--- !u!1 &864968824561396666
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
