@@ -9,6 +9,7 @@ TagManager:
   - sol
   - arme
   - medicament
+  - gestion
   layers:
   - Default
   - TransparentFX
