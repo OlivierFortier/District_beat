@@ -12,6 +12,14 @@
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": ""
+                },
+                {
+                    "name": "entrer",
+                    "type": "Button",
+                    "id": "54bf0e7e-5336-428e-8919-178b7c68d717",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
                 }
             ],
             "bindings": [
@@ -47,42 +55,103 @@
                     "action": "select",
                     "isComposite": false,
                     "isPartOfComposite": true
-                }
-            ]
-        },
-        {
-            "name": "joindre",
-            "id": "e3cfd9f3-af39-4a37-91e8-2aac6d5d7c04",
-            "actions": [
+                },
                 {
-                    "name": "joindre",
-                    "type": "Button",
-                    "id": "c602511e-5d3c-438d-a1b0-83b62dbfe734",
-                    "expectedControlType": "Button",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "26f99f9f-0eda-42d6-99c4-ad690bccdada",
-                    "path": "<Gamepad>/start",
+                    "name": "1D Axis",
+                    "id": "4e81c95a-cf2b-49e7-8020-2bc770896dc9",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "joindre",
+                    "action": "select",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "12e93d37-6fdb-413a-abc5-49ea2af294ce",
+                    "path": "<Keyboard>/a",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "select",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "778965bd-4a60-4379-9aa9-7e5f79cc459c",
+                    "path": "<Keyboard>/d",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "select",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "00b47859-bbc6-4e35-aa92-8e2bef1c014d",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "select",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "4f163d76-3e22-4964-8f73-ca140b0592c0",
+                    "path": "<Keyboard>/leftArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "select",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "21018d1d-a9c8-4bf1-941a-35b5f8567e23",
+                    "path": "<Keyboard>/rightArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "select",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "",
+                    "id": "e4d41ab3-85b4-4da3-82cc-a1803f5a8d1c",
+                    "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "entrer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "1793994f-e050-43c2-b225-9d188ab15b1b",
-                    "path": "<Keyboard>/anyKey",
+                    "id": "f0652da6-27e7-4da0-b65c-acc42388454b",
+                    "path": "<Keyboard>/p",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "joindre",
+                    "action": "entrer",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d19f0956-4151-48f6-b7df-b5384cb1fd6d",
+                    "path": "<Gamepad>/buttonSouth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "entrer",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
