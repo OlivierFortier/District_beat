@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class Controlleur_apparition : MonoBehaviour
+public class ControlleurApparition : MonoBehaviour
 {
     // liste des points d'apparitions possibles. Ce sont les enfants de ce gameobject (capsules jaunes)
     List<GameObject> listePointsApparition = new List<GameObject>();
@@ -20,6 +20,8 @@ public class Controlleur_apparition : MonoBehaviour
             // enlever le renderer des points d'apparitions
             point.gameObject.GetComponentInChildren<Renderer>().enabled = false;
         }
+
+        enabled = false;
 
     }
 
