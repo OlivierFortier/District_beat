@@ -112,7 +112,7 @@ public class healthBarController : MonoBehaviour
         {
             // dropper du loot
             Invoke("RelacherButin", 0.5f);
-            Invoke("DetruirePersonnage", 2f);
+            Invoke("DetruirePersonnage", 3f);
         }
         // si c'est un joueur, terminer la partie
         else if (tag == "joueur")
