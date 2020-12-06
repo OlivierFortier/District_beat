@@ -124,6 +124,13 @@ public class ControlleurJoueur : MonoBehaviour
 
             }
 
+            // changer d'arme
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+
+                ChangerArme();
+            }
+
             // gestion de mouvement du personage
             Bouger();
         }
@@ -217,6 +224,23 @@ public class ControlleurJoueur : MonoBehaviour
     public void RemettreVitesseDeBase()
     {
         vitesseActuelle = vitesseDeBase;
+    }
+
+    // permet de changer de mélée à distance et vice versa
+    public void ChangerArme()
+    {
+
+        if (refDistance.enabled)
+        {
+            refDistance.enabled = false;
+            refMelee.enabled = true;
+        }
+        else if (refMelee.enabled)
+        {
+            refMelee.enabled = false;
+            refDistance.enabled = true;
+        }
+
     }
 
 }

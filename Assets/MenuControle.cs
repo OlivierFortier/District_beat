@@ -25,6 +25,14 @@ public class @MenuControle : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""entrer"",
+                    ""type"": ""Button"",
+                    ""id"": ""54bf0e7e-5336-428e-8919-178b7c68d717"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -60,42 +68,103 @@ public class @MenuControle : IInputActionCollection, IDisposable
                     ""action"": ""select"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
-                }
-            ]
-        },
-        {
-            ""name"": ""joindre"",
-            ""id"": ""e3cfd9f3-af39-4a37-91e8-2aac6d5d7c04"",
-            ""actions"": [
+                },
                 {
-                    ""name"": ""joindre"",
-                    ""type"": ""Button"",
-                    ""id"": ""c602511e-5d3c-438d-a1b0-83b62dbfe734"",
-                    ""expectedControlType"": ""Button"",
-                    ""processors"": """",
-                    ""interactions"": """"
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""26f99f9f-0eda-42d6-99c4-ad690bccdada"",
-                    ""path"": ""<Gamepad>/start"",
+                    ""name"": ""1D Axis"",
+                    ""id"": ""4e81c95a-cf2b-49e7-8020-2bc770896dc9"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""joindre"",
+                    ""action"": ""select"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""12e93d37-6fdb-413a-abc5-49ea2af294ce"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""778965bd-4a60-4379-9aa9-7e5f79cc459c"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""00b47859-bbc6-4e35-aa92-8e2bef1c014d"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""select"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""4f163d76-3e22-4964-8f73-ca140b0592c0"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""21018d1d-a9c8-4bf1-941a-35b5f8567e23"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""select"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""e4d41ab3-85b4-4da3-82cc-a1803f5a8d1c"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""entrer"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""1793994f-e050-43c2-b225-9d188ab15b1b"",
-                    ""path"": ""<Keyboard>/anyKey"",
+                    ""id"": ""f0652da6-27e7-4da0-b65c-acc42388454b"",
+                    ""path"": ""<Keyboard>/p"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""joindre"",
+                    ""action"": ""entrer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""d19f0956-4151-48f6-b7df-b5384cb1fd6d"",
+                    ""path"": ""<Gamepad>/buttonSouth"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""entrer"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -107,9 +176,7 @@ public class @MenuControle : IInputActionCollection, IDisposable
         // menu
         m_menu = asset.FindActionMap("menu", throwIfNotFound: true);
         m_menu_select = m_menu.FindAction("select", throwIfNotFound: true);
-        // joindre
-        m_joindre = asset.FindActionMap("joindre", throwIfNotFound: true);
-        m_joindre_joindre = m_joindre.FindAction("joindre", throwIfNotFound: true);
+        m_menu_entrer = m_menu.FindAction("entrer", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -160,11 +227,13 @@ public class @MenuControle : IInputActionCollection, IDisposable
     private readonly InputActionMap m_menu;
     private IMenuActions m_MenuActionsCallbackInterface;
     private readonly InputAction m_menu_select;
+    private readonly InputAction m_menu_entrer;
     public struct MenuActions
     {
         private @MenuControle m_Wrapper;
         public MenuActions(@MenuControle wrapper) { m_Wrapper = wrapper; }
         public InputAction @select => m_Wrapper.m_menu_select;
+        public InputAction @entrer => m_Wrapper.m_menu_entrer;
         public InputActionMap Get() { return m_Wrapper.m_menu; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -177,6 +246,9 @@ public class @MenuControle : IInputActionCollection, IDisposable
                 @select.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnSelect;
                 @select.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnSelect;
                 @select.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnSelect;
+                @entrer.started -= m_Wrapper.m_MenuActionsCallbackInterface.OnEntrer;
+                @entrer.performed -= m_Wrapper.m_MenuActionsCallbackInterface.OnEntrer;
+                @entrer.canceled -= m_Wrapper.m_MenuActionsCallbackInterface.OnEntrer;
             }
             m_Wrapper.m_MenuActionsCallbackInterface = instance;
             if (instance != null)
@@ -184,49 +256,16 @@ public class @MenuControle : IInputActionCollection, IDisposable
                 @select.started += instance.OnSelect;
                 @select.performed += instance.OnSelect;
                 @select.canceled += instance.OnSelect;
+                @entrer.started += instance.OnEntrer;
+                @entrer.performed += instance.OnEntrer;
+                @entrer.canceled += instance.OnEntrer;
             }
         }
     }
     public MenuActions @menu => new MenuActions(this);
-
-    // joindre
-    private readonly InputActionMap m_joindre;
-    private IJoindreActions m_JoindreActionsCallbackInterface;
-    private readonly InputAction m_joindre_joindre;
-    public struct JoindreActions
-    {
-        private @MenuControle m_Wrapper;
-        public JoindreActions(@MenuControle wrapper) { m_Wrapper = wrapper; }
-        public InputAction @joindre => m_Wrapper.m_joindre_joindre;
-        public InputActionMap Get() { return m_Wrapper.m_joindre; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(JoindreActions set) { return set.Get(); }
-        public void SetCallbacks(IJoindreActions instance)
-        {
-            if (m_Wrapper.m_JoindreActionsCallbackInterface != null)
-            {
-                @joindre.started -= m_Wrapper.m_JoindreActionsCallbackInterface.OnJoindre;
-                @joindre.performed -= m_Wrapper.m_JoindreActionsCallbackInterface.OnJoindre;
-                @joindre.canceled -= m_Wrapper.m_JoindreActionsCallbackInterface.OnJoindre;
-            }
-            m_Wrapper.m_JoindreActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                @joindre.started += instance.OnJoindre;
-                @joindre.performed += instance.OnJoindre;
-                @joindre.canceled += instance.OnJoindre;
-            }
-        }
-    }
-    public JoindreActions @joindre => new JoindreActions(this);
     public interface IMenuActions
     {
         void OnSelect(InputAction.CallbackContext context);
-    }
-    public interface IJoindreActions
-    {
-        void OnJoindre(InputAction.CallbackContext context);
+        void OnEntrer(InputAction.CallbackContext context);
     }
 }
