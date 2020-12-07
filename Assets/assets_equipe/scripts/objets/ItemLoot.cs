@@ -17,6 +17,9 @@ public class ItemLoot : MonoBehaviour
     // valeur qui augmente une certaine statistique
     public int valeurDuBoost = 15;
 
+    // Jouer un son lorsque le joueur prendre des items 
+    public AudioClip ramassageSon; 
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("joueur"))
@@ -55,24 +58,28 @@ public class ItemLoot : MonoBehaviour
     {
         var scriptVie = joueur.GetComponent<healthBarController>();
         scriptVie.PrendreMedecine(valeurDuBoost);
+        GetComponent<AudioSource>().PlayOneShot(ramassageSon, 0.5f);
     }
 
     private void PrendreSpeed(GameObject joueur)
     {
         var scriptVitesse = joueur.GetComponent<ControlleurJoueur>();
         scriptVitesse.AugmenterVitesseDeBase(valeurDuBoost, tempsDuBoost);
+        GetComponent<AudioSource>().PlayOneShot(ramassageSon, 0.5f);
     }
 
     private void PrendreMorphine(GameObject joueur)
     {
         var scriptVie = joueur.GetComponent<healthBarController>();
         scriptVie.AugmenterResistance(valeurDuBoost, tempsDuBoost);
+        GetComponent<AudioSource>().PlayOneShot(ramassageSon, 0.5f);
     }
 
     private void PrendreNeon(GameObject joueur)
     {
         var scriptArme = joueur.GetComponent<CombatMelee>().attaqueArme.GetComponent<toucherEnnemi>();
         scriptArme.MultiplierDommages(valeurDuBoost, tempsDuBoost);
+        GetComponent<AudioSource>().PlayOneShot(ramassageSon, 0.5f);
     }
 
 

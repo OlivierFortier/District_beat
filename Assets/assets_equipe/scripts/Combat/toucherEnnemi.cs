@@ -20,6 +20,9 @@ public class toucherEnnemi : MonoBehaviour
     
     //systeme de particule pour le sang
     public ParticleSystem particuleSang; 
+    
+    //sons pour les armes
+    public AudioClip slashSon; 
 
     private void Start()
     {
@@ -45,7 +48,14 @@ public class toucherEnnemi : MonoBehaviour
             {
                 // faire perdre de la vie
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
+                //particuleSang.SetActive(true);
+                Instantiate(particuleSang);
                 particuleSang.Play();
+                //faire jouer le son d'un slash d'épée lorsque le joueur frappe un ennemi
+                GetComponent<AudioSource>().PlayOneShot(slashSon, 0.5f);
+
+               
+
             }
         }
         // sinon si c'Est un ennemi qui cause les dommages
@@ -56,7 +66,11 @@ public class toucherEnnemi : MonoBehaviour
             {
                 // faire perdre de la vie
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
+                //particuleSang.SetActive(true);
+                Instantiate(particuleSang);
                 particuleSang.Play();
+                //faire jouer un son de coup lorsque ennemi frappe au joueur
+                GetComponent<AudioSource>().PlayOneShot(slashSon, 0.5f);
             }
         }
 
