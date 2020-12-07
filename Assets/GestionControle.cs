@@ -25,6 +25,8 @@ public class GestionControle : MonoBehaviour
         choisir = perso.FirstOrDefault(m => m.GetPlayerIndex() == index);
            scene= GameObject.FindGameObjectWithTag("gestion");
 
+           DontDestroyOnLoad(gameObject);
+
     }
 
 

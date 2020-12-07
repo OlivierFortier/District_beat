@@ -99,9 +99,7 @@ public class ControlleurJoueur : MonoBehaviour
 
             
                 // selon si le systeme de distance ou de mélée est activée, attaque de cette facon
-                if (refMelee.enabled) refMelee.Attaque();
-
-                if (refDistance.enabled) refDistance.Attaque();
+                
 
             
             Bouger();
