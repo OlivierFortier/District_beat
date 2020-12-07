@@ -5000,7 +5000,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dommagesArme: 10
-  particuleSang: {fileID: 7470704095362992142, guid: 007139afe1fe05246872878ebd85e67a, type: 3}
+  particuleSang: {fileID: 7366362256586341331, guid: 007139afe1fe05246872878ebd85e67a, type: 3}
   slashSon: {fileID: 8300000, guid: 9ffa8a7aa476d8d4a95cb5931fa45649, type: 3}
 --- !u!65 &353017898841578262
 BoxCollider:
@@ -5052,7 +5052,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 1.000001
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
