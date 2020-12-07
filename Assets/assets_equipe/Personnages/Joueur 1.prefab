@@ -186,7 +186,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 9ffa8a7aa476d8d4a95cb5931fa45649, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -506,11 +506,6 @@ GameObject:
 --- !u!4 &2129171936885310736 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 62c4974c0379e90459d20de6dc15e1dc, type: 3}
-  m_PrefabInstance: {fileID: 1875450065925628667}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &2623257516997372727 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: -4728426434207774260, guid: 62c4974c0379e90459d20de6dc15e1dc, type: 3}
   m_PrefabInstance: {fileID: 1875450065925628667}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &4587284162558087162 stripped
