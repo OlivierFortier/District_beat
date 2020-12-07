@@ -35,7 +35,7 @@ public class toucherEnnemi : MonoBehaviour
         // si c'Est un projectile, activer le collider après un certain délai
         if (estunProjectile) Invoke("ActiverCollider", 0.15f);
 
-        //particuleSang = GetComponent<ParticleSystem>();
+        particuleSang = GetComponent<ParticleSystem>();
     }
 
     private void OnCollisionEnter(Collision toucherEnnemi)
@@ -48,6 +48,8 @@ public class toucherEnnemi : MonoBehaviour
             {
                 // faire perdre de la vie
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
+                //particuleSang.SetActive(true);
+                Instantiate(particuleSang);
                 particuleSang.Play();
                 //faire jouer le son d'un slash d'épée lorsque le joueur frappe un ennemi
                 GetComponent<AudioSource>().PlayOneShot(slashSon, 0.5f);
@@ -64,6 +66,8 @@ public class toucherEnnemi : MonoBehaviour
             {
                 // faire perdre de la vie
                 toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
+                //particuleSang.SetActive(true);
+                Instantiate(particuleSang);
                 particuleSang.Play();
                 //faire jouer un son de coup lorsque ennemi frappe au joueur
                 GetComponent<AudioSource>().PlayOneShot(slashSon, 0.5f);
