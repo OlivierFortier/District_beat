@@ -53,7 +53,9 @@ public class toucherEnnemi : MonoBehaviour
                 GetComponent<AudioSource>().PlayOneShot(slashSon, 1f);
                 //particuleSang.SetActive(true);
                 // Instantiate(particuleSang);
-                particuleSang.GetComponent<ParticleSystem>().Play();
+               var particules = particuleSang.GetComponent<ParticleSystem>();
+
+               particules.Play();
                 
 
                
@@ -71,7 +73,9 @@ public class toucherEnnemi : MonoBehaviour
                    GetComponent<AudioSource>().PlayOneShot(slashSon, 1f);
                 //particuleSang.SetActive(true);
                 // Instantiate(particuleSang);
-                particuleSang.GetComponent<ParticleSystem>().Play();
+               var particules = particuleSang.GetComponent<ParticleSystem>();
+
+               particules.Play();
                 //faire jouer un son de coup lorsque ennemi frappe au joueur
              
             }
