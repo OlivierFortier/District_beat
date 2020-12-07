@@ -169,6 +169,200 @@ public class @MenuControle : IInputActionCollection, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""jeux"",
+            ""id"": ""0770b177-609f-4cd5-b2ad-b048ac694aca"",
+            ""actions"": [
+                {
+                    ""name"": ""deplace"",
+                    ""type"": ""Button"",
+                    ""id"": ""2b2dc154-79a8-449f-95df-509fbc1c0446"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""attaque mele"",
+                    ""type"": ""Button"",
+                    ""id"": ""07ad1914-15c6-47f0-917e-5ecc4741c0ae"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""attaque distance"",
+                    ""type"": ""Button"",
+                    ""id"": ""4dc4d037-a277-4c06-8e0c-ccb5e060acc0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""roulade"",
+                    ""type"": ""Button"",
+                    ""id"": ""3ed1b6db-d24b-48c9-bafe-f7682b07977f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""d0f4c0a6-f171-46ca-abf4-c772f66b2a53"",
+                    ""path"": """",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""deplace"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""fd8f0829-608d-4d27-a7b4-65e4cf01a66a"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""deplace"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""261a0eca-ae5e-44be-9dde-67dd07334d53"",
+                    ""path"": ""<Keyboard>/numpad8"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""deplace"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""d87ce35b-6264-4a02-a202-ee680b04d82e"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""deplace"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""c7f1f9ff-0abf-4938-ab2d-952ebd920a05"",
+                    ""path"": ""<Keyboard>/a"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""deplace"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""647da641-ff79-4ff7-8e56-98ad0317d521"",
+                    ""path"": ""<Keyboard>/d"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""deplace"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""2D Vector"",
+                    ""id"": ""4b450cc5-103a-4f36-a8f2-3f189b23d303"",
+                    ""path"": ""2DVector"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""deplace"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""up"",
+                    ""id"": ""bd6de26f-07bf-4207-bc23-2871b58ba9ba"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""deplace"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""down"",
+                    ""id"": ""f57964c8-8100-4d0c-92cf-980fa9986b1b"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""deplace"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""left"",
+                    ""id"": ""cc7f0bff-fae8-418e-806e-485f70a9c623"",
+                    ""path"": ""<Gamepad>/leftStick/left"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""deplace"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""right"",
+                    ""id"": ""ceab89f1-5b9b-4425-a677-53eda0df8fd7"",
+                    ""path"": ""<Gamepad>/leftStick/right"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""deplace"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4c64718c-ab68-46e0-a287-a7c8907b11e6"",
+                    ""path"": ""<Keyboard>/space"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""attaque mele"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""613f14af-b182-4a95-86e9-93e4e3617205"",
+                    ""path"": ""<Keyboard>/g"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""attaque distance"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""52743a23-952e-4c35-a58e-a52f174e9356"",
+                    ""path"": ""<Keyboard>/f"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""roulade"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -177,6 +371,12 @@ public class @MenuControle : IInputActionCollection, IDisposable
         m_menu = asset.FindActionMap("menu", throwIfNotFound: true);
         m_menu_select = m_menu.FindAction("select", throwIfNotFound: true);
         m_menu_entrer = m_menu.FindAction("entrer", throwIfNotFound: true);
+        // jeux
+        m_jeux = asset.FindActionMap("jeux", throwIfNotFound: true);
+        m_jeux_deplace = m_jeux.FindAction("deplace", throwIfNotFound: true);
+        m_jeux_attaquemele = m_jeux.FindAction("attaque mele", throwIfNotFound: true);
+        m_jeux_attaquedistance = m_jeux.FindAction("attaque distance", throwIfNotFound: true);
+        m_jeux_roulade = m_jeux.FindAction("roulade", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -263,9 +463,73 @@ public class @MenuControle : IInputActionCollection, IDisposable
         }
     }
     public MenuActions @menu => new MenuActions(this);
+
+    // jeux
+    private readonly InputActionMap m_jeux;
+    private IJeuxActions m_JeuxActionsCallbackInterface;
+    private readonly InputAction m_jeux_deplace;
+    private readonly InputAction m_jeux_attaquemele;
+    private readonly InputAction m_jeux_attaquedistance;
+    private readonly InputAction m_jeux_roulade;
+    public struct JeuxActions
+    {
+        private @MenuControle m_Wrapper;
+        public JeuxActions(@MenuControle wrapper) { m_Wrapper = wrapper; }
+        public InputAction @deplace => m_Wrapper.m_jeux_deplace;
+        public InputAction @attaquemele => m_Wrapper.m_jeux_attaquemele;
+        public InputAction @attaquedistance => m_Wrapper.m_jeux_attaquedistance;
+        public InputAction @roulade => m_Wrapper.m_jeux_roulade;
+        public InputActionMap Get() { return m_Wrapper.m_jeux; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(JeuxActions set) { return set.Get(); }
+        public void SetCallbacks(IJeuxActions instance)
+        {
+            if (m_Wrapper.m_JeuxActionsCallbackInterface != null)
+            {
+                @deplace.started -= m_Wrapper.m_JeuxActionsCallbackInterface.OnDeplace;
+                @deplace.performed -= m_Wrapper.m_JeuxActionsCallbackInterface.OnDeplace;
+                @deplace.canceled -= m_Wrapper.m_JeuxActionsCallbackInterface.OnDeplace;
+                @attaquemele.started -= m_Wrapper.m_JeuxActionsCallbackInterface.OnAttaquemele;
+                @attaquemele.performed -= m_Wrapper.m_JeuxActionsCallbackInterface.OnAttaquemele;
+                @attaquemele.canceled -= m_Wrapper.m_JeuxActionsCallbackInterface.OnAttaquemele;
+                @attaquedistance.started -= m_Wrapper.m_JeuxActionsCallbackInterface.OnAttaquedistance;
+                @attaquedistance.performed -= m_Wrapper.m_JeuxActionsCallbackInterface.OnAttaquedistance;
+                @attaquedistance.canceled -= m_Wrapper.m_JeuxActionsCallbackInterface.OnAttaquedistance;
+                @roulade.started -= m_Wrapper.m_JeuxActionsCallbackInterface.OnRoulade;
+                @roulade.performed -= m_Wrapper.m_JeuxActionsCallbackInterface.OnRoulade;
+                @roulade.canceled -= m_Wrapper.m_JeuxActionsCallbackInterface.OnRoulade;
+            }
+            m_Wrapper.m_JeuxActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @deplace.started += instance.OnDeplace;
+                @deplace.performed += instance.OnDeplace;
+                @deplace.canceled += instance.OnDeplace;
+                @attaquemele.started += instance.OnAttaquemele;
+                @attaquemele.performed += instance.OnAttaquemele;
+                @attaquemele.canceled += instance.OnAttaquemele;
+                @attaquedistance.started += instance.OnAttaquedistance;
+                @attaquedistance.performed += instance.OnAttaquedistance;
+                @attaquedistance.canceled += instance.OnAttaquedistance;
+                @roulade.started += instance.OnRoulade;
+                @roulade.performed += instance.OnRoulade;
+                @roulade.canceled += instance.OnRoulade;
+            }
+        }
+    }
+    public JeuxActions @jeux => new JeuxActions(this);
     public interface IMenuActions
     {
         void OnSelect(InputAction.CallbackContext context);
         void OnEntrer(InputAction.CallbackContext context);
+    }
+    public interface IJeuxActions
+    {
+        void OnDeplace(InputAction.CallbackContext context);
+        void OnAttaquemele(InputAction.CallbackContext context);
+        void OnAttaquedistance(InputAction.CallbackContext context);
+        void OnRoulade(InputAction.CallbackContext context);
     }
 }
