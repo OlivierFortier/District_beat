@@ -52,7 +52,7 @@ public class toucherEnnemi : MonoBehaviour
                 Instantiate(particuleSang);
                 particuleSang.Play();
                 //faire jouer le son d'un slash d'épée lorsque le joueur frappe un ennemi
-                GetComponent<AudioSource>().PlayOneShot(slashSon, 0.5f);
+                GetComponent<AudioSource>().PlayOneShot(slashSon, 1f);
 
                
 
@@ -70,7 +70,7 @@ public class toucherEnnemi : MonoBehaviour
                 Instantiate(particuleSang);
                 particuleSang.Play();
                 //faire jouer un son de coup lorsque ennemi frappe au joueur
-                GetComponent<AudioSource>().PlayOneShot(slashSon, 0.5f);
+                GetComponent<AudioSource>().PlayOneShot(slashSon, 1f);
             }
         }
 
