@@ -17,7 +17,7 @@ public class CombatMelee : MonoBehaviour
     public GameObject refAttaqueArme;
 
 // l'instance de l'arme invoquée par le prefab
-    [HideInInspector] public GameObject attaqueArme;
+     public GameObject attaqueArme;
     // référence au gameobject de la main qui tiens l'arme
     public GameObject mainQuiPrendArme;
 
