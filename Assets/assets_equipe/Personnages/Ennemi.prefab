@@ -160,6 +160,7 @@ GameObject:
   - component: {fileID: 894954357870508928}
   - component: {fileID: 3194117670891760429}
   - component: {fileID: -781938730863018043}
+  - component: {fileID: -7754183129476563839}
   m_Layer: 11
   m_Name: Ennemi
   m_TagString: ennemi
@@ -432,6 +433,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!95 &-7754183129476563839
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 782974319183076168}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 615092bc16d28e4439bcfbe9014000fd, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &864968824561396666
 GameObject:
   m_ObjectHideFlags: 0
