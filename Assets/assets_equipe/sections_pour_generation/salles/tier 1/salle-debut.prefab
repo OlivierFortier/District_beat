@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_BindingMode: 4
-  m_FollowOffset: {x: 0, y: 20, z: -10.17}
+  m_FollowOffset: {x: 0, y: 30, z: -10.17}
   m_XDamping: 0
   m_YDamping: 0
   m_ZDamping: 0
@@ -426,8 +426,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4579566025036252283}
-  m_LocalRotation: {x: 0.52284575, y: -0.000000019144572, z: 0.0000000117425385, w: 0.8524273}
-  m_LocalPosition: {x: 0.0036067963, y: 20, z: 8.2783165}
+  m_LocalRotation: {x: 0.5826432, y: -0.000000024367603, z: 0.00000001746909, w: 0.812728}
+  m_LocalPosition: {x: 0.0036067963, y: 30, z: 8.2783165}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5669545645238780230}
@@ -457,7 +457,7 @@ MonoBehaviour:
   m_Lens:
     FieldOfView: 60
     OrthographicSize: 5
-    NearClipPlane: 0.3
+    NearClipPlane: 20
     FarClipPlane: 1000
     Dutch: 0
     LensShift: {x: 0, y: 0}
