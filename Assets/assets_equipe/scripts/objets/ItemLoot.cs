@@ -59,7 +59,7 @@ public class ItemLoot : MonoBehaviour
     private void PrendrePackVie(GameObject joueur)
     {
         
-        var scriptVie = joueur.GetComponent<healthBarController>();
+        var scriptVie = joueur.GetComponent<ControleurBarreVie>();
         scriptVie.PrendreMedecine(valeurDuBoost);
 
     }
@@ -73,7 +73,7 @@ public class ItemLoot : MonoBehaviour
 
     private void PrendreMorphine(GameObject joueur)
     {
-        var scriptVie = joueur.GetComponent<healthBarController>();
+        var scriptVie = joueur.GetComponent<ControleurBarreVie>();
         scriptVie.AugmenterResistance(valeurDuBoost, tempsDuBoost);
 
     }

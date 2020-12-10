@@ -47,7 +47,7 @@ public class toucherEnnemi : MonoBehaviour
             if (toucherEnnemi.gameObject.tag == "ennemi")
             {
                 // faire perdre de la vie
-                toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
+                toucherEnnemi.gameObject.GetComponent<ControleurBarreVie>().PrendreDommages(dommagesTotal);
 
                 //faire jouer le son d'un slash d'épée lorsque le joueur frappe un ennemi
                 GetComponent<AudioSource>().PlayOneShot(slashSon, 1f);
@@ -69,7 +69,7 @@ public class toucherEnnemi : MonoBehaviour
             if (toucherEnnemi.gameObject.tag == "joueur")
             {
                 // faire perdre de la vie
-                toucherEnnemi.gameObject.GetComponent<healthBarController>().PrendreDommages(dommagesTotal);
+                toucherEnnemi.gameObject.GetComponent<ControleurBarreVie>().PrendreDommages(dommagesTotal);
                    GetComponent<AudioSource>().PlayOneShot(slashSon, 1f);
                 //particuleSang.SetActive(true);
                 // Instantiate(particuleSang);

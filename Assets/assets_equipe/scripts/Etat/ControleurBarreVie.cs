@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 // Alejandra Damaris Miranda Reyes & Olivier Fortier
 // script qui gère le fonctionnement des barres de vie des entitées
-public class healthBarController : MonoBehaviour
+public class ControleurBarreVie : MonoBehaviour
 {
     // référence au prefab UI de barre de vie
     public GameObject refBarreDeVie;

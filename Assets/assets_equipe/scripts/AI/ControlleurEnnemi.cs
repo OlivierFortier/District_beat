@@ -66,7 +66,7 @@ public class ControlleurEnnemi : MonoBehaviour
         //si le AI est activé
         if (agent.enabled)
         {
-            bool estMort = GetComponent<healthBarController>().estMort;
+            bool estMort = GetComponent<ControleurBarreVie>().estMort;
             if (!estMort)
             {
                 //pour chaque joueur
