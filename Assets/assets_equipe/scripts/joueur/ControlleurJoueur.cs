@@ -100,7 +100,7 @@ public class ControlleurJoueur : MonoBehaviour
 
     void Update()
     {
-        bool estMort = GetComponent<healthBarController>().estMort;
+        bool estMort = GetComponent<ControleurBarreVie>().estMort;
         if (!estMort)
         { //faire écouler le temps pour l'esquive
             if (timerEsquive > 0)
