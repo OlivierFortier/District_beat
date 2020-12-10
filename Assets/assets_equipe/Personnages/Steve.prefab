@@ -95,7 +95,7 @@ MonoBehaviour:
     m_Bits: 256
   delaiEsquive: 1
   dureeEsquive: 0.5
-  vitesseDeBase: 15
+  vitesseDeBase: 8
   vitesseActuelle: 0
   gravite: -9.81
   tempsTournerSmooth: 0.1
