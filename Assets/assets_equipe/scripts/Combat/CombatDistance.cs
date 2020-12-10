@@ -35,6 +35,7 @@ public class CombatDistance : MonoBehaviour
         Invoke("DesactiverScript", 0.5f);
     }
 
+    // permet de désactiver les scripts apres leur initialisation
     void DesactiverScript() { enabled = false; }
 
     void Update()
