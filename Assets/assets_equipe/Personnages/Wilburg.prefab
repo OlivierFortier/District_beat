@@ -75,8 +75,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 256
   delaiEsquive: 0.5
-  dureeEsquive: 0.2
-  vitesseDeBase: 25
+  dureeEsquive: 0.4
+  vitesseDeBase: 20
   vitesseActuelle: 0
   gravite: -9.81
   tempsTournerSmooth: 0.1
@@ -133,7 +133,7 @@ MonoBehaviour:
   tempsEntreAttaque: 0
   debutAttaque: 1
   animator: {fileID: 7538869472324203573}
-  refAttaqueArme: {fileID: 8820125936034501892, guid: 0f4165a7aafbd5a468c4e806a0c24e0d, type: 3}
+  refAttaqueArme: {fileID: 8820125936034501892, guid: d7299c2dac0eac743b253dc6774c09cb, type: 3}
   attaqueArme: {fileID: 0}
   mainQuiPrendArme: {fileID: 6523069012772717630}
 --- !u!114 &1191588672243816874

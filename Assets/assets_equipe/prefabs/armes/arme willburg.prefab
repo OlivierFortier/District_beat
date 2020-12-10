@@ -93,9 +93,9 @@ GameObject:
   - component: {fileID: 6958810625088330419}
   - component: {fileID: 353017898841578262}
   - component: {fileID: 6810626404730506375}
-  - component: {fileID: 1159047343125335786}
+  - component: {fileID: -2995248225046835741}
   m_Layer: 12
-  m_Name: Projectile
+  m_Name: arme willburg
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -110,10 +110,10 @@ Transform:
   m_GameObject: {fileID: 8820125936034501892}
   m_LocalRotation: {x: -0.09497117, y: -0.78890216, z: 0.016753621, w: 0.6069045}
   m_LocalPosition: {x: 0.03, y: 0.14, z: -0.07}
-  m_LocalScale: {x: 5.2035, y: 0.66174, z: 0.11113697}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7153758007672669292}
-  - {fileID: 1605637679797719174}
+  - {fileID: 6216299384403830633}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -5.097, y: -105.297, z: 9.838}
@@ -129,8 +129,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a6a384da3d00a48964418a2b4694a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dommagesArme: 7
-  particuleSang: {fileID: 9184834540781392726}
+  dommagesArme: 15
+  particuleSang: {fileID: 4574518081636705465}
   slashSon: {fileID: 8300000, guid: 9ffa8a7aa476d8d4a95cb5931fa45649, type: 3}
 --- !u!65 &353017898841578262
 BoxCollider:
@@ -143,8 +143,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.043018255, y: 0.49283516, z: 6.468003}
-  m_Center: {x: -0.00027240487, y: 0.004261126, z: 2.7340467}
+  m_Size: {x: 0.115073234, y: 0.4928352, z: 6.4680023}
+  m_Center: {x: -0.012679234, y: 0.004261127, z: 2.734013}
 --- !u!54 &6810626404730506375
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
---- !u!82 &1159047343125335786
+--- !u!82 &-2995248225046835741
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -171,7 +171,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 9ffa8a7aa476d8d4a95cb5931fa45649, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -182,7 +182,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 1.000001
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -257,7 +257,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1001 &5392691865510030093
+--- !u!1001 &782030955405696226
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -270,15 +270,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6674033761221245835, guid: 8a2da9e86e95e9c428d230dbbf4a3b7c, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.002
+      value: -0.09
       objectReference: {fileID: 0}
     - target: {fileID: 6674033761221245835, guid: 8a2da9e86e95e9c428d230dbbf4a3b7c, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.056
+      value: -0.08
       objectReference: {fileID: 0}
     - target: {fileID: 6674033761221245835, guid: 8a2da9e86e95e9c428d230dbbf4a3b7c, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 5.1
+      value: 3.79
       objectReference: {fileID: 0}
     - target: {fileID: 6674033761221245835, guid: 8a2da9e86e95e9c428d230dbbf4a3b7c, type: 3}
       propertyPath: m_LocalRotation.x
@@ -314,13 +314,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8a2da9e86e95e9c428d230dbbf4a3b7c, type: 3}
---- !u!1 &9184834540781392726 stripped
+--- !u!1 &4574518081636705465 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3864553539055286363, guid: 8a2da9e86e95e9c428d230dbbf4a3b7c, type: 3}
-  m_PrefabInstance: {fileID: 5392691865510030093}
+  m_PrefabInstance: {fileID: 782030955405696226}
   m_PrefabAsset: {fileID: 0}
---- !u!4 &1605637679797719174 stripped
+--- !u!4 &6216299384403830633 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6674033761221245835, guid: 8a2da9e86e95e9c428d230dbbf4a3b7c, type: 3}
-  m_PrefabInstance: {fileID: 5392691865510030093}
+  m_PrefabInstance: {fileID: 782030955405696226}
   m_PrefabAsset: {fileID: 0}
