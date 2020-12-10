@@ -74,9 +74,9 @@ MonoBehaviour:
   masqueSol:
     serializedVersion: 2
     m_Bits: 256
-  delaiEsquive: 1
-  dureeEsquive: 0.5
-  vitesseDeBase: 15
+  delaiEsquive: 0.5
+  dureeEsquive: 0.3
+  vitesseDeBase: 20
   vitesseActuelle: 0
   gravite: -9.81
   tempsTournerSmooth: 0.1
