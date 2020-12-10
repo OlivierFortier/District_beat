@@ -95,7 +95,7 @@ GameObject:
   - component: {fileID: 6810626404730506375}
   - component: {fileID: 1159047343125335786}
   m_Layer: 12
-  m_Name: Projectile
+  m_Name: projectile mama
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -129,7 +129,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1a6a384da3d00a48964418a2b4694a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dommagesArme: 7
+  dommagesArme: 15
   particuleSang: {fileID: 9184834540781392726}
   slashSon: {fileID: 8300000, guid: 9ffa8a7aa476d8d4a95cb5931fa45649, type: 3}
 --- !u!65 &353017898841578262

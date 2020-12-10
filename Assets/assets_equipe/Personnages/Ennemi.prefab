@@ -138,7 +138,7 @@ MonoBehaviour:
   tempsEntreAttaque: 0
   debutAttaque: 5
   animator: {fileID: 5789537031323780427}
-  refAttaqueArme: {fileID: 8820125936034501892, guid: f91bc7a12ca1cc741bbe97d21c71747f, type: 3}
+  refAttaqueArme: {fileID: 8820125936034501892, guid: 3650ac714b87a23469c2b7aaaa1bb3d2, type: 3}
   attaqueArme: {fileID: 0}
   mainQuiPrendArme: {fileID: 1057781908334255028}
 --- !u!114 &-4260924625498445636

@@ -95,7 +95,7 @@ MonoBehaviour:
     m_Bits: 256
   delaiEsquive: 1
   dureeEsquive: 0.5
-  vitesseDeBase: 8
+  vitesseDeBase: 10
   vitesseActuelle: 0
   gravite: -9.81
   tempsTournerSmooth: 0.1
@@ -118,7 +118,7 @@ MonoBehaviour:
   animator: {fileID: 7438375292100561928}
   fondBarreVie: {fileID: 3120963436269683979, guid: 4b4e8b1b8a56c7b4d827f2912b2444e5, type: 3}
   vie: 0
-  vieDebut: 100
+  vieDebut: 130
   estMort: 0
   resistanceBase: 1
   resistanceActuelle: 0
@@ -152,7 +152,7 @@ MonoBehaviour:
   tempsEntreAttaque: 0
   debutAttaque: 1
   animator: {fileID: 7438375292100561928}
-  refAttaqueArme: {fileID: 8820125936034501892, guid: 0f4165a7aafbd5a468c4e806a0c24e0d, type: 3}
+  refAttaqueArme: {fileID: 8820125936034501892, guid: c07e930867556c04694aed8d7770803c, type: 3}
   attaqueArme: {fileID: 0}
   mainQuiPrendArme: {fileID: 2749940279605010027}
 --- !u!114 &1191588672243816874

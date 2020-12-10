@@ -76,7 +76,7 @@ MonoBehaviour:
     m_Bits: 256
   delaiEsquive: 0.5
   dureeEsquive: 0.3
-  vitesseDeBase: 20
+  vitesseDeBase: 15
   vitesseActuelle: 0
   gravite: -9.81
   tempsTournerSmooth: 0.1
@@ -99,7 +99,7 @@ MonoBehaviour:
   animator: {fileID: 2757970318449813636}
   fondBarreVie: {fileID: 3120963436269683979, guid: 4b4e8b1b8a56c7b4d827f2912b2444e5, type: 3}
   vie: 0
-  vieDebut: 100
+  vieDebut: 60
   estMort: 0
   resistanceBase: 1
   resistanceActuelle: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
   tempsEntreAttaque: 0
   debutAttaque: 1
   animator: {fileID: 2757970318449813636}
-  refAttaqueArme: {fileID: 8820125936034501892, guid: 0f4165a7aafbd5a468c4e806a0c24e0d, type: 3}
+  refAttaqueArme: {fileID: 8820125936034501892, guid: 66e3cbcd8755ea9419f87756d6165c15, type: 3}
   attaqueArme: {fileID: 0}
   mainQuiPrendArme: {fileID: 5428169355010769244}
 --- !u!114 &1191588672243816874
@@ -152,7 +152,7 @@ MonoBehaviour:
   tempsEntreAttaque: 0
   debutAttaque: 1
   animator: {fileID: 2757970318449813636}
-  refAttaqueArme: {fileID: 8820125936034501892, guid: ca08e1cc4b3e400438c5517b47376c93, type: 3}
+  refAttaqueArme: {fileID: 8820125936034501892, guid: eec3d2769198420449a21b827a2ee07f, type: 3}
   attaqueArme: {fileID: 0}
   mainQuiPrendArme: {fileID: 5808054934856836497}
 --- !u!1 &4524091258392181681
