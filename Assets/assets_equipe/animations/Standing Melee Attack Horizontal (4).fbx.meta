@@ -38,8 +38,8 @@ ModelImporter:
       name: attaqueSlash
       takeName: mixamo.com
       internalID: 0
-      firstFrame: 30
-      lastFrame: 60
+      firstFrame: 44
+      lastFrame: 95
       wrapMode: 0
       orientationOffsetY: 0
       level: 0
