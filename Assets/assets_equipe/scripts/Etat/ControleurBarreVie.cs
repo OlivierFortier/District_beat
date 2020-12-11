@@ -74,7 +74,7 @@ public class ControleurBarreVie : MonoBehaviour
     public void AugmenterResistance(float nouvelleResistance, float tempsBoost)
     {
 
-        resistanceBase += nouvelleResistance;
+        resistanceActuelle += nouvelleResistance;
         Invoke("RemettreResistanceNormale", tempsBoost);
     }
 
