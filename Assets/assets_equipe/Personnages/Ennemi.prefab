@@ -137,6 +137,7 @@ MonoBehaviour:
   estUnJoueur: 0
   tempsEntreAttaque: 0
   debutAttaque: 5
+  dureeAttaque: 0.7
   animator: {fileID: 5789537031323780427}
   refAttaqueArme: {fileID: 8820125936034501892, guid: 3650ac714b87a23469c2b7aaaa1bb3d2, type: 3}
   attaqueArme: {fileID: 0}
@@ -154,7 +155,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   refBarreDeVie: {fileID: 0}
-  animator: {fileID: 0}
+  animator: {fileID: 5789537031323780427}
   fondBarreVie: {fileID: 6245572519642850723}
   vie: 0
   vieDebut: 25
@@ -187,7 +188,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tableButin:
-  - objet: {fileID: 1102826171423402851, guid: d979d1ed7e3fd8e45b4868aa4b96aafa, type: 3}
+  - objet: {fileID: 7307611136845948421, guid: d979d1ed7e3fd8e45b4868aa4b96aafa, type: 3}
     valeur: 25
   - objet: {fileID: 8688042914799933395, guid: 36b6aa9828decfb4491c4d8314ea3ebe, type: 3}
     valeur: 25

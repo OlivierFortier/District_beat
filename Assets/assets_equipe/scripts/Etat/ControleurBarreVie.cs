@@ -102,10 +102,8 @@ public class ControleurBarreVie : MonoBehaviour
 
         estMort = true;
 
-        if (animator)
-        {
-            animator.SetTrigger("mort");
-        }
+        animator.SetTrigger("mort");
+        
 
         // si c'est un ennemi, le détruire
         if (tag == "ennemi")
