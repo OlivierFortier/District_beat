@@ -25,13 +25,18 @@ public class CombatDistance : MonoBehaviour
     {
         // on instancie l'arme dans la main du personnage
         attaqueArme = Instantiate(refAttaqueArme, mainQuiPrendArme.transform);
-        
+
         // on associe l'entitée au projectile selon la variable booléenne
         attaqueArme.GetComponent<toucherEnnemi>().AssocierJoueurAuProjectile(estUnJoueur);
 
         // on ajuste la position de l'arme dans la main
         attaqueArme.transform.localPosition = new Vector3(0.03f, 0.14f, -0.07f);
+
+        Invoke("DesactiverScript", 0.5f);
     }
+
+    // permet de désactiver les scripts apres leur initialisation
+    void DesactiverScript() { enabled = false; }
 
     void Update()
     {
@@ -39,7 +44,7 @@ public class CombatDistance : MonoBehaviour
         if (tempsEntreAttaque > 0)
         {
             tempsEntreAttaque -= Time.deltaTime;
-            
+
         }
 
     }
@@ -71,8 +76,8 @@ public class CombatDistance : MonoBehaviour
             rbProjectile.AddForce(transform.forward * 30, ForceMode.VelocityChange);
 
             //activer le collider du projectile 
-           var coll = projectile.GetComponent<Collider>();
-           coll.enabled = true;
+            var coll = projectile.GetComponent<Collider>();
+            coll.enabled = true;
 
         }
 

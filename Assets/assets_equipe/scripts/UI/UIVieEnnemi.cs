@@ -15,7 +15,7 @@ public class UIVieEnnemi : MonoBehaviour
     void Update()
     {
         // met constanement à jour le UI de vie
-        barreVie.GetComponent<Image>().fillAmount = gameObject.GetComponent<healthBarController>().vie / gameObject.GetComponent<healthBarController>().vieDebut;
+        barreVie.GetComponent<Image>().fillAmount = gameObject.GetComponent<ControleurBarreVie>().vie / gameObject.GetComponent<ControleurBarreVie>().vieDebut;
     
     }
 }

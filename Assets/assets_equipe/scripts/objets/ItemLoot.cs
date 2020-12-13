@@ -17,6 +17,9 @@ public class ItemLoot : MonoBehaviour
     // valeur qui augmente une certaine statistique
     public int valeurDuBoost = 15;
 
+    // Jouer un son lorsque le joueur prendre des items 
+    public AudioClip ramassageSon;
+
     private void OnCollisionEnter(Collision collision)
     {
         if (collision.gameObject.CompareTag("joueur"))
@@ -45,34 +48,49 @@ public class ItemLoot : MonoBehaviour
                     break;
             }
 
+            GetComponent<AudioSource>().PlayOneShot(ramassageSon, 1f);
+
             //détruire l'objet après avoir interragi avec
-            Destroy(gameObject);
+            DesactiverColliderEtRenderer();
 
         }
     }
 
     private void PrendrePackVie(GameObject joueur)
     {
-        var scriptVie = joueur.GetComponent<healthBarController>();
+        
+        var scriptVie = joueur.GetComponent<ControleurBarreVie>();
         scriptVie.PrendreMedecine(valeurDuBoost);
+
     }
 
     private void PrendreSpeed(GameObject joueur)
     {
         var scriptVitesse = joueur.GetComponent<ControlleurJoueur>();
         scriptVitesse.AugmenterVitesseDeBase(valeurDuBoost, tempsDuBoost);
+
     }
 
     private void PrendreMorphine(GameObject joueur)
     {
-        var scriptVie = joueur.GetComponent<healthBarController>();
+        var scriptVie = joueur.GetComponent<ControleurBarreVie>();
         scriptVie.AugmenterResistance(valeurDuBoost, tempsDuBoost);
+
     }
 
     private void PrendreNeon(GameObject joueur)
     {
-        var scriptArme = joueur.GetComponent<CombatMelee>().attaqueArme.GetComponent<toucherEnnemi>();
-        scriptArme.MultiplierDommages(valeurDuBoost, tempsDuBoost);
+        var armeMelee = joueur.GetComponent<CombatMelee>().attaqueArme.GetComponent<toucherEnnemi>();
+        var armeDistance = joueur.GetComponent<CombatDistance>().attaqueArme.GetComponent<toucherEnnemi>();
+        if (armeMelee) { armeMelee.MultiplierDommages(valeurDuBoost, tempsDuBoost); }
+        if (armeDistance) { armeDistance.MultiplierDommages(valeurDuBoost, tempsDuBoost); }
+
+    }
+
+    private void DesactiverColliderEtRenderer() {
+        GetComponent<Collider>().enabled = false;
+        GetComponent<Renderer>().enabled = false;
+        Destroy(gameObject, 1f);
     }
 
 

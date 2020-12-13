@@ -12,12 +12,14 @@ public class CombatMelee : MonoBehaviour
     public bool estUnJoueur;
     public float tempsEntreAttaque;
     public float debutAttaque;
+
+    public float dureeAttaque = 0.5f;
     public Animator animator;
     // référence au prefab de l'arme avec laquelle l'entité est équipée
     public GameObject refAttaqueArme;
 
 // l'instance de l'arme invoquée par le prefab
-    [HideInInspector] public GameObject attaqueArme;
+      [HideInInspector] public GameObject attaqueArme;
     // référence au gameobject de la main qui tiens l'arme
     public GameObject mainQuiPrendArme;
 
@@ -53,7 +55,7 @@ public class CombatMelee : MonoBehaviour
         {
             // attaquer
             animator.SetTrigger("attaque");
-            Invoke("ActiverColliderArme", 1f);
+            ActiverColliderArme();
             tempsEntreAttaque = debutAttaque;
 
             
@@ -64,7 +66,7 @@ public class CombatMelee : MonoBehaviour
 // actique le collider de l'arme pendant l'animation d'attaque
     void ActiverColliderArme() {
         attaqueCollider.enabled = true;
-        Invoke("DesactiverColliderArme", 1f);
+        Invoke("DesactiverColliderArme", dureeAttaque );
     }
 
     void DesactiverColliderArme() {

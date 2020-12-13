@@ -2,17 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Olivier Fortier pour la basse
-//Thomas Lorenzo pour les modifications des inputs
+// Olivier Fortier
 // script de controle de base du joueur. Mouvement, boutons pour effectuer des actions, esquive, etc
 public class ControlleurJoueur : MonoBehaviour
 {
-
-     [SerializeField]
-    private int IndexJoueur =0;
-
-
-    public MenuControle obj_MenuControle;
 
     //référence au controlleur de personnage jouables
     public CharacterController controller;
@@ -49,9 +42,6 @@ public class ControlleurJoueur : MonoBehaviour
     //référence à la vélocité du personnage
     Vector3 velocite;
 
-    // input vecteur 2
-    Vector2 InputVector = Vector2.zero;
-
     //temps pour adoucir quand le personnage tourne
     public float tempsTournerSmooth = 0.1f;
     //variable pour calcul de la vélocité du "tour" du personnage
@@ -66,6 +56,20 @@ public class ControlleurJoueur : MonoBehaviour
     public CombatDistance refDistance;
 
 
+    //détermine les types de touches/contrôles (2 pour l'instant)
+    public enum enumTypeTouches
+    {
+        WASD,
+        IJKL
+    };
+
+    //liste des touches verticales et horizontales
+    private string[] axeTouches = new string[3];
+
+    //faire afficher la liste des touches dans l'inspecteur
+    public enumTypeTouches typeTouches;
+
+
     //aller chercher le composant animator du personnage au départ.
     void Start()
     {
@@ -73,7 +77,21 @@ public class ControlleurJoueur : MonoBehaviour
         if (GetComponentInChildren<Animator>() != null) animateur = GetComponentInChildren<Animator>();
 
 
+        //on détermine le type de touches dans le input manager selon le choix dans l'inspecteur
+        switch (typeTouches)
+        {
+            case enumTypeTouches.WASD:
+                axeTouches[0] = "Horizontal";
+                axeTouches[1] = "Vertical";
+                axeTouches[2] = "Esquive";
+                break;
 
+            case enumTypeTouches.IJKL:
+                axeTouches[0] = "2_Horizontal";
+                axeTouches[1] = "2_Vertical";
+                axeTouches[2] = "2_Esquive";
+                break;
+        }
 
         // configuration de la vitesse de base
         vitesseActuelle = vitesseDeBase;
@@ -82,7 +100,7 @@ public class ControlleurJoueur : MonoBehaviour
 
     void Update()
     {
-        bool estMort = GetComponent<healthBarController>().estMort;
+        bool estMort = GetComponent<ControleurBarreVie>().estMort;
         if (!estMort)
         { //faire écouler le temps pour l'esquive
             if (timerEsquive > 0)
@@ -96,44 +114,42 @@ public class ControlleurJoueur : MonoBehaviour
                 timerDureeEsquive -= Time.deltaTime;
             }
 
-
-            
+            // bouton pour attaquer
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
                 // selon si le systeme de distance ou de mélée est activée, attaque de cette facon
-                
+                if (refMelee.enabled) refMelee.Attaque();
 
-            
+                if (refDistance.enabled) refDistance.Attaque();
+
+            }
+
+            // changer d'arme
+            if (Input.GetKeyDown(KeyCode.G))
+            {
+
+                ChangerArme();
+            }
+
+            // gestion de mouvement du personage
             Bouger();
-           
         }
     }
 
     /// <summary>
     /// Méthode pour faire bouger le personnage joueur selon les touches activées
     /// </summary>
-
-       public int GetPlayerIndex(){
-        return IndexJoueur;
-    }
-
-    public void SetInputVector(Vector2 LesDirections){
-
-        InputVector=LesDirections;
-
-    }
-
-    public void AttaqueDistance(){
-        refDistance.Attaque();
-
-    }
-
-     public void AttaqueMelee(){
-        refMelee.Attaque();
-
-    }
-
     private void Bouger()
     {
-
+        //si on appuie sur la touche d'esquive
+        if (Input.GetAxis(axeTouches[2]) >= 0.1f)
+        {
+            //si le cooldown de l'esquive est prêt
+            if (timerEsquive <= 0)
+            {
+                Esquiver(25f, 0.5f);
+            }
+        }
         //on prends la vitesse de base pour faire bouger le joueur
         float vitesse = vitesseActuelle;
 
@@ -146,9 +162,12 @@ public class ControlleurJoueur : MonoBehaviour
             velocite.y = -2f;
         }
 
+        //on assigne les touches et on les détectes
+        float horizontal = Input.GetAxis(axeTouches[0]);
+        float vertical = Input.GetAxis(axeTouches[1]);
 
         //calcul de la direction du personnage selon le input horizontal et vertical
-        Vector3 direction = new Vector3(InputVector.x, 0f, InputVector.y).normalized;
+        Vector3 direction = new Vector3(horizontal, 0f, vertical).normalized;
 
         //activer l'animation de marche si on bouge
         if (animateur != null) animateur.SetFloat("vitesse", direction.magnitude);
@@ -180,7 +199,7 @@ public class ControlleurJoueur : MonoBehaviour
     /// 
     /// Retourne la vitesse 
     /// </summary>
-    public void Esquiver(float vitesseEsquive, float tempsEsquive)
+    private void Esquiver(float vitesseEsquive, float tempsEsquive)
     {
 
         // déclenche l'animation d'esquive
@@ -195,17 +214,6 @@ public class ControlleurJoueur : MonoBehaviour
 
     }
 
-    public void roulade(){
-      //si on appuie sur la touche d'esquive
-
-            //si le cooldown de l'esquive est prêt
-            if (timerEsquive <= 0)
-            {
-                Esquiver(25f, 0.5f);
-            }
-    }
-  
-        
 
     public void AugmenterVitesseDeBase(float vitesse, float temps)
     {
@@ -234,14 +242,5 @@ public class ControlleurJoueur : MonoBehaviour
         }
 
     }
-      private void OnEnable(){
-         obj_MenuControle.Enable();
-    }
-
-   
-    private void OnDisable(){
-        obj_MenuControle.Disable();
-         
-    }        
 
 }
