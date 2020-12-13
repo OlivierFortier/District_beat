@@ -65,7 +65,7 @@ public class choisirPerso : MonoBehaviour
           val= Mathf.FloorToInt(num) ;
             actif.SetActive(false);
             numPerso= numPerso+val;
-            if(numPerso==10){
+            if(numPerso==8){
                 numPerso=0;
             }
                 if(numPerso==-2){
