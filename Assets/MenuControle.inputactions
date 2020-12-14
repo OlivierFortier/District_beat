@@ -329,6 +329,17 @@
                 },
                 {
                     "name": "",
+                    "id": "e8fbf6cb-68ef-41b9-bd72-50afd9e14783",
+                    "path": "<Gamepad>/buttonWest",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "attaque mele",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "613f14af-b182-4a95-86e9-93e4e3617205",
                     "path": "<Keyboard>/g",
                     "interactions": "",
@@ -340,8 +351,30 @@
                 },
                 {
                     "name": "",
+                    "id": "3338dc1d-adc2-4a24-9a3c-c53ed8fc2e95",
+                    "path": "<Gamepad>/buttonNorth",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "attaque distance",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "52743a23-952e-4c35-a58e-a52f174e9356",
                     "path": "<Keyboard>/f",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "roulade",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9cb543dd-f386-405f-9645-d39aca019194",
+                    "path": "<Gamepad>/buttonEast",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

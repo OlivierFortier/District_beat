@@ -92,6 +92,8 @@ public class ControlleurJoueur : MonoBehaviour
      if(SceneManager.GetActiveScene().name=="scene_jeu_principal"){
          
         control.enabled= true;
+        refMelee.enabled=true;
+        refDistance.enabled=true;
 
      
  }

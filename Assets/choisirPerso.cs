@@ -72,6 +72,13 @@ public class choisirPerso : MonoBehaviour
 
      
  }
+ if(SceneManager.GetActiveScene().name=="Menu principal"){
+         
+        Destroy(gameObject);
+        
+
+     
+ }
         
     }
 
