@@ -296,7 +296,7 @@ public class @MenuControle : IInputActionCollection, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""bd6de26f-07bf-4207-bc23-2871b58ba9ba"",
-                    ""path"": ""<Gamepad>/leftStick/up"",
+                    ""path"": ""<Gamepad>/leftStick/down"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -307,7 +307,7 @@ public class @MenuControle : IInputActionCollection, IDisposable
                 {
                     ""name"": ""down"",
                     ""id"": ""f57964c8-8100-4d0c-92cf-980fa9986b1b"",
-                    ""path"": ""<Gamepad>/leftStick/down"",
+                    ""path"": ""<Gamepad>/leftStick/up"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",

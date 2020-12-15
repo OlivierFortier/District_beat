@@ -7,25 +7,24 @@ using static UnityEngine.InputSystem.InputAction;
 public class joindreJeux : MonoBehaviour
 {
 
-
+   //Thomas Lorenzo
      public GameObject[] Joueurs;
      public GameObject[] MessageJoueurs;
      public GameObject scene;
 
 
     public int Nbjoueur;
-    public int i;
 
 
 
 public void Joindre(){
-Nbjoueur=Nbjoueur+i;
 
+// gère le login des joueurs
 MessageJoueurs[Nbjoueur].SetActive(false);
 Joueurs[Nbjoueur].SetActive(true);
 scene.GetComponent<gestionscene>().Nbdjoueur=scene.GetComponent<gestionscene>().Nbdjoueur+1;
+Nbjoueur=Nbjoueur+1;
 
-i=i+1;
 
 
 }
