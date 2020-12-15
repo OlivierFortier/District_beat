@@ -42,24 +42,31 @@ public class choisirPerso : MonoBehaviour
 
     void Update() {
         if(SceneManager.GetActiveScene().name=="scene_jeu_principal"){
+
+            var transformSalleDebut = GameObject.Find("salle-debut(Clone)").transform;
+
          if(IndexJoueur==0){
         gameObject.transform.localScale= new Vector3(1f,1f,1f);
-         gameObject.transform.localPosition= new Vector3(0f,4.7f,5.6f);
+        gameObject.transform.SetParent(transformSalleDebut);
+         gameObject.transform.localPosition= new Vector3(9.05f,3.49f,8.22f);
         
          }
           if(IndexJoueur==1){
         gameObject.transform.localScale= new Vector3(1f,1f,1f);
-         gameObject.transform.localPosition= new Vector3(1f,4.7f,5.6f);
+        gameObject.transform.SetParent(transformSalleDebut);
+         gameObject.transform.localPosition= new Vector3(-6.93f,3.49f,7.19f);
         
          }
           if(IndexJoueur==2){
         gameObject.transform.localScale= new Vector3(1f,1f,1f);
-         gameObject.transform.localPosition= new Vector3(2f,4.7f,5.6f);
+        gameObject.transform.SetParent(transformSalleDebut);
+         gameObject.transform.localPosition= new Vector3(-6.93f,3.49f,20.75f);
         
          }
           if(IndexJoueur==3){
         gameObject.transform.localScale= new Vector3(1f,1f,1f);
-         gameObject.transform.localPosition= new Vector3(3f,4.7f,5.6f);
+        gameObject.transform.SetParent(transformSalleDebut);
+         gameObject.transform.localPosition= new Vector3(9.12f,3.49f,20.75f);
         
          }
 
