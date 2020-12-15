@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 
 public class choisirPerso : MonoBehaviour
 {
@@ -39,6 +40,48 @@ public class choisirPerso : MonoBehaviour
 
     }
 
+    void Update() {
+        if(SceneManager.GetActiveScene().name=="scene_jeu_principal"){
+         if(IndexJoueur==0){
+        gameObject.transform.localScale= new Vector3(1f,1f,1f);
+         gameObject.transform.localPosition= new Vector3(0f,4.7f,5.6f);
+        
+         }
+          if(IndexJoueur==1){
+        gameObject.transform.localScale= new Vector3(1f,1f,1f);
+         gameObject.transform.localPosition= new Vector3(1f,4.7f,5.6f);
+        
+         }
+          if(IndexJoueur==2){
+        gameObject.transform.localScale= new Vector3(1f,1f,1f);
+         gameObject.transform.localPosition= new Vector3(2f,4.7f,5.6f);
+        
+         }
+          if(IndexJoueur==3){
+        gameObject.transform.localScale= new Vector3(1f,1f,1f);
+         gameObject.transform.localPosition= new Vector3(3f,4.7f,5.6f);
+        
+         }
+
+     
+ }
+ if(SceneManager.GetActiveScene().name=="fin_jeu"){
+         
+        Destroy(gameObject);
+        
+
+     
+ }
+ if(SceneManager.GetActiveScene().name=="Menu principal"){
+         
+        Destroy(gameObject);
+        
+
+     
+ }
+        
+    }
+
     public int GetPlayerIndex(){
         return IndexJoueur;
     }
@@ -52,7 +95,7 @@ public class choisirPerso : MonoBehaviour
         Perso[5] = Perso3;
         Perso[6] = Perso4;
         Perso[7] = Perso4;
-       
+       DontDestroyOnLoad(gameObject);
     }
 
 
