@@ -11,6 +11,8 @@ public class ControlleurApparition : MonoBehaviour
     // Liste des objets prefab qu'on veut instancier aléatoirement
     public List<GameObject> listeObjetsAInstancier = new List<GameObject>();
     
+    void Awake() => enabled = false;
+
     void Start()
     {
         // remplir la liste des points
@@ -21,7 +23,7 @@ public class ControlleurApparition : MonoBehaviour
             point.gameObject.GetComponentInChildren<Renderer>().enabled = false;
         }
 
-        enabled = false;
+        
 
     }
 

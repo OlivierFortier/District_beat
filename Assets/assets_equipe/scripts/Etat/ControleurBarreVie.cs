@@ -41,11 +41,9 @@ public class ControleurBarreVie : MonoBehaviour
             instanceBarreDeVie = Instantiate(refBarreDeVie);
 
             //on parente au canvas l'élément UI
-            instanceBarreDeVie.transform.SetParent(GameObject.Find("Canvas").transform);
+            instanceBarreDeVie.transform.SetParent(GameObject.Find("Canvas").transform.Find("groupe-arrangement").transform);
 
-            //on le positionne à la meme place que le fond
-            instanceBarreDeVie.GetComponent<RectTransform>().anchoredPosition =
-                fondBarreVie.GetComponent<RectTransform>().anchoredPosition;
+          
         }
     }
 
@@ -115,7 +113,10 @@ public class ControleurBarreVie : MonoBehaviour
         // si c'est un joueur, terminer la partie
         else if (tag == "joueur")
         {
-            Invoke("RelancerPartie", 4f);
+            //supprimer le gameobject du joueur apres 1 seconde
+            ControlleurJoueur.nombreJoueursMort += 1;
+            print("bonsoir");
+            Destroy(this.gameObject, 1f);
         }
 
     }
@@ -125,10 +126,6 @@ public class ControleurBarreVie : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    void RelancerPartie()
-    {
-        SceneManager.LoadScene("fin_jeu");
-    }
 
     // méthode pour déclencher le butin qui tombe de l'ennemi
     void RelacherButin() {

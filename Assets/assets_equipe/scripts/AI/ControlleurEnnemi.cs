@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
+// Olivier Fortier
+// script qui gère le AI des ennemis
 public class ControlleurEnnemi : MonoBehaviour
 {
 

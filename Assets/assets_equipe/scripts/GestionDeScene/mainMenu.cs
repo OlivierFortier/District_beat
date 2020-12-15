@@ -10,7 +10,7 @@ public class mainMenu : MonoBehaviour
 {
     public void Jouer()
     {
-        SceneManager.LoadScene("Scene_jeu_principal");
+        SceneManager.LoadScene("Choix perso");
     }
     public void choixJoueur()
     {
@@ -26,8 +26,7 @@ public class mainMenu : MonoBehaviour
     }
     public void Quitter()
     {     
-        // yeet
-       Debug.Log("QUIT!");
+    
        Application.Quit();
        
     }  

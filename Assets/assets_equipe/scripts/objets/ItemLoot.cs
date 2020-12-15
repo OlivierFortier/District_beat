@@ -56,6 +56,7 @@ public class ItemLoot : MonoBehaviour
         }
     }
 
+// augmente la vie
     private void PrendrePackVie(GameObject joueur)
     {
         
@@ -64,6 +65,7 @@ public class ItemLoot : MonoBehaviour
 
     }
 
+// augmente la vitesse
     private void PrendreSpeed(GameObject joueur)
     {
         var scriptVitesse = joueur.GetComponent<ControlleurJoueur>();
@@ -71,6 +73,7 @@ public class ItemLoot : MonoBehaviour
 
     }
 
+// augmente la résistance
     private void PrendreMorphine(GameObject joueur)
     {
         var scriptVie = joueur.GetComponent<ControleurBarreVie>();
@@ -78,6 +81,7 @@ public class ItemLoot : MonoBehaviour
 
     }
 
+// augment les dommages
     private void PrendreNeon(GameObject joueur)
     {
         var armeMelee = joueur.GetComponent<CombatMelee>().attaqueArme.GetComponent<toucherEnnemi>();
@@ -87,6 +91,7 @@ public class ItemLoot : MonoBehaviour
 
     }
 
+// désactiver le collider et le renderer pour permettre au son de jouer avant de le détruire
     private void DesactiverColliderEtRenderer() {
         GetComponent<Collider>().enabled = false;
         GetComponent<Renderer>().enabled = false;
