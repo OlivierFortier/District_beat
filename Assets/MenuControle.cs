@@ -205,6 +205,14 @@ public class @MenuControle : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""entrer"",
+                    ""type"": ""Value"",
+                    ""id"": ""9119fe3e-d150-4907-877c-c3ab8da956a5"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -394,6 +402,39 @@ public class @MenuControle : IInputActionCollection, IDisposable
                     ""action"": ""roulade"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""40d70257-e1c7-4584-a04e-2d854ab9eab1"",
+                    ""path"": ""<Gamepad>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""entrer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b8f92b38-76fb-45c3-b510-eaeaa37f2e79"",
+                    ""path"": ""<XInputController>/start"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""entrer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8411bc04-e38a-484b-95f9-a5ef8ce16baf"",
+                    ""path"": ""<Keyboard>/r"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""entrer"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -410,6 +451,7 @@ public class @MenuControle : IInputActionCollection, IDisposable
         m_jeux_attaquemele = m_jeux.FindAction("attaque mele", throwIfNotFound: true);
         m_jeux_attaquedistance = m_jeux.FindAction("attaque distance", throwIfNotFound: true);
         m_jeux_roulade = m_jeux.FindAction("roulade", throwIfNotFound: true);
+        m_jeux_entrer = m_jeux.FindAction("entrer", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -504,6 +546,7 @@ public class @MenuControle : IInputActionCollection, IDisposable
     private readonly InputAction m_jeux_attaquemele;
     private readonly InputAction m_jeux_attaquedistance;
     private readonly InputAction m_jeux_roulade;
+    private readonly InputAction m_jeux_entrer;
     public struct JeuxActions
     {
         private @MenuControle m_Wrapper;
@@ -512,6 +555,7 @@ public class @MenuControle : IInputActionCollection, IDisposable
         public InputAction @attaquemele => m_Wrapper.m_jeux_attaquemele;
         public InputAction @attaquedistance => m_Wrapper.m_jeux_attaquedistance;
         public InputAction @roulade => m_Wrapper.m_jeux_roulade;
+        public InputAction @entrer => m_Wrapper.m_jeux_entrer;
         public InputActionMap Get() { return m_Wrapper.m_jeux; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -533,6 +577,9 @@ public class @MenuControle : IInputActionCollection, IDisposable
                 @roulade.started -= m_Wrapper.m_JeuxActionsCallbackInterface.OnRoulade;
                 @roulade.performed -= m_Wrapper.m_JeuxActionsCallbackInterface.OnRoulade;
                 @roulade.canceled -= m_Wrapper.m_JeuxActionsCallbackInterface.OnRoulade;
+                @entrer.started -= m_Wrapper.m_JeuxActionsCallbackInterface.OnEntrer;
+                @entrer.performed -= m_Wrapper.m_JeuxActionsCallbackInterface.OnEntrer;
+                @entrer.canceled -= m_Wrapper.m_JeuxActionsCallbackInterface.OnEntrer;
             }
             m_Wrapper.m_JeuxActionsCallbackInterface = instance;
             if (instance != null)
@@ -549,6 +596,9 @@ public class @MenuControle : IInputActionCollection, IDisposable
                 @roulade.started += instance.OnRoulade;
                 @roulade.performed += instance.OnRoulade;
                 @roulade.canceled += instance.OnRoulade;
+                @entrer.started += instance.OnEntrer;
+                @entrer.performed += instance.OnEntrer;
+                @entrer.canceled += instance.OnEntrer;
             }
         }
     }
@@ -564,5 +614,6 @@ public class @MenuControle : IInputActionCollection, IDisposable
         void OnAttaquemele(InputAction.CallbackContext context);
         void OnAttaquedistance(InputAction.CallbackContext context);
         void OnRoulade(InputAction.CallbackContext context);
+        void OnEntrer(InputAction.CallbackContext context);
     }
 }

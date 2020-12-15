@@ -16,7 +16,9 @@ public class ControlleurJoueur : MonoBehaviour
      [SerializeField]
     private int IndexJoueur =0;
 
+    public bool estPret = false;
 
+    public MenuControle obj_MenuControle;
 
 
     //référence au controlleur de personnage jouables
@@ -73,11 +75,14 @@ public class ControlleurJoueur : MonoBehaviour
     // référence controler
     private CharacterController control;
 
+    void Awake() {
+         obj_MenuControle = new MenuControle();
+    }
 
     //aller chercher le composant animator du personnage au départ.
     void Start()
     {
-       
+      
 
         control =GetComponent<CharacterController>();
         // activer l'animator si on en possède un
@@ -114,11 +119,6 @@ public class ControlleurJoueur : MonoBehaviour
             {
                 timerDureeEsquive -= Time.deltaTime;
             }
-
-
-            
-                // selon si le systeme de distance ou de mélée est activée, attaque de cette facon
-                
 
             
             Bouger();
@@ -253,5 +253,13 @@ public class ControlleurJoueur : MonoBehaviour
             refDistance.enabled = true;
         }
 
+    }
+
+    private void OnEnable() {
+        obj_MenuControle.Enable();
+    }
+
+    private void OnDisable() {
+ obj_MenuControle.Disable();
     }
 }
