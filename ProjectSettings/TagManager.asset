@@ -10,6 +10,8 @@ TagManager:
   - arme
   - medicament
   - gestion
+  - principal
+  - conteneur-joueur
   layers:
   - Default
   - TransparentFX
