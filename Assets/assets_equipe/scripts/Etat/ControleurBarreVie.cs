@@ -43,9 +43,7 @@ public class ControleurBarreVie : MonoBehaviour
             //on parente au canvas l'élément UI
             instanceBarreDeVie.transform.SetParent(GameObject.Find("Canvas").transform.Find("groupe-arrangement").transform);
 
-            //on le positionne à la meme place que le fond
-            // instanceBarreDeVie.GetComponent<RectTransform>().anchoredPosition =
-            //     fondBarreVie.GetComponent<RectTransform>().anchoredPosition;
+          
         }
     }
 
