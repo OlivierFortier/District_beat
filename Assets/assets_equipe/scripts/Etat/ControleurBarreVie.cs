@@ -115,7 +115,10 @@ public class ControleurBarreVie : MonoBehaviour
         // si c'est un joueur, terminer la partie
         else if (tag == "joueur")
         {
-            Invoke("RelancerPartie", 4f);
+            //supprimer le gameobject du joueur apres 1 seconde
+            ControlleurJoueur.nombreJoueursMort += 1;
+            print("bonsoir");
+            Destroy(this.gameObject, 1f);
         }
 
     }
@@ -125,10 +128,6 @@ public class ControleurBarreVie : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    void RelancerPartie()
-    {
-        SceneManager.LoadScene("fin_jeu");
-    }
 
     // méthode pour déclencher le butin qui tombe de l'ennemi
     void RelacherButin() {

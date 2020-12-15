@@ -9,6 +9,9 @@ using UnityEngine.SceneManagement;
 // script de controle de base du joueur. Mouvement, boutons pour effectuer des actions, esquive, etc
 public class ControlleurJoueur : MonoBehaviour
 {
+    public static int nombreJoueurs;
+
+    public static int nombreJoueursMort = 0;
 
      [SerializeField]
     private int IndexJoueur =0;
@@ -74,11 +77,11 @@ public class ControlleurJoueur : MonoBehaviour
     //aller chercher le composant animator du personnage au départ.
     void Start()
     {
+       
+
         control =GetComponent<CharacterController>();
         // activer l'animator si on en possède un
         if (GetComponentInChildren<Animator>() != null) animateur = GetComponentInChildren<Animator>();
-
-
 
 
         // configuration de la vitesse de base
@@ -94,7 +97,7 @@ public class ControlleurJoueur : MonoBehaviour
         control.enabled= true;
         refMelee.enabled=true;
         refDistance.enabled=true;
-
+         GetComponent<ControleurBarreVie>().enabled = true;
      
  }
 
@@ -121,6 +124,7 @@ public class ControlleurJoueur : MonoBehaviour
             Bouger();
            
         }
+        
     }
 
     /// <summary>

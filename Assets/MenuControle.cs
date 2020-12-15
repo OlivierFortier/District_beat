@@ -233,7 +233,7 @@ public class @MenuControle : IInputActionCollection, IDisposable
                 {
                     ""name"": ""up"",
                     ""id"": ""261a0eca-ae5e-44be-9dde-67dd07334d53"",
-                    ""path"": ""<Keyboard>/numpad8"",
+                    ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -277,7 +277,7 @@ public class @MenuControle : IInputActionCollection, IDisposable
                 {
                     ""name"": ""2D Vector"",
                     ""id"": ""4b450cc5-103a-4f36-a8f2-3f189b23d303"",
-                    ""path"": ""2DVector"",
+                    ""path"": ""2DVector(mode=2)"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
