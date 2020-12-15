@@ -57,11 +57,27 @@ public class choisirPerso : MonoBehaviour
 
             if(fini==false){
 
-        GameObject joueur;
-        // on va chercher le perso
-        joueur = gameObject.transform.GetChild(0).gameObject;
+        GameObject joueur1;
+        GameObject joueur2;
+        GameObject joueur3;
+        GameObject joueur4;
+        // on va chercher le perso 1
+        joueur1 = gameObject.transform.GetChild(0).gameObject;
         // et on force sa position
-        joueur.transform.localPosition =new Vector3(0f,0f,0);
+        joueur1.transform.localPosition =new Vector3(0f,0f,0);
+        // on va chercher le perso 2
+        joueur2 = gameObject.transform.GetChild(1).gameObject;
+        // et on force sa position
+        joueur2.transform.localPosition =new Vector3(0f,0f,0);
+        
+        // on va chercher le perso 3
+        joueur3 = gameObject.transform.GetChild(2).gameObject;
+        // et on force sa position
+        joueur3.transform.localPosition =new Vector3(0f,0f,0);
+        // on va chercher le perso 4
+        joueur4 = gameObject.transform.GetChild(3).gameObject;
+        // et on force sa position
+        joueur4.transform.localPosition =new Vector3(0f,0f,0);
         Invoke("fait", 1f);
 
         }
@@ -69,7 +85,7 @@ public class choisirPerso : MonoBehaviour
         // on change les paramêtre transform du joueur 
         gameObject.transform.localScale= new Vector3(1f,1f,1f);
         gameObject.transform.SetParent(transformSalleDebut);
-         gameObject.transform.localPosition= new Vector3(4,3.56f,8.22f);
+         gameObject.transform.localPosition= new Vector3(4,4.56f,8.22f);
         
         
          }
@@ -77,21 +93,21 @@ public class choisirPerso : MonoBehaviour
         // on change les paramêtre transform du joueur 
         gameObject.transform.localScale= new Vector3(1f,1f,1f);
         gameObject.transform.SetParent(transformSalleDebut);
-         gameObject.transform.localPosition= new Vector3(-6.93f,3.56f,7.19f);
+         gameObject.transform.localPosition= new Vector3(-6.93f,4.56f,12.19f);
         
          }
           if(IndexJoueur==2){
         // on change les paramêtre transform du joueur
         gameObject.transform.localScale= new Vector3(1f,1f,1f);
         gameObject.transform.SetParent(transformSalleDebut);
-         gameObject.transform.localPosition= new Vector3(-6.93f,3.56f,4.22f);
+         gameObject.transform.localPosition= new Vector3(-6.93f,4.56f,4.22f);
         
          }
           if(IndexJoueur==3){
         // on change les paramêtre transform du joueur
         gameObject.transform.localScale= new Vector3(1f,1f,1f);
         gameObject.transform.SetParent(transformSalleDebut);
-         gameObject.transform.localPosition= new Vector3(9.12f,3.56f,4.22f);
+         gameObject.transform.localPosition= new Vector3(9.12f,4.56f,4.22f);
         
          }
 

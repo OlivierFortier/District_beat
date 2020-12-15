@@ -8,7 +8,9 @@ using UnityEngine.SceneManagement;
 public class GestionMort : MonoBehaviour
 {
     
-    void Start() { ControlleurJoueur.nombreJoueurs = GameObject.FindGameObjectsWithTag("joueur").Length; }
+    void Start() { ControlleurJoueur.nombreJoueurs = GameObject.FindGameObjectsWithTag("joueur").Length;
+    print(ControlleurJoueur.nombreJoueurs);
+     }
 
     // Update is called once per frame
     void Update()

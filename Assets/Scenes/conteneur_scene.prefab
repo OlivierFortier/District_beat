@@ -274,6 +274,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6594889434618930118}
   - component: {fileID: 6594889434618930119}
+  - component: {fileID: 5852701222357712004}
   m_Layer: 0
   m_Name: Generateur-niveau
   m_TagString: Untagged
@@ -324,6 +325,18 @@ MonoBehaviour:
   - Tag: debut
     MinAmount: 1
     MaxAmount: 1
+--- !u!114 &5852701222357712004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6594889434618930116}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d2bc8f19d0de8a46882291bf3835324, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6594889434752215713
 GameObject:
   m_ObjectHideFlags: 0
@@ -516,4 +529,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b9f03f603d0003458479e9e32a776b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nbJoueursPret: 0
