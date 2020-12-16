@@ -3,19 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 
+// Olivier Fortier
+// script qui gère la caméra qui s'adapte au nombre de joueurs
 public class GestionCameraMulti : MonoBehaviour
 {
 
+// référence au groupe de cibles de la caméra cinemachine
    public CinemachineTargetGroup groupeCamera;
-//    private List<GameObject> lesJoueurs = new List<GameObject>();
 
 
-    // Start is called before the first frame update
     void Start()
     {
+        // trouver tous les joueurs
         var arrJoueurs = GameObject.FindGameObjectsWithTag("joueur");
-        // Cinemachine.CinemachineTargetGroup.Target cible;
 
+        // pour chaque joueur, l'ajouter au groupe de caméra
         foreach (GameObject joueur in arrJoueurs) {
             groupeCamera.AddMember(joueur.transform, 1f, 3.12f);
         }
