@@ -17,7 +17,7 @@ public class GestionMort : MonoBehaviour
     {
        
         //si tous les joueurs sont morts, relancer la partie
-        if(ControlleurJoueur.nombreJoueursMort == ControlleurJoueur.nombreJoueurs) {
+        if(ControlleurJoueur.nombreJoueursMort >= ControlleurJoueur.nombreJoueurs) {
             RelancerPartie();
         }
         
