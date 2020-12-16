@@ -8,11 +8,11 @@ using UnityEngine.SceneManagement;
 public class GestionMort : MonoBehaviour
 {
     
+    // trouver le nombre de joueurs actifs
     void Start() { ControlleurJoueur.nombreJoueurs = GameObject.FindGameObjectsWithTag("joueur").Length;
-    print(ControlleurJoueur.nombreJoueurs);
      }
 
-    // Update is called once per frame
+
     void Update()
     {
        
@@ -24,7 +24,7 @@ public class GestionMort : MonoBehaviour
     }
 
 
-    
+    // Méthode qui permet de relancer la partie
     void RelancerPartie()
     {
         ControlleurJoueur.nombreJoueursMort = 0;

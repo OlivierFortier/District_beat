@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-
+// Olivier Fortier
 /// <summary>
 /// structure qui permet de créer un genre de dictionnaire reconnaissable par unity
 /// puisque unity ne prends pas en charche les dictionnaires par défaut

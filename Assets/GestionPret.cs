@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 // Olivier Fortier
+// Script qui enlève le texte qui indique comment commencer arpès 5s
 public class GestionPret : MonoBehaviour
 {
 

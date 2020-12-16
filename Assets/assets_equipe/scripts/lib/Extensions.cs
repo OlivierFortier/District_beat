@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
+// Olivier Fortier
 // classe statique pour créer des méthodes extensions de différents interfaces, type, structs, classes, etc
 public static class Extensions
 {

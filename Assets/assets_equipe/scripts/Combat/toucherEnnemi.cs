@@ -35,7 +35,7 @@ public class toucherEnnemi : MonoBehaviour
         // si c'Est un projectile, activer le collider après un certain délai
         if (estunProjectile) Invoke("ActiverCollider", 0.15f);
 
-        // particuleSang = GetComponent<ParticleSystem>();
+    
     }
 
     private void OnCollisionEnter(Collision toucherEnnemi)
@@ -71,12 +71,11 @@ public class toucherEnnemi : MonoBehaviour
                 // faire perdre de la vie
                 toucherEnnemi.gameObject.GetComponent<ControleurBarreVie>().PrendreDommages(dommagesTotal);
                    GetComponent<AudioSource>().PlayOneShot(slashSon, 1f);
-                //particuleSang.SetActive(true);
-                // Instantiate(particuleSang);
+          
                var particules = particuleSang.GetComponent<ParticleSystem>();
 
                particules.Play();
-                //faire jouer un son de coup lorsque ennemi frappe au joueur
+       
              
             }
         }
@@ -86,13 +85,14 @@ public class toucherEnnemi : MonoBehaviour
 
     }
 
-    // méthode pour augmenter les dommages
+    // méthode pour augmenter les dommages du personnage pendant un certain temps
     public void MultiplierDommages(float multiplicateur, float tempsDuBoost)
     {
         dommagesTotal *= multiplicateur;
         Invoke("ArreterMultiplicateurDommages", tempsDuBoost);
     }
 
+// méthode pour arrêter le boost de dommages
     private void ArreterMultiplicateurDommages()
     {
         dommagesTotal = dommagesArme;
@@ -110,6 +110,7 @@ public class toucherEnnemi : MonoBehaviour
         estunProjectile = vraiFaux;
     }
 
+    // méthode permettant d'activer le collider du projectile
     public void ActiverCollider() { GetComponent<Collider>().enabled = true; }
 
 }

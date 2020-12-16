@@ -14,6 +14,8 @@ public class VieFlottante : MonoBehaviour
 // offset de déplacement si nécéssaire
     public Vector3 deplacement;
 
+    // référence à la caméra principale
+
     private Camera cam;
 
    
@@ -28,7 +30,7 @@ public class VieFlottante : MonoBehaviour
         // trouver la position de la cible (ennemi)
         Vector3 pos = cam.WorldToScreenPoint(cible.position + deplacement);
 
-    // mettre à jour la position du UI à la positio nde la cible
+    // mettre à jour la position du UI à la position de la cible
         if(transform.position != pos)
             transform.position = pos;
     }

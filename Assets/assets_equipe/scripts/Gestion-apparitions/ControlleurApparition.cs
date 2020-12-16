@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
+// Olivier Fortier
+// script qui gère l'apparition aléatoire des ennemis dans une salle.
 public class ControlleurApparition : MonoBehaviour
 {
     // liste des points d'apparitions possibles. Ce sont les enfants de ce gameobject (capsules jaunes)
@@ -11,6 +13,7 @@ public class ControlleurApparition : MonoBehaviour
     // Liste des objets prefab qu'on veut instancier aléatoirement
     public List<GameObject> listeObjetsAInstancier = new List<GameObject>();
     
+    // désactiver l'objet au chargement, pour ne pas surcharger le jeu de 500 ennemis
     void Awake() => enabled = false;
 
     void Start()

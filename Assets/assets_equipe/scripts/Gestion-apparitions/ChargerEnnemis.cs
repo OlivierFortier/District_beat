@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Olivier Fortier
+// script qui active le chargement des ennemis lorsqu'on entre dans une salle
 public class ChargerEnnemis : MonoBehaviour
 {
 
@@ -13,6 +15,7 @@ public class ChargerEnnemis : MonoBehaviour
         if(autreObjet.transform.CompareTag("joueur")) {
 
             controlleur.enabled = true;
+            // désactiver le détecteur d'entrée
             Destroy(gameObject, 1f);
         }
     }

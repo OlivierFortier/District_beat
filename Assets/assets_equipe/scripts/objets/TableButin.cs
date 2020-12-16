@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Olivier Fortier
+// script qui permet de gérer les chances qu'un ennemi possède de laisser tomber du butin lorsqu'il meurt
 public class TableButin : MonoBehaviour
 {
 

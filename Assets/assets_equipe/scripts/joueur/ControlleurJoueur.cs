@@ -9,15 +9,17 @@ using UnityEngine.SceneManagement;
 // script de controle de base du joueur. Mouvement, boutons pour effectuer des actions, esquive, etc
 public class ControlleurJoueur : MonoBehaviour
 {
+    // ces deux variables statique permettent a tout moment de savoir il reste combien de joueurs vivants
     public static int nombreJoueurs;
 
     public static int nombreJoueursMort = 0;
 
-     [SerializeField]
+     [SerializeField] //référence au joueur actuel (pour le multijoueur)
     private int IndexJoueur =0;
 
     public bool estPret = false;
 
+// référence au input system
     public MenuControle obj_MenuControle;
 
 
@@ -62,7 +64,7 @@ public class ControlleurJoueur : MonoBehaviour
     //temps pour adoucir quand le personnage tourne
     public float tempsTournerSmooth = 0.1f;
     //variable pour calcul de la vélocité du "tour" du personnage
-    float turnSmoothVelocity;
+    float velociteTournerSmooth;
 
     //référence à l'animator pour controller les animations du personnage
     private Animator animateur = null;
@@ -72,10 +74,11 @@ public class ControlleurJoueur : MonoBehaviour
     // référence au systeme de combat distance
     public CombatDistance refDistance;
 
-    // référence controler
+    // référence controler ??? Je sais pas pourquoi THomas a mis ca, il ya a déja une variable qui contient la référence au character controler
     private CharacterController control;
 
     void Awake() {
+        // initialiser le input system
          obj_MenuControle = new MenuControle();
     }
 
@@ -97,6 +100,7 @@ public class ControlleurJoueur : MonoBehaviour
     void Update()
     {
 
+// configuration des personnages si on est dans la scene de jeu (par défaut c'est désactivé pour la scene de persos)
      if(SceneManager.GetActiveScene().name=="scene_jeu_principal"){
          
         control.enabled= true;
@@ -105,7 +109,7 @@ public class ControlleurJoueur : MonoBehaviour
          GetComponent<ControleurBarreVie>().enabled = true;
      
  }
-
+        // gestion du cycle de vie du personnage joueur
         bool estMort = GetComponent<ControleurBarreVie>().estMort;
         if (!estMort)
         { //faire écouler le temps pour l'esquive
@@ -127,25 +131,26 @@ public class ControlleurJoueur : MonoBehaviour
         
     }
 
-    /// <summary>
-    /// Méthode pour faire bouger le personnage joueur selon les touches activées
-    /// </summary>
-
+    
+    // Gestion du input systeme  Thomas Lorenzo
        public int GetPlayerIndex(){
         return IndexJoueur;
     }
 
+// Gestion du input systeme  Thomas Lorenzo
     public void SetInputVector(Vector2 LesDirections){
 
         InputVector=LesDirections;
 
     }
 
+// Gestion du input systeme  Thomas Lorenzo
     public void AttaqueDistance(){
         refDistance.Attaque();
 
     }
 
+// Gestion du input systeme  Thomas Lorenzo
      public void AttaqueMelee(){
         refMelee.Attaque();
 
@@ -180,7 +185,7 @@ public class ControlleurJoueur : MonoBehaviour
             float targetAngle = Mathf.Atan2(direction.x, direction.z) * Mathf.Rad2Deg;
 
             //appliquer une "douceur" lorsque le personnage tourne
-            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref turnSmoothVelocity, tempsTournerSmooth);
+            float angle = Mathf.SmoothDampAngle(transform.eulerAngles.y, targetAngle, ref velociteTournerSmooth, tempsTournerSmooth);
             //changer la direction
             transform.rotation = Quaternion.Euler(0f, targetAngle, 0f);
 
@@ -195,11 +200,7 @@ public class ControlleurJoueur : MonoBehaviour
         controller.Move(velocite * Time.deltaTime);
     }
 
-    /// <summary>
-    /// Méthode pour faire esquiver le joueur lorsqu'il appuie sur un bouton
-    /// 
-    /// Retourne la vitesse 
-    /// </summary>
+//    Méthode pour faire esquiver le joueur lorsqu'il appuie sur un bouton
     public void Esquiver(float vitesseEsquive, float tempsEsquive)
     {
 
@@ -215,7 +216,8 @@ public class ControlleurJoueur : MonoBehaviour
 
     }
 
-    public void roulade(){
+// méthode pour permettre au personnage d'esquiver
+    public void Roulade(){
       //si on appuie sur la touche d'esquive
 
             //si le cooldown de l'esquive est prêt
@@ -226,13 +228,14 @@ public class ControlleurJoueur : MonoBehaviour
     }
   
         
-
+// méthode pour augmenter la vitesse d'un personnage pendant un certain temps
     public void AugmenterVitesseDeBase(float vitesse, float temps)
     {
         vitesseActuelle += vitesse;
         Invoke("RemettreVitesseDeBase", temps);
     }
 
+// méthode permettant de remettre la vitesse a la normale
     public void RemettreVitesseDeBase()
     {
         vitesseActuelle = vitesseDeBase;
@@ -255,6 +258,7 @@ public class ControlleurJoueur : MonoBehaviour
 
     }
 
+// requis pour activer le nouveau input system sur les personnages
     private void OnEnable() {
         obj_MenuControle.Enable();
     }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 // Olivier Fortier
 // script de gestion des items ramassables dans le jeu (médecine, speed, neon, morphine)
-public class ItemLoot : MonoBehaviour
+public class ItemButin : MonoBehaviour
 {
 
     // type des items de loot

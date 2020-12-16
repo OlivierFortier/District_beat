@@ -60,7 +60,7 @@ choisir.AttaqueDistance();
   public void roule(){
 // on envoie une valeurs a un autre script pour pouvoir faire rouler le perso
 if(choisir != null)
-choisir.roulade();
+choisir.Roulade();
 
 
 

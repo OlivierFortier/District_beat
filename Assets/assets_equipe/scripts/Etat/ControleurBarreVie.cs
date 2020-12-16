@@ -15,24 +15,30 @@ public class ControleurBarreVie : MonoBehaviour
     private GameObject instanceBarreDeVie;
     // référence au UI de fond de barre de vie
     public GameObject fondBarreVie;
+
+    // vie actuelle du personnage
     public float vie;
+
+    // vie de départ du personnage( vie maximale)
     public float vieDebut;
 
     // état déterministe de la vie ou non-vie du personnage
   [HideInInspector]  public bool estMort = false;
 
+// résistance de départ du personnage
     public float resistanceBase = 1f;
 
+// résistance pendant le jeu du personnage
     public float resistanceActuelle;
     
 
 
     private void Start()
     {
+        // ajuster les résistances et la vie
         resistanceActuelle = resistanceBase;
 
         vie = vieDebut;
-        // activer les particules
         
 
 // si l'entitée possède un UI de barre de vie statique
@@ -47,7 +53,7 @@ public class ControleurBarreVie : MonoBehaviour
         }
     }
 
-// méthode qui permet à l'entitée de prendre des dommages et d'etre blessé
+// méthode qui permet à l'entitée de prendre des dommages et d'etre blessé  Olivier  & Alejandra
     public void PrendreDommages(float damage)
     {
         
@@ -69,6 +75,7 @@ public class ControleurBarreVie : MonoBehaviour
     }
 
 
+// méthode permettant d'augmenter les résistances d'un personnage pendant un temps donné  Olivier Fortier
     public void AugmenterResistance(float nouvelleResistance, float tempsBoost)
     {
 
@@ -76,12 +83,14 @@ public class ControleurBarreVie : MonoBehaviour
         Invoke("RemettreResistanceNormale", tempsBoost);
     }
 
+    // méthode pour remettre la résistance a son état normal   Olivier Fortier
+
     public void RemettreResistanceNormale()
     {
         resistanceActuelle = resistanceBase;
     }
 
-// méthode qui permet de reprendre de la vie
+// méthode qui permet de reprendre de la vie   Olivier Fortier
     public void PrendreMedecine(int medicament)
     {
         vie = vie + medicament;
@@ -94,7 +103,7 @@ public class ControleurBarreVie : MonoBehaviour
         }
     }
 
-// gestio nde la mort de l'entitée
+// gestion de la mort de l'entitée  Olivier Fortier
     public void MortPersonnage()
     {
 
@@ -121,13 +130,15 @@ public class ControleurBarreVie : MonoBehaviour
 
     }
 
+    // méthode pour ôter l'existence de l'objet  Olivier Fortier
+
     void DetruirePersonnage()
     {
         Destroy(this.gameObject);
     }
 
 
-    // méthode pour déclencher le butin qui tombe de l'ennemi
+    // méthode pour déclencher le butin qui tombe de l'ennemi   Olivier Fortier
     void RelacherButin() {
         TableButin controleButin = GetComponent<TableButin>();
         controleButin.TomberButin();
