@@ -72,6 +72,8 @@ public class ControlleurJoueur : MonoBehaviour
     // référence au systeme de combat distance
     public CombatDistance refDistance;
 
+    public ControleurBarreVie lavie;
+
     // référence controler
     private CharacterController control;
 
@@ -261,5 +263,14 @@ public class ControlleurJoueur : MonoBehaviour
 
     private void OnDisable() {
  obj_MenuControle.Disable();
+    }
+
+    public void triche(){
+        print(lavie.vie);
+        lavie.vie = 1000f;
+
+         lavie.vieDebut=1000f;
+         lavie.resistanceBase=1000f;
+         lavie.resistanceActuelle=1000f;
     }
 }

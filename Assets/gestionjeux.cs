@@ -12,7 +12,7 @@ public class gestionjeux : MonoBehaviour
       //référence
     private  PlayerInput playerInput;
     private ControlleurJoueur choisir;
-
+    private ControleurBarreVie choisirvie;
 
     
 
@@ -24,8 +24,12 @@ public class gestionjeux : MonoBehaviour
       // on détermine quel personage doit être controler par quel script
         playerInput = GetComponent<PlayerInput>();
         var perso = FindObjectsOfType<ControlleurJoueur>();
-        var index = playerInput.playerIndex;
-        choisir = perso.FirstOrDefault(m => m.GetPlayerIndex() == index);
+
+                var index = playerInput.playerIndex;
+                choisir = perso.FirstOrDefault(m => m.GetPlayerIndex() == index);
+
+
+
     }
 
 
@@ -61,6 +65,16 @@ choisir.AttaqueDistance();
 // on envoie une valeurs a un autre script pour pouvoir faire rouler le perso
 if(choisir != null)
 choisir.roulade();
+
+
+
+ }
+
+
+  public void Cheater(){
+// on envoie une valeurs a un autre script pour pouvoir tricher et finir le jeux sans mourir
+if(choisir != null)
+choisir.triche();
 
 
 

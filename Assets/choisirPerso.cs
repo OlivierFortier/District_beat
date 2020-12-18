@@ -168,7 +168,7 @@ public class choisirPerso : MonoBehaviour
                 numPerso=0;
             }
                 if(numPerso==-2){
-                numPerso=7;
+                numPerso=6;
             }
 
              actif = Perso[numPerso];

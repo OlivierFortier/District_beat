@@ -213,6 +213,14 @@ public class @MenuControle : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""CHEAT"",
+                    ""type"": ""Button"",
+                    ""id"": ""b48eec15-60b4-4b9c-bbc4-683df74b2765"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -435,6 +443,28 @@ public class @MenuControle : IInputActionCollection, IDisposable
                     ""action"": ""entrer"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0bfa2320-e36a-4c3a-8e61-38f42e9ea922"",
+                    ""path"": ""<Keyboard>/l"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CHEAT"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f3095d57-f3fd-4865-b48f-332ee07a5f3d"",
+                    ""path"": ""<Gamepad>/leftShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CHEAT"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -452,6 +482,7 @@ public class @MenuControle : IInputActionCollection, IDisposable
         m_jeux_attaquedistance = m_jeux.FindAction("attaque distance", throwIfNotFound: true);
         m_jeux_roulade = m_jeux.FindAction("roulade", throwIfNotFound: true);
         m_jeux_entrer = m_jeux.FindAction("entrer", throwIfNotFound: true);
+        m_jeux_CHEAT = m_jeux.FindAction("CHEAT", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -547,6 +578,7 @@ public class @MenuControle : IInputActionCollection, IDisposable
     private readonly InputAction m_jeux_attaquedistance;
     private readonly InputAction m_jeux_roulade;
     private readonly InputAction m_jeux_entrer;
+    private readonly InputAction m_jeux_CHEAT;
     public struct JeuxActions
     {
         private @MenuControle m_Wrapper;
@@ -556,6 +588,7 @@ public class @MenuControle : IInputActionCollection, IDisposable
         public InputAction @attaquedistance => m_Wrapper.m_jeux_attaquedistance;
         public InputAction @roulade => m_Wrapper.m_jeux_roulade;
         public InputAction @entrer => m_Wrapper.m_jeux_entrer;
+        public InputAction @CHEAT => m_Wrapper.m_jeux_CHEAT;
         public InputActionMap Get() { return m_Wrapper.m_jeux; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -580,6 +613,9 @@ public class @MenuControle : IInputActionCollection, IDisposable
                 @entrer.started -= m_Wrapper.m_JeuxActionsCallbackInterface.OnEntrer;
                 @entrer.performed -= m_Wrapper.m_JeuxActionsCallbackInterface.OnEntrer;
                 @entrer.canceled -= m_Wrapper.m_JeuxActionsCallbackInterface.OnEntrer;
+                @CHEAT.started -= m_Wrapper.m_JeuxActionsCallbackInterface.OnCHEAT;
+                @CHEAT.performed -= m_Wrapper.m_JeuxActionsCallbackInterface.OnCHEAT;
+                @CHEAT.canceled -= m_Wrapper.m_JeuxActionsCallbackInterface.OnCHEAT;
             }
             m_Wrapper.m_JeuxActionsCallbackInterface = instance;
             if (instance != null)
@@ -599,6 +635,9 @@ public class @MenuControle : IInputActionCollection, IDisposable
                 @entrer.started += instance.OnEntrer;
                 @entrer.performed += instance.OnEntrer;
                 @entrer.canceled += instance.OnEntrer;
+                @CHEAT.started += instance.OnCHEAT;
+                @CHEAT.performed += instance.OnCHEAT;
+                @CHEAT.canceled += instance.OnCHEAT;
             }
         }
     }
@@ -615,5 +654,6 @@ public class @MenuControle : IInputActionCollection, IDisposable
         void OnAttaquedistance(InputAction.CallbackContext context);
         void OnRoulade(InputAction.CallbackContext context);
         void OnEntrer(InputAction.CallbackContext context);
+        void OnCHEAT(InputAction.CallbackContext context);
     }
 }

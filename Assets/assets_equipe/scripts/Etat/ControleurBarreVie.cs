@@ -1,4 +1,4 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -17,6 +17,9 @@ public class ControleurBarreVie : MonoBehaviour
     public GameObject fondBarreVie;
     public float vie;
     public float vieDebut;
+    [SerializeField]
+
+
 
     // état déterministe de la vie ou non-vie du personnage
   [HideInInspector]  public bool estMort = false;
@@ -29,6 +32,7 @@ public class ControleurBarreVie : MonoBehaviour
 
     private void Start()
     {
+        
         resistanceActuelle = resistanceBase;
 
         vie = vieDebut;
@@ -46,7 +50,6 @@ public class ControleurBarreVie : MonoBehaviour
           
         }
     }
-
 // méthode qui permet à l'entitée de prendre des dommages et d'etre blessé
     public void PrendreDommages(float damage)
     {
@@ -111,7 +114,7 @@ public class ControleurBarreVie : MonoBehaviour
             Invoke("DetruirePersonnage", 3f);
         }
         // si c'est un joueur, terminer la partie
-        else if (tag == "joueur")
+        if (tag == "joueur")
         {
             //supprimer le gameobject du joueur apres 1 seconde
             ControlleurJoueur.nombreJoueursMort += 1;
@@ -132,5 +135,12 @@ public class ControleurBarreVie : MonoBehaviour
         TableButin controleButin = GetComponent<TableButin>();
         controleButin.TomberButin();
     }
+
+
+    
+
+
+
+
 
 }
